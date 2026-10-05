@@ -3,9 +3,9 @@ const I=ImportCore;
 let preferences={version:1,mappings:[],presets:[]},preferenceError='',preferenceErrorKey='';
 try{const saved=I.read(localStorage);preferences=saved.data;preferenceError=saved.error||'';preferenceErrorKey=saved.error?'import-core.68a68ea1d1':'';}catch{preferenceErrorKey='product.c7a2eeda46';preferenceError=I18n.t(preferenceErrorKey);}
 state.rciData=null;state.rciColumns={date:-1,event:-1};state.appliedPreset='';state.restoreNote='';
-function currentMapping(){const q=state.quality;return state.view==='capability'?{value:state.col,date:q.date,product:q.product}:state.view==='cycle'?{...state.cycleColumns}:state.view==='pareto'?{category:state.paretoCategory,quantity:state.paretoValue}:{...state.rciColumns};}
+function currentMapping(){const q=state.quality;return state.view==='capability'?{value:state.col,date:q.date,product:q.product,lot:q.lot??-1}:state.view==='cycle'?{...state.cycleColumns}:state.view==='pareto'?{category:state.paretoCategory,quantity:state.paretoValue}:{...state.rciColumns};}
 function currentSettings(){return state.view==='capability'?{...state.quality,lsl:state.lsl,usl:state.usl,unit:state.unit}:state.view==='cycle'?{...state.cycleSettings}:{};}
-function applyMapping(m){if(state.view==='capability'){state.col=m.value;state.quality.date=m.date;state.quality.product=m.product;}else if(state.view==='cycle')state.cycleColumns={...m};else if(state.view==='pareto'){state.paretoCategory=m.category;state.paretoValue=m.quantity;}else state.rciColumns={...m};}
+function applyMapping(m){if(state.view==='capability'){state.col=m.value;state.quality.date=m.date;state.quality.product=m.product;state.quality.lot=m.lot??I.lotColumn(state.data.headers,[m.value,m.date,m.product]);}else if(state.view==='cycle')state.cycleColumns={...m};else if(state.view==='pareto'){state.paretoCategory=m.category;state.paretoValue=m.quantity;}else state.rciColumns={...m};}
 function applyPreset(p){if(state.view==='capability')resetQualityRange();const d=activeData();if(!I.match(p,state.view,d.headers))throw Error((I18n.t("product.b34dc62867")));
   if(p.tool==='capability'&&p.settings.productValue&&!d.rows.some(r=>String(r[p.mapping.product]??'').trim()===p.settings.productValue))throw Error((I18n.t("product.26aca008ef")));
   applyMapping(p.mapping);const s=p.settings;if(p.tool==='capability'){for(const k of ['lsl','usl','unit'])state[k]=s[k];for(const k of ['productValue','order','chart','subgroupSize','rules'])state.quality[k]=Array.isArray(s[k])?[...s[k]]:s[k];}else if(p.tool==='cycle')state.cycleSettings={...s};state.appliedPreset=p.name;
@@ -17,13 +17,13 @@ function setData(d,name){
   else setImportedData(d,name);
   const types=I.infer(d);d.types=types;
   if(state.view==='capability'){
-    resetQualityRange();state.quality={date:types.find(t=>t.type==='date')?.index??-1,product:d.headers.findIndex(h=>/製品|品番|品目|product|material|sku/i.test(h)),productValue:'',order:'input',chart:'imr',subgroupSize:5,rules:[1]};
-    state.quality.order=V.canUseDates(d,state.quality.date)?'date':'input';
+    resetQualityRange();state.quality={lot:I.lotColumn(d.headers),date:types.find(t=>t.type==='date')?.index??-1,product:d.headers.findIndex((h,i)=>i!==I.lotColumn(d.headers)&&/製品|品番|品目|product|material|sku/i.test(h)),productValue:'',order:'input',chart:'imr',subgroupSize:5,rules:[1]};
     if(types[state.col]?.type!=='number')state.col=types.find(t=>t.type==='number')?.index??state.col;
+    state.quality.lot=I.lotColumn(d.headers,[state.col,state.quality.date,state.quality.product]);state.quality.order=state.quality.lot>=0?'lot':'input';
   }
   if(state.view==='pareto'){state.paretoCategory=types.find(t=>t.type==='category')?.index??0;state.paretoValue=types.find(t=>t.type==='number'&&t.index!==state.paretoCategory)?.index??-1;}
   const saved=preferences.mappings.find(p=>I.match(p,state.view,d.headers));
-  if(saved){applyMapping(saved.mapping);if(state.view==='capability')state.quality.order=V.canUseDates(d,state.quality.date)?'date':'input';state.restoreNote=(I18n.t("product.18c5f6c119"));}
+  if(saved){applyMapping(saved.mapping);if(state.view==='capability')state.quality.order=state.quality.lot>=0?'lot':'input';state.restoreNote=(I18n.t("product.18c5f6c119"));}
   const candidates=preferences.presets.filter(p=>p.auto&&I.match(p,state.view,d.headers)&&(
     p.tool!=='capability'||(p.mapping.product<0&&!p.settings.productValue)||(p.mapping.product>=0&&p.settings.productValue&&d.rows.filter(r=>r.some(v=>String(v??'').trim())).every(r=>String(r[p.mapping.product]??'').trim()===p.settings.productValue))));
   if(candidates.length===1){applyPreset(candidates[0]);state.restoreNote=(I18n.t("product.2863dc563b", [candidates[0].name]));}

@@ -1,5 +1,7 @@
 # Manufacturing Toolbox
 
+管理図の横軸はロット番号順・等間隔表示です。同じ日付の測定点も重ならず、日付による期間絞り込みも利用できます。
+
 ## [▶ Launch.html — アプリを起動 / Open the app](https://koh2828.github.io/manufacturing-toolbox/Launch.html)
 
 **上のリンクをクリックするだけで利用できます。インストール・ログイン・アクセス申請・コマンド操作は不要です。**

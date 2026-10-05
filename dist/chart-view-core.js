@@ -13,8 +13,8 @@
     const from=parse(selection.start,min),to=parse(selection.end,max);
     const valid=Number.isInteger(from)&&Number.isInteger(to)&&from<=to&&(!dated?from>=1&&to<=input.length:true);
     const groups=new Map(result.groups.map(g=>[g.index,g]));
-    function select(records){return records.map(point=>{const group=result.chart==='xbar'?groups.get(point.index):null,start=group?.start??point.index,end=group?.end??point.index;return {...point,position:end+1,time:input[end]?.time,startTime:input[start]?.time,startPosition:start+1,isSubgroup:!!group};}).filter(point=>valid&&(dated?point.time>=from*DAY&&point.time<(to+1)*DAY:point.position>=from&&point.position<=to));}
-    return {mode:dated?'date':'index',min,max,from,to,valid,start:valid?(dated?isoDay(from):String(from)):'',end:valid?(dated?isoDay(to):String(to)):'',first:select(result.chartRecords),ranges:select(result.rangeRecords),firstTotal:result.chartRecords.length,rangeTotal:result.rangeRecords.length,axis:{mode:dated?'date':'index',min:dated?from*DAY:from,max:dated?(to+1)*DAY-1:to}};
+    function select(records){return records.map(point=>{const group=result.chart==='xbar'?groups.get(point.index):null,start=group?.start??point.index,end=group?.end??point.index;return {...point,position:end+1,lot:input[end]?.lot??'',startLot:input[start]?.lot??'',time:input[end]?.time,startTime:input[start]?.time,startPosition:start+1,isSubgroup:!!group};}).filter(point=>valid&&(dated?point.time>=from*DAY&&point.time<(to+1)*DAY:point.position>=from&&point.position<=to));}
+    return {mode:dated?'date':'index',min,max,from,to,valid,start:valid?(dated?isoDay(from):String(from)):'',end:valid?(dated?isoDay(to):String(to)):'',first:select(result.chartRecords),ranges:select(result.rangeRecords),firstTotal:result.chartRecords.length,rangeTotal:result.rangeRecords.length,axis:{mode:'index'}};
   }
   const api={DAY,isoDay,canUseDates,windowFor};root.ChartViewCore=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);
