@@ -1,0 +1,1500 @@
+{
+  "description": "Independent Python Decimal reference; no app implementation imported; formula verification does not claim Microsoft Excel or Minitab was executed.",
+  "precision": 50,
+  "sources": {
+    "individuals": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc322.htm",
+    "xbar_r": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc311.htm",
+    "capability": "https://www.itl.nist.gov/div898/handbook/pmc/section1/pmc16.htm",
+    "sigma_constants": "https://support.minitab.com/en-us/minitab/help-and-how-to/quality-and-process-improvement/capability-analysis/how-to/capability-analysis/normal-capability-analysis/methods-and-formulas/methods/",
+    "nelson": "https://support.minitab.com/en-us/minitab/help-and-how-to/quality-and-process-improvement/control-charts/supporting-topics/basics/using-tests-for-special-causes/",
+    "quantile_r7": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/quantile.html",
+    "quantile_excel": "https://support.microsoft.com/en-us/excel/functions/percentile-inc-function"
+  },
+  "conventions": {
+    "overallSD": "Sample SD with n-1 denominator, no c4 correction.",
+    "withinSD": "XmR MRbar/1.128; equal-size Xbar-R Rbar/d2.",
+    "xbarRLimits": "A2=3/(d2*sqrt(n)); D3=max(0,1-3*d3/d2); D4=1+3*d3/d2. Coefficients derive from published d2/d3; conventional 3-decimal chart factors give slightly different limits.",
+    "quantile": "R type 7 / Excel PERCENTILE.INC convention: zero-based rank (n-1)*p, linear interpolation.",
+    "missing": "Missing individual values break moving-range adjacency and Nelson runs. Incomplete rational subgroups must not be compressed/repacked.",
+    "nelson": "Vectors use fixed center=0 and sigma=1; strict greater-than sigma thresholds and strict increasing/decreasing; center ties break side runs. Rule7 uses <=1 and missing values break all windows as explicit tool conventions; Minitab prose does not specify these two edge policies. Rule8 requires every abs(z)>1; either side is allowed without requiring both sides."
+  },
+  "individuals": [
+    {
+      "name": "hand-calculable-five",
+      "raw": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "lsl": 0,
+      "usl": 6,
+      "expected": {
+        "n": 5,
+        "excluded": 0,
+        "mean": 3.0,
+        "sd": 1.5811388300841898,
+        "mr": 1.0,
+        "within": 0.8865248226950354,
+        "cp": 1.128,
+        "cpk": 1.128,
+        "pp": 0.6324555320336759,
+        "ppk": 0.6324555320336759,
+        "lcl": 0.3404255319148936,
+        "ucl": 5.659574468085107,
+        "movingRanges": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mrLcl": 0.0,
+        "mrUclDerived": 3.2672872340425534,
+        "mrUclRoundedD4": 3.267,
+        "oosIndices": []
+      }
+    },
+    {
+      "name": "nist-published-flowrate",
+      "raw": [
+        49.6,
+        47.6,
+        49.9,
+        51.3,
+        47.8,
+        51.2,
+        52.6,
+        52.4,
+        53.6,
+        52.1
+      ],
+      "lsl": 45,
+      "usl": 55,
+      "expected": {
+        "n": 10,
+        "excluded": 0,
+        "mean": 50.81,
+        "sd": 2.0338523927649113,
+        "mr": 1.8777777777777778,
+        "within": 1.664696611505122,
+        "cp": 1.0011834319526627,
+        "cpk": 0.8389917159763314,
+        "pp": 0.8194629426380958,
+        "ppk": 0.6867099459307243,
+        "lcl": 45.81591016548463,
+        "ucl": 55.804089834515366,
+        "movingRanges": [
+          2.0,
+          2.3,
+          1.4,
+          3.5,
+          3.4,
+          1.4,
+          0.2,
+          1.2,
+          1.5
+        ],
+        "mrLcl": 0.0,
+        "mrUclDerived": 6.135239361702127,
+        "mrUclRoundedD4": 6.1347,
+        "oosIndices": []
+      }
+    },
+    {
+      "name": "missing-breaks-adjacency",
+      "raw": [
+        1,
+        2,
+        null,
+        100,
+        101
+      ],
+      "lsl": 0,
+      "usl": 110,
+      "expected": {
+        "n": 4,
+        "excluded": 1,
+        "mean": 51.0,
+        "sd": 57.160592485849314,
+        "mr": 1.0,
+        "within": 0.8865248226950354,
+        "cp": 20.68,
+        "cpk": 19.176,
+        "pp": 0.3207337876679976,
+        "ppk": 0.29740769401941597,
+        "lcl": 48.340425531914896,
+        "ucl": 53.659574468085104,
+        "movingRanges": [
+          1.0,
+          1.0
+        ],
+        "mrLcl": 0.0,
+        "mrUclDerived": 3.2672872340425534,
+        "mrUclRoundedD4": 3.267,
+        "oosIndices": []
+      }
+    },
+    {
+      "name": "no-valid-moving-range",
+      "raw": [
+        1,
+        null,
+        2,
+        null,
+        3
+      ],
+      "lsl": 0,
+      "usl": 4,
+      "expected": {
+        "n": 3,
+        "excluded": 2,
+        "mean": 2.0,
+        "sd": 1.0,
+        "mr": null,
+        "within": null,
+        "cp": null,
+        "cpk": null,
+        "pp": 0.6666666666666666,
+        "ppk": 0.6666666666666666,
+        "lcl": null,
+        "ucl": null,
+        "movingRanges": [],
+        "mrLcl": null,
+        "mrUclDerived": null,
+        "mrUclRoundedD4": null,
+        "oosIndices": []
+      }
+    },
+    {
+      "name": "constant-data",
+      "raw": [
+        3,
+        3,
+        3
+      ],
+      "lsl": 0,
+      "usl": 6,
+      "expected": {
+        "n": 3,
+        "excluded": 0,
+        "mean": 3.0,
+        "sd": 0.0,
+        "mr": 0.0,
+        "within": 0.0,
+        "cp": null,
+        "cpk": null,
+        "pp": null,
+        "ppk": null,
+        "lcl": 3.0,
+        "ucl": 3.0,
+        "movingRanges": [
+          0.0,
+          0.0
+        ],
+        "mrLcl": 0.0,
+        "mrUclDerived": 0.0,
+        "mrUclRoundedD4": 0.0,
+        "oosIndices": []
+      }
+    },
+    {
+      "name": "one-sided-specification",
+      "raw": [
+        1,
+        2,
+        3
+      ],
+      "lsl": null,
+      "usl": 2,
+      "expected": {
+        "n": 3,
+        "excluded": 0,
+        "mean": 2.0,
+        "sd": 1.0,
+        "mr": 1.0,
+        "within": 0.8865248226950354,
+        "cp": null,
+        "cpk": 0.0,
+        "pp": null,
+        "ppk": 0.0,
+        "lcl": -0.6595744680851063,
+        "ucl": 4.659574468085107,
+        "movingRanges": [
+          1.0,
+          1.0
+        ],
+        "mrLcl": 0.0,
+        "mrUclDerived": 3.2672872340425534,
+        "mrUclRoundedD4": 3.267,
+        "oosIndices": [
+          2
+        ]
+      }
+    },
+    {
+      "name": "negative-capability",
+      "raw": [
+        5,
+        6,
+        7
+      ],
+      "lsl": 0,
+      "usl": 3,
+      "expected": {
+        "n": 3,
+        "excluded": 0,
+        "mean": 6.0,
+        "sd": 1.0,
+        "mr": 1.0,
+        "within": 0.8865248226950354,
+        "cp": 0.564,
+        "cpk": -1.128,
+        "pp": 0.5,
+        "ppk": -1.0,
+        "lcl": 3.3404255319148937,
+        "ucl": 8.659574468085106,
+        "movingRanges": [
+          1.0,
+          1.0
+        ],
+        "mrLcl": 0.0,
+        "mrUclDerived": 3.2672872340425534,
+        "mrUclRoundedD4": 3.267,
+        "oosIndices": [
+          0,
+          1,
+          2
+        ]
+      }
+    }
+  ],
+  "xbarR": [
+    {
+      "name": "equal-size-subgroups-n2",
+      "subgroupSize": 2,
+      "groups": [
+        [
+          100.0,
+          100.5
+        ],
+        [
+          100.2,
+          100.7
+        ],
+        [
+          99.9,
+          100.4
+        ],
+        [
+          100.4,
+          100.9
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 1.128,
+        "d3": 0.8525,
+        "A2": 1.8806031414535838,
+        "D3": 0.0,
+        "D4": 3.2672872340425534
+      },
+      "expected": {
+        "mean": 100.375,
+        "sd": 0.3370036032024414,
+        "within": 0.4432624113475177,
+        "groupMeans": [
+          100.25,
+          100.45,
+          100.15,
+          100.65
+        ],
+        "groupRanges": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "rangeMean": 0.5,
+        "xbarLcl": 99.43469842927321,
+        "xbarUcl": 101.31530157072679,
+        "rangeLcl": 0.0,
+        "rangeUcl": 1.6336436170212767,
+        "cp": 5.64,
+        "cpk": 4.042,
+        "pp": 7.418318309487704,
+        "ppk": 5.316461455132854
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n3",
+      "subgroupSize": 3,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0
+        ],
+        [
+          100.2,
+          100.7,
+          101.2
+        ],
+        [
+          99.9,
+          100.4,
+          100.9
+        ],
+        [
+          100.4,
+          100.9,
+          101.4
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 1.693,
+        "d3": 0.8884,
+        "A2": 1.0230660410920716,
+        "D3": 0.0,
+        "D4": 2.5742468989958653
+      },
+      "expected": {
+        "mean": 100.625,
+        "sd": 0.47121699305675996,
+        "within": 0.5906674542232723,
+        "groupMeans": [
+          100.5,
+          100.7,
+          100.4,
+          100.9
+        ],
+        "groupRanges": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rangeMean": 1.0,
+        "xbarLcl": 99.60193395890794,
+        "xbarUcl": 101.64806604109206,
+        "rangeLcl": 0.0,
+        "rangeUcl": 2.5742468989958653,
+        "cp": 4.2325,
+        "cpk": 3.174375,
+        "pp": 5.305411385490644,
+        "ppk": 3.979058539117983
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n4",
+      "subgroupSize": 4,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 2.059,
+        "d3": 0.8798,
+        "A2": 0.7285089849441476,
+        "D3": 0.0,
+        "D4": 2.2818844099077222
+      },
+      "expected": {
+        "mean": 100.875,
+        "sd": 0.6104643041707407,
+        "within": 0.7285089849441476,
+        "groupMeans": [
+          100.75,
+          100.95,
+          100.65,
+          101.15
+        ],
+        "groupRanges": [
+          1.5,
+          1.5,
+          1.5,
+          1.5
+        ],
+        "rangeMean": 1.5,
+        "xbarLcl": 99.78223652258377,
+        "xbarUcl": 101.96776347741623,
+        "rangeLcl": 0.0,
+        "rangeUcl": 3.422826614861583,
+        "cp": 3.4316666666666666,
+        "cpk": 2.688138888888889,
+        "pp": 4.095243543184755,
+        "ppk": 3.2079407754947242
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n5",
+      "subgroupSize": 5,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5,
+          102.0
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7,
+          102.2
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4,
+          101.9
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 2.326,
+        "d3": 0.8641,
+        "A2": 0.5768017138864462,
+        "D3": 0.0,
+        "D4": 2.1144883920894237
+      },
+      "expected": {
+        "mean": 101.125,
+        "sd": 0.7517523388373117,
+        "within": 0.8598452278589854,
+        "groupMeans": [
+          101.0,
+          101.2,
+          100.9,
+          101.4
+        ],
+        "groupRanges": [
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "rangeMean": 2.0,
+        "xbarLcl": 99.9713965722271,
+        "xbarUcl": 102.2786034277729,
+        "rangeLcl": 0.0,
+        "rangeUcl": 4.2289767841788475,
+        "cp": 2.9075,
+        "cpk": 2.374458333333333,
+        "pp": 3.325563314996257,
+        "ppk": 2.7158767072469434
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n6",
+      "subgroupSize": 6,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5,
+          102.0,
+          102.5
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7,
+          102.2,
+          102.7
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 2.534,
+        "d3": 0.848,
+        "A2": 0.48332473219873284,
+        "D3": 0.0,
+        "D4": 2.003946329913181
+      },
+      "expected": {
+        "mean": 101.375,
+        "sd": 0.8940625403666997,
+        "within": 0.9865824782951855,
+        "groupMeans": [
+          101.25,
+          101.45,
+          101.15,
+          101.65
+        ],
+        "groupRanges": [
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        "rangeMean": 2.5,
+        "xbarLcl": 100.16668816950317,
+        "xbarUcl": 102.58331183049683,
+        "rangeLcl": 0.0,
+        "rangeUcl": 5.009865824782952,
+        "cp": 2.534,
+        "cpk": 2.1539,
+        "pp": 2.7962249698713753,
+        "ppk": 2.376791224390669
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n7",
+      "subgroupSize": 7,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5,
+          102.0,
+          102.5,
+          103.0
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7,
+          102.2,
+          102.7,
+          103.2
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 2.704,
+        "d3": 0.8332,
+        "A2": 0.4193392821847935,
+        "D3": 0.07559171597633137,
+        "D4": 1.9244082840236687
+      },
+      "expected": {
+        "mean": 101.625,
+        "sd": 1.0369560153534854,
+        "within": 1.1094674556213018,
+        "groupMeans": [
+          101.5,
+          101.7,
+          101.4,
+          101.9
+        ],
+        "groupRanges": [
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "rangeMean": 3.0,
+        "xbarLcl": 100.36698215344562,
+        "xbarUcl": 102.88301784655438,
+        "rangeLcl": 0.2267751479289941,
+        "rangeUcl": 5.773224852071006,
+        "cp": 2.2533333333333334,
+        "cpk": 1.9904444444444445,
+        "pp": 2.41090264484148,
+        "ppk": 2.129630669609974
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n8",
+      "subgroupSize": 8,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5,
+          102.0,
+          102.5,
+          103.0,
+          103.5
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7,
+          102.2,
+          102.7,
+          103.2,
+          103.7
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4,
+          103.9
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 2.847,
+        "d3": 0.8198,
+        "A2": 0.3725536254934392,
+        "D3": 0.13614330874604846,
+        "D4": 1.8638566912539516
+      },
+      "expected": {
+        "mean": 101.875,
+        "sd": 1.1802132120114788,
+        "within": 1.2293642430628733,
+        "groupMeans": [
+          101.75,
+          101.95,
+          101.65,
+          102.15
+        ],
+        "groupRanges": [
+          3.5,
+          3.5,
+          3.5,
+          3.5
+        ],
+        "rangeMean": 3.5,
+        "xbarLcl": 100.57106231077296,
+        "xbarUcl": 103.17893768922704,
+        "rangeLcl": 0.47650158061116965,
+        "rangeUcl": 6.52349841938883,
+        "cp": 2.0335714285714284,
+        "cpk": 1.864107142857143,
+        "pp": 2.1182613230868363,
+        "ppk": 1.9417395461629334
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n9",
+      "subgroupSize": 9,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5,
+          102.0,
+          102.5,
+          103.0,
+          103.5,
+          104.0
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7,
+          102.2,
+          102.7,
+          103.2,
+          103.7,
+          104.2
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4,
+          103.9
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4,
+          103.9,
+          104.4
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 2.97,
+        "d3": 0.8078,
+        "A2": 0.3367003367003367,
+        "D3": 0.18404040404040403,
+        "D4": 1.815959595959596
+      },
+      "expected": {
+        "mean": 102.125,
+        "sd": 1.323712312292322,
+        "within": 1.3468013468013469,
+        "groupMeans": [
+          102.0,
+          102.2,
+          101.9,
+          102.4
+        ],
+        "groupRanges": [
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "rangeMean": 4.0,
+        "xbarLcl": 100.77819865319866,
+        "xbarUcl": 103.47180134680134,
+        "rangeLcl": 0.7361616161616161,
+        "rangeUcl": 7.263838383838384,
+        "cp": 1.85625,
+        "cpk": 1.7634375,
+        "pp": 1.8886278965485006,
+        "ppk": 1.7941965017210757
+      }
+    },
+    {
+      "name": "equal-size-subgroups-n10",
+      "subgroupSize": 10,
+      "groups": [
+        [
+          100.0,
+          100.5,
+          101.0,
+          101.5,
+          102.0,
+          102.5,
+          103.0,
+          103.5,
+          104.0,
+          104.5
+        ],
+        [
+          100.2,
+          100.7,
+          101.2,
+          101.7,
+          102.2,
+          102.7,
+          103.2,
+          103.7,
+          104.2,
+          104.7
+        ],
+        [
+          99.9,
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4,
+          103.9,
+          104.4
+        ],
+        [
+          100.4,
+          100.9,
+          101.4,
+          101.9,
+          102.4,
+          102.9,
+          103.4,
+          103.9,
+          104.4,
+          104.9
+        ]
+      ],
+      "lsl": 95,
+      "usl": 110,
+      "constants": {
+        "d2": 3.078,
+        "d3": 0.7971,
+        "A2": 0.30821419689750285,
+        "D3": 0.22309941520467835,
+        "D4": 1.7769005847953216
+      },
+      "expected": {
+        "mean": 102.375,
+        "sd": 1.467380362484495,
+        "within": 1.4619883040935673,
+        "groupMeans": [
+          102.25,
+          102.45,
+          102.15,
+          102.65
+        ],
+        "groupRanges": [
+          4.5,
+          4.5,
+          4.5,
+          4.5
+        ],
+        "rangeMean": 4.5,
+        "xbarLcl": 100.98803611396124,
+        "xbarUcl": 103.76196388603876,
+        "rangeLcl": 1.0039473684210527,
+        "rangeUcl": 7.996052631578947,
+        "cp": 1.71,
+        "cpk": 1.6815,
+        "pp": 1.703716407767053,
+        "ppk": 1.6753211343042687
+      }
+    }
+  ],
+  "pareto": {
+    "raw": [
+      [
+        "Scratch",
+        20
+      ],
+      [
+        "Bubble",
+        22
+      ],
+      [
+        "Scratch",
+        21
+      ],
+      [
+        "Color",
+        16
+      ],
+      [
+        "Other",
+        21
+      ],
+      [
+        "Invalid",
+        -1
+      ],
+      [
+        "",
+        8
+      ]
+    ],
+    "expected": {
+      "total": 100.0,
+      "excluded": 2,
+      "items": [
+        {
+          "label": "Scratch",
+          "value": 41.0,
+          "percent": 41.0,
+          "cumulative": 41.0
+        },
+        {
+          "label": "Bubble",
+          "value": 22.0,
+          "percent": 22.0,
+          "cumulative": 63.0
+        },
+        {
+          "label": "Other",
+          "value": 21.0,
+          "percent": 21.0,
+          "cumulative": 84.0
+        },
+        {
+          "label": "Color",
+          "value": 16.0,
+          "percent": 16.0,
+          "cumulative": 100.0
+        }
+      ]
+    }
+  },
+  "quantiles": [
+    {
+      "values": [
+        40,
+        10,
+        30,
+        20
+      ],
+      "p25": 17.5,
+      "p50": 25.0
+    },
+    {
+      "values": [
+        12,
+        24,
+        48,
+        72,
+        144
+      ],
+      "p25": 24.0,
+      "p50": 48.0
+    },
+    {
+      "values": [
+        12,
+        12,
+        24,
+        48,
+        72,
+        144
+      ],
+      "p25": 15.0,
+      "p50": 36.0
+    },
+    {
+      "values": [
+        1
+      ],
+      "p25": 1.0,
+      "p50": 1.0
+    }
+  ],
+  "cycle": {
+    "columns": {
+      "product": 0,
+      "lot": 1,
+      "start": 2,
+      "end": 3,
+      "equipment": -1
+    },
+    "rows": [
+      [
+        "A",
+        "A2",
+        "2026-09-01 13:00",
+        "2026-09-01 14:00"
+      ],
+      [
+        "B",
+        "B1",
+        "2026-09-01 10:00",
+        "2026-09-01 12:00"
+      ],
+      [
+        "A",
+        "A1",
+        "2026-09-01 08:00",
+        "2026-09-01 09:00"
+      ],
+      [
+        "A",
+        "A3",
+        "2026-09-01 16:00",
+        "2026-09-01 17:00"
+      ]
+    ],
+    "expected": {
+      "processingMinutesByInputIndex": [
+        60,
+        120,
+        60,
+        60
+      ],
+      "gapMinutesByInputIndex": [
+        120,
+        60,
+        60,
+        null
+      ],
+      "cycleMinutesByInputIndex": [
+        180,
+        180,
+        120,
+        null
+      ],
+      "productACycleN": 2,
+      "productACycleP25": 135,
+      "productACycleP50": 150
+    }
+  },
+  "nelsonTargetVectors": [
+    {
+      "rule": 1,
+      "values": [
+        0,
+        3,
+        -3,
+        3.01
+      ],
+      "triggerIndex": 3,
+      "negative": [
+        0,
+        3,
+        -3
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 1,
+          "index": 3,
+          "startIndex": 3
+        },
+        {
+          "rule": 5,
+          "index": 3,
+          "startIndex": 1
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    },
+    {
+      "rule": 2,
+      "values": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "triggerIndex": 8,
+      "negative": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 2,
+          "index": 8,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    },
+    {
+      "rule": 3,
+      "values": [
+        -0.5,
+        -0.3,
+        -0.1,
+        0.1,
+        0.3,
+        0.5
+      ],
+      "triggerIndex": 5,
+      "negative": [
+        -0.5,
+        -0.3,
+        -0.1,
+        -0.1,
+        0.3,
+        0.5
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 3,
+          "index": 5,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    },
+    {
+      "rule": 4,
+      "values": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "triggerIndex": 13,
+      "negative": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        -0.5
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 4,
+          "index": 13,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    },
+    {
+      "rule": 5,
+      "values": [
+        2.1,
+        0,
+        2.2
+      ],
+      "triggerIndex": 2,
+      "negative": [
+        2.1,
+        0,
+        -2.2
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 5,
+          "index": 2,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    },
+    {
+      "rule": 6,
+      "values": [
+        1.1,
+        1.2,
+        0,
+        1.3,
+        1.4
+      ],
+      "triggerIndex": 4,
+      "negative": [
+        1.1,
+        1.2,
+        0,
+        -1.3,
+        -1.4
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 6,
+          "index": 4,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    },
+    {
+      "rule": 7,
+      "values": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        0
+      ],
+      "triggerIndex": 14,
+      "negative": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        -0.5,
+        0.5,
+        1.1
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 4,
+          "index": 13,
+          "startIndex": 0
+        },
+        {
+          "rule": 4,
+          "index": 14,
+          "startIndex": 1
+        },
+        {
+          "rule": 7,
+          "index": 14,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": [
+        {
+          "rule": 4,
+          "index": 13,
+          "startIndex": 0
+        }
+      ]
+    },
+    {
+      "rule": 8,
+      "values": [
+        -1.5,
+        1.5,
+        -1.5,
+        1.5,
+        -1.5,
+        1.5,
+        -1.5,
+        1.5
+      ],
+      "triggerIndex": 7,
+      "negative": [
+        -1.5,
+        1.5,
+        -1.5,
+        1.5,
+        -1.5,
+        1.5,
+        -1.5,
+        1
+      ],
+      "expectedAllSignals": [
+        {
+          "rule": 8,
+          "index": 7,
+          "startIndex": 0
+        }
+      ],
+      "negativeExpectedAllSignals": []
+    }
+  ],
+  "nelsonBoundaryFixtures": [
+    {
+      "name": "rule7-includes-one-sigma-boundary",
+      "values": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        0
+      ],
+      "expected": [
+        {
+          "rule": 4,
+          "index": 13,
+          "startIndex": 0
+        },
+        {
+          "rule": 4,
+          "index": 14,
+          "startIndex": 1
+        },
+        {
+          "rule": 7,
+          "index": 14,
+          "startIndex": 0
+        }
+      ]
+    },
+    {
+      "name": "missing-breaks-side-run",
+      "values": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        null,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "expected": []
+    },
+    {
+      "name": "same-side-rule8-convention",
+      "values": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "expected": [
+        {
+          "rule": 6,
+          "index": 4,
+          "startIndex": 0
+        },
+        {
+          "rule": 6,
+          "index": 5,
+          "startIndex": 1
+        },
+        {
+          "rule": 6,
+          "index": 6,
+          "startIndex": 2
+        },
+        {
+          "rule": 6,
+          "index": 7,
+          "startIndex": 3
+        },
+        {
+          "rule": 8,
+          "index": 7,
+          "startIndex": 0
+        }
+      ]
+    },
+    {
+      "name": "repeated-runs-report-each-ending-point",
+      "values": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "expected": [
+        {
+          "rule": 2,
+          "index": 8,
+          "startIndex": 0
+        },
+        {
+          "rule": 2,
+          "index": 9,
+          "startIndex": 1
+        },
+        {
+          "rule": 2,
+          "index": 10,
+          "startIndex": 2
+        }
+      ]
+    }
+  ]
+}
