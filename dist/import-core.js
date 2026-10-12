@@ -3,9 +3,10 @@
   const I18n=root.I18n||(typeof require==='function'?require('./i18n.js'):null);
   const C=typeof module!=='undefined'?require('./core.js'):root.ToolboxCore;
   const Y=typeof module!=='undefined'?require('./cycle-core.js'):root.CycleCore;
+  const W=typeof module!=='undefined'?require('./workflow-config.js'):root.WorkflowConfig;
   const KEY='manufacturing-toolbox.preferences.v1';
   const normalized=v=>String(v??'').normalize('NFKC').trim();
-  const fields={capability:['value','date','product','lot'],cycle:['product','lot','start','end','equipment'],pareto:['category','quantity'],rci:['date','event']};
+  const fields={capability:['value','date','product','lot'],cycle:['product','lot','start','end','equipment'],pareto:['category','quantity'],rci:['date','event'],...W.fields};
   function signature(tool,headers){return JSON.stringify([tool,headers.map(normalized)]);}
   function sheetRows(X,sheet){
     const range=X.utils.decode_range(sheet['!ref']||'A1');if(range.e.r>50000||range.e.c>299)throw Error((I18n.t("import-core.b6ddc84d1c")));
@@ -27,6 +28,7 @@
     return {index:i,type,filled:n,numeric:numbers,dates,confidence:n===0?'low':type==='number'?numbers===n?'high':'low':type==='date'?dates===n?'high':'low':'high'};
   });}
   function mapping(tool,m,width){
+    if(W.fields[tool]){try{return W.mapping(tool,m,width);}catch{throw Error(I18n.t('workflow.invalidSettings'));}}
     if(!m||typeof m!=='object')throw Error((I18n.t("import-core.e720147c09")));const out={};
     for(const key of fields[tool]||[]){const v=tool==='capability'&&key==='lot'&&m[key]===undefined?-1:m[key];if(!Number.isInteger(v)||v< -1||v>=width)throw Error((I18n.t("import-core.d7fce27e8b")));out[key]=v;}
     const required={capability:['value'],cycle:['product','lot','start','end'],pareto:['category','quantity'],rci:['event']}[tool];
@@ -34,6 +36,7 @@
     const used=Object.values(out).filter(v=>v>=0);if(new Set(used).size!==used.length)throw Error((I18n.t("import-core.99a6422b97")));return out;
   }
   function settings(tool,s={}){
+    if(W.fields[tool]){try{return W.settings(tool,s);}catch{throw Error(I18n.t('workflow.invalidSettings'));}}
     const str=(v,max=200)=>{if(typeof v!=='string'||v.length>max)throw Error((I18n.t("import-core.254e4b2b93")));return v;};
     if(tool==='capability'){
       const out={lsl:str(s.lsl),usl:str(s.usl),unit:str(s.unit,40),chart:s.chart,subgroupSize:s.subgroupSize,rules:s.rules,productValue:str(s.productValue),order:s.order};
@@ -52,7 +55,8 @@
     const clean=x=>{
       if(!x||!fields[x.tool]||!Array.isArray(x.headers)||!x.headers.length||x.headers.length>300||x.headers.some(h=>typeof h!=='string'||h.length>200))throw Error((I18n.t("import-core.defc876158")));
       const headers=x.headers.map(normalized);if(new Set(headers).size!==headers.length)throw Error((I18n.t("import-core.a72bd8ed34")));
-      const m={...x.mapping};if(x.tool==='capability'&&m.lot===undefined)m.lot=lotColumn(headers,Object.values(m));return {tool:x.tool,headers,mapping:mapping(x.tool,m,headers.length)};
+      const m={...x.mapping};if(x.tool==='capability'&&m.lot===undefined)m.lot=lotColumn(headers,Object.values(m));const out={tool:x.tool,headers,mapping:mapping(x.tool,m,headers.length)};
+      if(W.fields[x.tool]){if(x.layouts!==undefined&&(!Array.isArray(x.layouts)||!x.layouts.length||x.layouts.length>20))throw Error(I18n.t('workflow.invalidSettings'));out.layouts=(x.layouts||[{headers,mapping:m}]).map(l=>{if(!Array.isArray(l.headers)||!l.headers.length||l.headers.length>300||l.headers.some(h=>typeof h!=='string'||h.length>200))throw Error(I18n.t('workflow.invalidSettings'));const hs=l.headers.map(normalized);if(new Set(hs).size!==hs.length)throw Error(I18n.t('workflow.invalidSettings'));return {headers:hs,mapping:mapping(x.tool,l.mapping,hs.length)};});try{out.layouts=W.uniqueLayouts(out.layouts,true);}catch{throw Error(I18n.t('workflow.ambiguousLayouts'));}}return out;
     };
     return {version:1,mappings:p.mappings.map(clean),presets:p.presets.map(x=>{
       const out=clean(x);if(typeof x.name!=='string'||!x.name.trim()||x.name.length>80||typeof x.auto!=='boolean')throw Error((I18n.t("import-core.15f4a3776f")));return {...out,name:x.name,auto:x.auto,settings:settings(x.tool,x.tool==='capability'&&x.mapping.lot===undefined&&x.settings?.order==='date'?{...x.settings,order:out.mapping.lot>=0?'lot':'input'}:x.settings)};
