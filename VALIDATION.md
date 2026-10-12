@@ -134,3 +134,59 @@ PDFは実際に出力し、ページを画像化して日本語・図・表・�
 ## 制限
 
 p-chart、正規性検定、多段見出し統合、表の転置、複数表分離は対象外。PDFの明細表は500件、管理図は500点、サイクルグラフは15組、パレート図は12分類までと明示。Excelは全件を出力します。Excelには編集可能なグラフを埋め込まず、図はPDFで出力します。
+
+## v0.7 定例品質・バッチ工程リリース（2026-10-13）
+
+### 実装と再利用
+
+- 既存 `ImportCore` / `ToolboxCore` によるCSV解析、Excel値保持、見出し推定、型推定、自然ロット順を再利用。`file-reader.js` は単一ファイル画面から共通読取処理を抽出したもの。
+- `SPCCore` のXmR / Xbar-R、群内σ・全体標本SD、Nelsonルールを層別解析でも再利用。
+- `CycleCore.timestamp`、R7パーセンタイル、`ToolboxCore.pareto` をバッチ工程でも再利用。
+- 既存preferences v1を後方互換で拡張。既存JA/EN辞書、レポートビューア、Excel保存、PDF印刷を共用。追加ライブラリなし。
+- `.mtb` project v1はユーザーが明示保存する元表＋設定。自動保存は従来どおり設定のみ。
+
+### 検証
+
+最終ソースの単体・統合・ビルドテストは **223件成功、失敗0、skip 0**。内訳には既存117件、新規共有読取9件、Workflow22件、定例品質27件、品質UI6件、Batch34件、Batch UI8件を含む。
+
+実Chromeブラウザで、既存4ツール・Cleaner・Preset・Export・JA/EN・ロット軸の **183項目**、A+B統合の **128項目**、失敗した読取と競合の **21項目** を検証。いずれも成功。配布用 `Launch.html` を `file://` で直接開くオフライン検証でも、同じ既存183項目、新機能112項目（大量データ性能測定は重複省略）、安全な取り消し21項目の計 **316項目すべて成功**。
+
+再現コマンド（Node、Chrome、Playwrightがある開発環境）：
+
+```
+node --test tests/*.test.cjs
+python3 scripts/build-standalone.py
+node tests/browser-acceptance.cjs
+node tests/multilingual-browser.cjs
+node tests/chart-view-browser.cjs
+node tests/lot-axis-browser.cjs
+node tests/workflow-browser.cjs
+node tests/workflow-safety-browser.cjs
+```
+
+`TOOLBOX_PLAYWRIGHT`でPlaywrightの場所、`TOOLBOX_URL`で対象URLを指定可能。管理図専用テストのURLは `#capability` を付ける。`TOOLBOX_TEST_OUTPUT`は検証成果物の保存先。`TOOLBOX_SKIP_BENCHMARK=1`は性能測定を省略し、その有無はJSON結果に記録される。通常の全体実行ではA+B両方と10,000/50,000行を対象にする。
+
+独立参照：既存Python Decimal参照に加え、`tests/reference/batch-reference.py` のPython標準ライブラリ・手計算から、R7分位数、標本SD、区間union、並列工程、IQR、期間差、Excel日付方式の期待値を生成。例：10,20,30,40,50のP50=30、P75=40、P90=46、P95=48。08–10時、09–11時、12–13時は工程合計300分、区間union240分、経過300分、空白60分。
+
+失敗データ：50,000件の不正品質行から150,000件の問題情報を保持してもクラッシュしないことを追加検証。シート・見出し切替失敗時は元表・出典・解析結果をまとめて保持。遅延したプロジェクト読取は画面遷移時に取り消し、新しい操作を上書きしない。
+
+Excelは再読込により全件と統計値を検証。PDFはJA/ENのA4描画を目視確認。注記した件数・グラフ上限の範囲を表示し、全件はExcelに残す。自動テストは合成データのみで、実工場データは使用していない。
+
+### 性能（この検証端末のChrome、参考値）
+
+| 対象 | 行数 | 読込 | 解析・表示 | 全件Excelレポート | 出力サイズ |
+|---|---:|---:|---:|---:|---:|
+| 定例品質 | 10,000 | 228ms | 126ms | 1,024ms | 7.36MB |
+| 定例品質 | 50,000 | 340ms | 329ms | 6,606ms | 36.83MB |
+| バッチ工程 | 10,000 | 261ms | 195ms | 587ms | 2.97MB |
+| バッチ工程 | 50,000 | 420ms | 480ms | 2,514ms | 14.66MB |
+
+両方の50,000行をExcel再読込で照合。圧縮を有効にし、定例品質の50,000行レポートは初回の約115MBから約37MBへ縮小。入力の列数・文字列長・群数・端末性能で変わり、利用者の作業短縮効果を保証する値ではない。Excelパースと出力は同期処理で、特に全件レポート時には数秒の応答待ちがある。
+
+### Local-firstと限界
+
+自作JS全体にデータ送信API・Analytics・Error Tracking・製造データのログ出力がないことを静的検査。実ブラウザの読込後、読み込み・解析・Preset・Project・出力中のHTTP通信0件、実行時エラー0件、consoleへの検証用製造データ0件。localStorageに元行・元ファイル名が保存されないことを確認。ページ自体の配信通信は別。
+
+SheetJS診断に入力の一部が出る実在経路を再現し、同期read/write内で診断を抑止・例外を一般化する修正を単体・ブラウザ双方で確認。配布版0.20.3と公表済みadvisoryの確認範囲は [セキュリティ監査](docs/security-release.md) に記録。
+
+未検証：社内PCの実ポリシー・Windows版Edge/Safari/Firefox・任意の企業独自Excel・実利用者による所要時間短縮。高度な圧縮爆弾対策、任意に巨大なファイルの安全性、未知の脆弱性までは保証しない。サンプルと自動テストで検証した範囲を超えて統計的妥当性を保証しない。

@@ -6,6 +6,8 @@
 
 **上のリンクをクリックするだけで利用できます。インストール・ログイン・アクセス申請・コマンド操作は不要です。**
 
+**v0.7：定例品質分析・バッチ工程分析を追加。** 複数ファイルの一括解析、期間比較、設定の再利用、作業ファイル、Excel / PDFレポートが使えます。
+
 工程能力解析、Individuals / MR・Xbar-R管理図、サイクルタイム、根本原因調査（RCI）、パレート分析、Excel / CSVの整形・出力をブラウザで利用できます。日本語 / English対応。
 
 共有するときは、このリポジトリのURL、または[アプリの直接起動リンク](https://koh2828.github.io/manufacturing-toolbox/Launch.html)を送ってください。GitHubのファイル一覧で `Launch.html` をクリックするとソース表示になるため、**起動にはこのREADMEの上のリンク**を使います。
@@ -29,7 +31,7 @@
 
 ### English
 
-Click **Launch.html — Open the app** above. No installation, sign-in, terminal, or access request is required. To use the app offline, download `Launch.html` and open it in Edge or Chrome. All dependencies are included. Input data stays in your browser; only preferences are stored locally. The GitHub file listing shows HTML source, so use the launch link in this README to run the online app.
+Click **Launch.html — Open the app** above. No installation, sign-in, terminal, or access request is required. To use the app offline, download `Launch.html` and open it in Edge or Chrome. All dependencies are included. Version 0.7 adds recurring quality review and batch process analysis, multi-file import, period comparisons, reusable presets, explicit project files, and shared Excel/PDF reports. Input data stays in your browser; only preferences are stored locally. The GitHub file listing shows HTML source, so use the launch link in this README to run the online app.
 
 ### 開発・保守用 / Development only
 
