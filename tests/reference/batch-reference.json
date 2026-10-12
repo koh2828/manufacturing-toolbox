@@ -1,0 +1,565 @@
+{
+  "format": "manufacturing-toolbox-batch-reference",
+  "version": 1,
+  "method": "Python statistics.quantiles(method=inclusive), stdev(ddof=1); hand-derived interval arithmetic",
+  "unit": "minute",
+  "summaries": [
+    {
+      "name": "five-known",
+      "values": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 5,
+        "status": "reference",
+        "mean": 30,
+        "median": 30,
+        "sd": 15.811388300841896,
+        "min": 10,
+        "max": 50,
+        "p50": 30.0,
+        "p75": 40.0,
+        "p90": 46.0,
+        "p95": 48.0
+      }
+    },
+    {
+      "name": "minimum-minus-one",
+      "values": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 4,
+        "status": "insufficient",
+        "mean": 25,
+        "median": 25.0,
+        "sd": 12.909944487358056,
+        "min": 10,
+        "max": 40,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null
+      }
+    },
+    {
+      "name": "singleton",
+      "values": [
+        123
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 1,
+        "status": "insufficient",
+        "mean": 123,
+        "median": 123,
+        "sd": null,
+        "min": 123,
+        "max": 123,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null
+      }
+    },
+    {
+      "name": "empty",
+      "values": [],
+      "minSamples": 5,
+      "expected": {
+        "n": 0,
+        "status": "insufficient",
+        "mean": null,
+        "median": null,
+        "sd": null,
+        "min": null,
+        "max": null,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null
+      }
+    },
+    {
+      "name": "constant",
+      "values": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 20,
+        "status": "available",
+        "mean": 60,
+        "median": 60.0,
+        "sd": 0.0,
+        "min": 60,
+        "max": 60,
+        "p50": 60.0,
+        "p75": 60.0,
+        "p90": 60.0,
+        "p95": 60.0
+      }
+    },
+    {
+      "name": "iqr-all",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        100
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 5,
+        "status": "reference",
+        "mean": 22,
+        "median": 3,
+        "sd": 43.617656975128774,
+        "min": 1,
+        "max": 100,
+        "p50": 3.0,
+        "p75": 4.0,
+        "p90": 61.6,
+        "p95": 80.8
+      }
+    },
+    {
+      "name": "iqr-retained-insufficient",
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 4,
+        "status": "insufficient",
+        "mean": 2.5,
+        "median": 2.5,
+        "sd": 1.2909944487358056,
+        "min": 1,
+        "max": 4,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null
+      }
+    },
+    {
+      "name": "iqr-six-all",
+      "values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        100
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 6,
+        "status": "reference",
+        "mean": 26.666666666666668,
+        "median": 12.5,
+        "sd": 35.95367389665021,
+        "min": 10,
+        "max": 100,
+        "p50": 12.5,
+        "p75": 13.75,
+        "p90": 57.0,
+        "p95": 78.5
+      }
+    },
+    {
+      "name": "iqr-six-retained",
+      "values": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "minSamples": 5,
+      "expected": {
+        "n": 5,
+        "status": "reference",
+        "mean": 12,
+        "median": 12,
+        "sd": 1.5811388300841898,
+        "min": 10,
+        "max": 14,
+        "p50": 12.0,
+        "p75": 13.0,
+        "p90": 13.6,
+        "p95": 13.8
+      }
+    }
+  ],
+  "intervals": [
+    {
+      "name": "parallel-with-gap",
+      "spans": [
+        [
+          0,
+          120
+        ],
+        [
+          60,
+          180
+        ],
+        [
+          240,
+          300
+        ]
+      ],
+      "expected": {
+        "elapsed": 300,
+        "sumStep": 300,
+        "active": 240,
+        "gap": 60,
+        "overlap": 60,
+        "merged": [
+          [
+            0,
+            180
+          ],
+          [
+            240,
+            300
+          ]
+        ],
+        "gaps": [
+          [
+            180,
+            240
+          ]
+        ]
+      }
+    },
+    {
+      "name": "nested-and-touching",
+      "spans": [
+        [
+          0,
+          240
+        ],
+        [
+          60,
+          120
+        ],
+        [
+          90,
+          150
+        ],
+        [
+          240,
+          300
+        ]
+      ],
+      "expected": {
+        "elapsed": 300,
+        "sumStep": 420,
+        "active": 300,
+        "gap": 0,
+        "overlap": 120,
+        "merged": [
+          [
+            0,
+            300
+          ]
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "name": "cross-midnight",
+      "spans": [
+        [
+          0,
+          180
+        ]
+      ],
+      "expected": {
+        "elapsed": 180,
+        "sumStep": 180,
+        "active": 180,
+        "gap": 0,
+        "overlap": 0,
+        "merged": [
+          [
+            0,
+            180
+          ]
+        ],
+        "gaps": []
+      }
+    }
+  ],
+  "iqr": [
+    {
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        100
+      ],
+      "q1": 2,
+      "q3": 4,
+      "lower": -1,
+      "upper": 7,
+      "excludedIndices": [
+        4
+      ],
+      "retained": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        100
+      ],
+      "q1": 11.25,
+      "q3": 13.75,
+      "lower": 7.5,
+      "upper": 17.5,
+      "excludedIndices": [
+        5
+      ],
+      "retained": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    }
+  ],
+  "timeCases": {
+    "sameInstant": [
+      "2026-09-01T17:00:00+09:00",
+      "2026-09-01T08:00:00Z"
+    ],
+    "sameWall": [
+      "2026-09-01 08:00:00",
+      46266.333333333336
+    ],
+    "excel1900": 46266.333333333336,
+    "excel1904": 44804.333333333336,
+    "expectedMs": 1788249600000,
+    "crossMidnight": [
+      "2026-09-01 23:00:00",
+      "2026-09-02 02:00:00"
+    ],
+    "crossMidnightMinutes": 180,
+    "invalid": [
+      "",
+      "08:00",
+      "2026-02-30 08:00:00",
+      "2026-09-01 24:00:00",
+      "2026-09-01T08:00:00+14:01",
+      60
+    ],
+    "mixedClockKindsMustNotBeCombined": [
+      "2026-09-01 08:00:00",
+      "2026-09-01T08:00:00Z"
+    ]
+  },
+  "beforeAfter": {
+    "product": "SYN-RESIN-A",
+    "equipment": "SYN-KETTLE-1",
+    "step": "Heating",
+    "before": {
+      "n": 5,
+      "status": "reference",
+      "mean": 140,
+      "median": 140,
+      "sd": 15.811388300841896,
+      "min": 120,
+      "max": 160,
+      "p50": 140.0,
+      "p75": 150.0,
+      "p90": 156.0,
+      "p95": 158.0
+    },
+    "after": {
+      "n": 5,
+      "status": "reference",
+      "mean": 106,
+      "median": 106,
+      "sd": 12.649110640673518,
+      "min": 90,
+      "max": 122,
+      "p50": 106.0,
+      "p75": 114.0,
+      "p90": 118.8,
+      "p95": 120.4
+    },
+    "deltaAfterMinusBeforeMinutes": {
+      "mean": -34,
+      "median": -34,
+      "p90": -37.2,
+      "p95": -37.6
+    },
+    "meanReductionMinutes": 34,
+    "meanReductionHours": 0.5666666666666667,
+    "meanReductionPercent": 24.285714285714285,
+    "causality": "Descriptive comparison only; no causal claim."
+  },
+  "fixture": {
+    "path": "tests/fixtures/batch-workflow.csv",
+    "sourceRows": 98,
+    "completeReferenceBatches": [
+      {
+        "batch": "SYN-09-001",
+        "period": "before",
+        "stepRows": 9,
+        "elapsed": 680.0,
+        "sumStep": 735,
+        "active": 650.0,
+        "gap": 30,
+        "overlap": 85.0,
+        "excess": 155
+      },
+      {
+        "batch": "SYN-09-002",
+        "period": "before",
+        "stepRows": 9,
+        "elapsed": 700.0,
+        "sumStep": 755,
+        "active": 670.0,
+        "gap": 30,
+        "overlap": 85.0,
+        "excess": 175
+      },
+      {
+        "batch": "SYN-09-003",
+        "period": "before",
+        "stepRows": 9,
+        "elapsed": 720.0,
+        "sumStep": 775,
+        "active": 690.0,
+        "gap": 30,
+        "overlap": 85.0,
+        "excess": 195
+      },
+      {
+        "batch": "SYN-09-004",
+        "period": "before",
+        "stepRows": 9,
+        "elapsed": 740.0,
+        "sumStep": 795,
+        "active": 710.0,
+        "gap": 30,
+        "overlap": 85.0,
+        "excess": 215
+      },
+      {
+        "batch": "SYN-09-005",
+        "period": "before",
+        "stepRows": 9,
+        "elapsed": 760.0,
+        "sumStep": 815,
+        "active": 730.0,
+        "gap": 30,
+        "overlap": 85.0,
+        "excess": 235
+      },
+      {
+        "batch": "SYN-10-001",
+        "period": "after",
+        "stepRows": 9,
+        "elapsed": 530.0,
+        "sumStep": 570,
+        "active": 500.0,
+        "gap": 30,
+        "overlap": 70.0,
+        "excess": 0
+      },
+      {
+        "batch": "SYN-10-002",
+        "period": "after",
+        "stepRows": 9,
+        "elapsed": 543.0,
+        "sumStep": 583,
+        "active": 513.0,
+        "gap": 30,
+        "overlap": 70.0,
+        "excess": 5
+      },
+      {
+        "batch": "SYN-10-003",
+        "period": "after",
+        "stepRows": 9,
+        "elapsed": 556.0,
+        "sumStep": 596,
+        "active": 526.0,
+        "gap": 30,
+        "overlap": 70.0,
+        "excess": 16
+      },
+      {
+        "batch": "SYN-10-004",
+        "period": "after",
+        "stepRows": 9,
+        "elapsed": 569.0,
+        "sumStep": 609,
+        "active": 539.0,
+        "gap": 30,
+        "overlap": 70.0,
+        "excess": 29
+      },
+      {
+        "batch": "SYN-10-005",
+        "period": "after",
+        "stepRows": 9,
+        "elapsed": 582.0,
+        "sumStep": 622,
+        "active": 552.0,
+        "gap": 30,
+        "overlap": 70.0,
+        "excess": 42
+      }
+    ],
+    "syntheticOnly": true,
+    "note": "Three invalid rows and two copies of one exact duplicate are deliberate."
+  }
+}
