@@ -13,7 +13,9 @@ test('Launch bundles exactly the source scripts with valid CSP hashes',()=>{
   });
   assert.equal(/<script[^>]+src=/.test(html),false);
   assert.equal(/<link[^>]+rel="stylesheet"/.test(html),false);
-  assert.ok(html.includes("connect-src 'none'"));
+  assert.ok(html.includes("connect-src 'self';"));
+  assert.ok(html.includes("'wasm-unsafe-eval'"));
+  assert.ok(!html.includes("'unsafe-eval'"));
 });
 test('Launch carries the bundled license and root entry points to it',()=>{
   const license=fs.readFileSync(path.join(root,'dist/vendor/LICENSE.sheetjs.txt'),'utf8').replace(/--/g,'—');
