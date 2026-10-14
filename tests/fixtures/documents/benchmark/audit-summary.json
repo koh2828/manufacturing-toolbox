@@ -159,7 +159,7 @@
     "uploadedBytes": 0
   },
   "sourceHashes": {
-    "dist/document-core.js": "0a7dd1d996b7445da9eeb58448095f049e14f786740e45bde03dc6aa42d039d8",
+    "dist/document-core.js": "bdc3a086f9540e154c8c87603929600fbce15381827bfc5c4320ff8bb2d85d79",
     "dist/document-engine.js": "809b21f5025779735691a05cfcd04e9a3bf3282fdb6b66a15b89d37d90aac4ca",
     "tests/fixtures/documents/mixed-certificates-20-pages.pdf": "d208dbfab38f0ce198ff4a3185b587aac94093b48076683b5a5b4cea3ab1cf8b",
     "tests/fixtures/documents/scanned-certificates-20-pages.pdf": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1"
