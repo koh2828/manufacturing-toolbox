@@ -1,0 +1,167 @@
+{
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/tesseract/tesseract.min.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/tesseract/worker.min.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/tesseract/core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/tesseract/lang/eng.traineddata.gz",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/tesseract/lang/jpn.traineddata.gz",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8768/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    }
+  ],
+  "cancellation": {
+    "code": "CANCELLED",
+    "completed": 0,
+    "retryStatus": "completed"
+  },
+  "metrics": {
+    "maxMainThreadLagMs": 1.7999999523162842,
+    "peakMainThreadJSHeapBytes": 19812234,
+    "sampleCount": 292,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "deviceMemory": 16,
+    "peakBrowserProcessTreeRSSBytes": 1369702400,
+    "memoryMethod": "RSS sum of Chrome process tree, 250ms samples; includes shared pages and browser baseline; main JS heap separately",
+    "os": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "arch": "arm64",
+      "cpu": "Apple M1"
+    },
+    "fixture": "mixed-certificates-20-pages.pdf",
+    "fixtureSHA256": "d208dbfab38f0ce198ff4a3185b587aac94093b48076683b5a5b4cea3ab1cf8b",
+    "measuredOn": "2026-10-14 Asia/Tokyo"
+  },
+  "requestSummary": {
+    "total": 25,
+    "methodCounts": {
+      "GET": 25
+    },
+    "uploadedBytes": 0
+  },
+  "sourceHashes": {
+    "dist/document-core.js": "0a7dd1d996b7445da9eeb58448095f049e14f786740e45bde03dc6aa42d039d8",
+    "dist/document-engine.js": "809b21f5025779735691a05cfcd04e9a3bf3282fdb6b66a15b89d37d90aac4ca",
+    "tests/fixtures/documents/mixed-certificates-20-pages.pdf": "d208dbfab38f0ce198ff4a3185b587aac94093b48076683b5a5b4cea3ab1cf8b",
+    "tests/fixtures/documents/scanned-certificates-20-pages.pdf": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1"
+  }
+}

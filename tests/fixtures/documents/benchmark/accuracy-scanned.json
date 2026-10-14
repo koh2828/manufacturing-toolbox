@@ -1,0 +1,1732 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-14T11:04:49.603Z",
+  "synthetic": true,
+  "sourceFile": "scanned-certificates-20-pages.pdf",
+  "evaluatedPageCount": 20,
+  "actualPageCount": 20,
+  "expectedDocuments": 16,
+  "actualDocuments": 18,
+  "expectedRows": 93,
+  "actualRows": 84,
+  "method": "Exact text after outer trimming and whitespace folding only. No case folding, numeric conversion, aliasing, or Unicode correction. Row association uses source-page geometry, not recognized text.",
+  "validationScope": "Development corpus, not unseen real-world or independent supplier validation.",
+  "boundary": {
+    "adjacentDecisions": {
+      "correct": 17,
+      "total": 19,
+      "percent": 89.47
+    },
+    "truePositive": 15,
+    "falsePositive": 2,
+    "falseNegative": 0,
+    "precision": 88.24,
+    "recall": 100,
+    "f1": 93.75
+  },
+  "secondaryAccuracy": {
+    "whitespaceInsensitiveItemValuePair": {
+      "correct": 72,
+      "total": 93,
+      "percent": 77.42
+    },
+    "definition": "Remove whitespace only from expected and extracted item names and raw values, after the same geometry-only row association. No Unicode, case, punctuation, digit, fuzzy, or alias correction. Production values remain unchanged."
+  },
+  "accuracy": {
+    "supplier": {
+      "correct": 20,
+      "total": 20,
+      "percent": 100
+    },
+    "product": {
+      "correct": 13,
+      "total": 20,
+      "percent": 65
+    },
+    "lot": {
+      "correct": 17,
+      "total": 19,
+      "percent": 89.47
+    },
+    "item": {
+      "correct": 67,
+      "total": 93,
+      "percent": 72.04
+    },
+    "value": {
+      "correct": 76,
+      "total": 93,
+      "percent": 81.72
+    },
+    "itemValuePair": {
+      "correct": 60,
+      "total": 93,
+      "percent": 64.52
+    }
+  },
+  "review": {
+    "unidentifiedPages": 0,
+    "needsReviewPages": 19,
+    "documentsByStatus": {
+      "identified": 1,
+      "needsReview": 17,
+      "unidentified": 0
+    },
+    "rowsWithIssues": 28,
+    "unflaggedMismatchedRows": 11,
+    "unconfirmedDocuments": 18,
+    "missingRows": 10,
+    "extraRows": 1,
+    "ambiguousPageMembership": 0,
+    "mismatchedMetadataCells": 14,
+    "mismatchedRowCells": 77,
+    "minimumCorrectionCells": 91,
+    "correctionDefinition": "Mismatched target cells across one metadata set per expected certificate and six cells per expected row; counts absent expected values, does not count extra rows or boundary-review operations. This is not measured user correction effort."
+  },
+  "metadata": {
+    "sourceFile": "scanned-certificates-20-pages.pdf",
+    "engineInput": "engine-scanned.json",
+    "engineTimings": {
+      "totalMs": 15912.399999856949,
+      "modelLoadMs": 260.2000000476837
+    },
+    "environment": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "options": {
+      "language": "eng+jpn",
+      "forceOCR": false,
+      "layout": "block",
+      "preprocess": "original",
+      "rotation": 0,
+      "deskew": 0,
+      "scale": 2,
+      "denoise": false
+    },
+    "performance": {
+      "maxMainThreadLagMs": 2.5999999046325684,
+      "peakMainThreadJSHeapBytes": 22797002,
+      "sampleCount": 319,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "hardwareConcurrency": 8,
+      "deviceMemory": 16,
+      "peakBrowserProcessTreeRSSBytes": 1333755904,
+      "memoryMethod": "RSS sum of Chrome process tree, 250ms samples; includes shared pages and browser baseline; main JS heap separately",
+      "os": {
+        "platform": "darwin",
+        "release": "25.6.0",
+        "arch": "arm64",
+        "cpu": "Apple M1"
+      },
+      "fixture": "scanned-certificates-20-pages.pdf",
+      "fixtureSHA256": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1",
+      "measuredOn": "2026-10-14 Asia/Tokyo"
+    }
+  },
+  "metadataMismatches": [
+    {
+      "documentId": "fixture-doc-04",
+      "field": "productName",
+      "expected": "青葉溶液A",
+      "actual": "青葉 溶液 A"
+    },
+    {
+      "documentId": "fixture-doc-04",
+      "field": "issueDate",
+      "expected": "2026-10-04",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-06",
+      "field": "productName",
+      "expected": "青葉粉末B",
+      "actual": "青葉 粉末 B"
+    },
+    {
+      "documentId": "fixture-doc-06",
+      "field": "issueDate",
+      "expected": "2026-10-06",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "productName",
+      "expected": "青葉溶液A",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "productCode",
+      "expected": "AS1",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "lot",
+      "expected": "AO-26-0009",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "certificateNumber",
+      "expected": "AO-COA-0009",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "issueDate",
+      "expected": "2026-10-09",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "inspectionDate",
+      "expected": "2026-09-19",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-09",
+      "field": "deliveryDate",
+      "expected": "2026-10-11",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-12",
+      "field": "productName",
+      "expected": "青葉粉末B",
+      "actual": "青葉 粉末 B"
+    },
+    {
+      "documentId": "fixture-doc-12",
+      "field": "issueDate",
+      "expected": "2026-10-12",
+      "actual": ""
+    },
+    {
+      "documentId": "fixture-doc-15",
+      "field": "productName",
+      "expected": "青葉溶液A",
+      "actual": "青葉 溶液"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-01-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p1:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-01-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p1:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-01-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p1:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-01-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p1:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-01-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p2:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-01-row-6",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p2:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-01-row-7",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p2:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-01-row-8",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p2:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-02-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p3:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-02-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p3:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-02-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p3:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-02-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p3:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-02-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p3:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-03-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p4:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-03-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p4:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-03-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p4:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 4,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-04-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p5:r0",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "粘度",
+              "actual": "HE"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-04-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p5:r1",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "揮発分",
+              "actual": "揮発 分"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-04-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p5:r2",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "プロピオン酸",
+              "actual": "プロ ピオ ン 酸"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-04-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p5:r3",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "カリウム",
+              "actual": "カリ ウム"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [
+        "tableNotFound",
+        "noInspectionRows",
+        "missingProduct",
+        "missingLot",
+        "unresolvedContinuation"
+      ],
+      "rowsWithIssues": 0,
+      "mismatchedRowCells": 19,
+      "method": "ocr",
+      "degradation": "skew +2 degrees",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": false,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-04-row-5",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "ナトリウム",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "N.D.",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "ppm",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "5",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "ICP-01",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-04-row-6",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "密度",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "1,234.5",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "kg/m3",
+              "actual": ""
+            },
+            {
+              "field": "lsl",
+              "expected": "1200",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "1250",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "QM-06",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-04-row-7",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "外観",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "Pass",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "VISUAL",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-04-row-8",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "不純物",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "Not Detected",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "ppm",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "1",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "GC-02",
+              "actual": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-05-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p7:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-05-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p7:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-05-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p7:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-05-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p7:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-05-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p7:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 4,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-06-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p8:r0",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "粘度",
+              "actual": "HE"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-06-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p8:r1",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "揮発分",
+              "actual": "揮発 分"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-06-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p8:r2",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "プロピオン酸",
+              "actual": "プロ ピオ ン 酸"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-06-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p8:r3",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "カリウム",
+              "actual": "カリ ウム"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 3,
+      "mismatchedRowCells": 3,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-07-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-07-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-07-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-07-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": [
+            {
+              "field": "lsl",
+              "expected": "90",
+              "actual": "920"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-07-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-07-row-6",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r5",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-07-row-7",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r6",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "95–110",
+              "actual": "95-110"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-07-row-8",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p9:r7",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "100 ± 5",
+              "actual": "1005"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-08-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p10:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-08-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p10:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-08-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p10:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-08-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p10:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-08-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p10:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-08-row-6",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p10:r5",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [
+        "missingProduct",
+        "missingLot"
+      ],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 4,
+      "method": "ocr",
+      "degradation": "low contrast",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": false,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-09-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p11:r0",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "粘度",
+              "actual": "HE"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-09-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p11:r1",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "揮発分",
+              "actual": "揮発 分"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-09-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p11:r2",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "プロピオン酸",
+              "actual": "プロ ピオ ン 酸"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-09-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p11:r3",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "カリウム",
+              "actual": "カリ ウム"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [
+        "unresolvedContinuation"
+      ],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 1,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-09-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p12:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-09-row-6",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p12:r1",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "1,234.5",
+              "actual": "1.234.5"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-09-row-7",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p12:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-10-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p13:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-10-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p13:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-10-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p13:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-10-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p13:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 1,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-11-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-11-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-11-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-11-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-11-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-11-row-6",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r5",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-11-row-7",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p14:r6",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "95–110",
+              "actual": "95-110"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 2,
+      "mismatchedRowCells": 4,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-12-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p15:r0",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "粘度",
+              "actual": "HE"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-12-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p15:r1",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "揮発分",
+              "actual": "揮発 分"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-12-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p15:r2",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "プロピオン酸",
+              "actual": "プロ ピオ ン 酸"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-12-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p15:r3",
+          "itemCorrect": false,
+          "valueCorrect": true,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "カリウム",
+              "actual": "カリ ウム"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-12-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p15:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 3,
+      "mismatchedRowCells": 2,
+      "method": "ocr",
+      "degradation": "partially obscured result",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 1,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-13-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p16:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-13-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p16:r1",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "0.01",
+              "actual": "ント"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-13-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p16:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-13-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p16:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": [
+            {
+              "field": "lsl",
+              "expected": "90",
+              "actual": "920"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 2,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-13-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p17:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-13-row-6",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p17:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-13-row-7",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p17:r2",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "95–110",
+              "actual": "95-110"
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-13-row-8",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p17:r3",
+          "itemCorrect": true,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "raw",
+              "expected": "100 ± 5",
+              "actual": "100+5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [
+        "missingLot"
+      ],
+      "rowsWithIssues": 1,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": null,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-14-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p18:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-14-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p18:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-14-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p18:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-14-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p18:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "status": "needsReview",
+      "verification": "unconfirmed",
+      "documentIssues": [
+        "tableNotFound",
+        "noInspectionRows"
+      ],
+      "rowsWithIssues": 0,
+      "mismatchedRowCells": 33,
+      "method": "ocr",
+      "degradation": "skew -1.5 degrees + mild blur",
+      "supplierCorrect": true,
+      "productCorrect": false,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-15-row-1",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "粘度",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "102.5",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "mPa.s",
+              "actual": ""
+            },
+            {
+              "field": "lsl",
+              "expected": "95",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "110",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "JIS K7117",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-15-row-2",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "揮発分",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "0.01",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "%",
+              "actual": ""
+            },
+            {
+              "field": "lsl",
+              "expected": "0",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "0.10",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "QM-02",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-15-row-3",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "プロピオン酸",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "<0.01",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "%",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "0.05",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "GC-01",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-15-row-4",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "カリウム",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "ND",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "ppm",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "5",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "ICP-01",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-15-row-5",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "ナトリウム",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "N.D.",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "ppm",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "5",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "ICP-01",
+              "actual": ""
+            }
+          ]
+        },
+        {
+          "expectedId": "fixture-doc-15-row-6",
+          "matchedRowId": null,
+          "itemCorrect": false,
+          "valueCorrect": false,
+          "pairingCorrect": false,
+          "cells": [
+            {
+              "field": "item",
+              "expected": "密度",
+              "actual": ""
+            },
+            {
+              "field": "raw",
+              "expected": "1,234.5",
+              "actual": ""
+            },
+            {
+              "field": "unit",
+              "expected": "kg/m3",
+              "actual": ""
+            },
+            {
+              "field": "lsl",
+              "expected": "1200",
+              "actual": ""
+            },
+            {
+              "field": "usl",
+              "expected": "1250",
+              "actual": ""
+            },
+            {
+              "field": "method",
+              "expected": "QM-06",
+              "actual": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "status": "identified",
+      "verification": "unconfirmed",
+      "documentIssues": [],
+      "rowsWithIssues": 0,
+      "mismatchedRowCells": 0,
+      "method": "ocr",
+      "degradation": "none",
+      "supplierCorrect": true,
+      "productCorrect": true,
+      "lotCorrect": true,
+      "alignment": "source-page vertical geometry / monotonic alignment",
+      "extraRows": 0,
+      "rows": [
+        {
+          "expectedId": "fixture-doc-16-row-1",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p20:r0",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-16-row-2",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p20:r1",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-16-row-3",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p20:r2",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-16-row-4",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p20:r3",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        },
+        {
+          "expectedId": "fixture-doc-16-row-5",
+          "matchedRowId": "7ecb1a8b5fcae331f2d3570770db2f41115eb2f3994a6ef207183f9449b2edc1-p20:r4",
+          "itemCorrect": true,
+          "valueCorrect": true,
+          "pairingCorrect": true,
+          "cells": []
+        }
+      ]
+    }
+  ]
+}

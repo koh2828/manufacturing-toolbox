@@ -1,0 +1,7538 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "seed": 240101,
+  "generatedFor": "Manufacturing Toolbox Document Intelligence",
+  "sourceFile": "mixed-certificates-20-pages.pdf",
+  "pageCount": 20,
+  "documentCount": 16,
+  "inspectionRowCount": 93,
+  "scanDpi": 150,
+  "coordinateSystem": "normalized [x,y,width,height], top-left origin; source vector positions before deliberate scan rotation",
+  "suppliers": {
+    "aster": {
+      "name": "Aster Materials",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "templateId": "aster-v1",
+      "lang": "en",
+      "products": [
+        [
+          "Aster Resin R1",
+          "AR1"
+        ],
+        [
+          "Aster Catalyst C2",
+          "AC2"
+        ]
+      ]
+    },
+    "aoba": {
+      "name": "青葉試薬株式会社",
+      "title": "検査成績書",
+      "templateId": "aoba-v1",
+      "lang": "ja",
+      "products": [
+        [
+          "青葉溶液A",
+          "AS1"
+        ],
+        [
+          "青葉粉末B",
+          "AP2"
+        ]
+      ]
+    },
+    "northstar": {
+      "name": "Northstar Polymers",
+      "title": "INSPECTION REPORT",
+      "templateId": "northstar-v1",
+      "lang": "en",
+      "products": [
+        [
+          "Northstar Polymer N1",
+          "NP1"
+        ],
+        [
+          "Northstar Additive N2",
+          "NA2"
+        ]
+      ]
+    }
+  },
+  "documents": [
+    {
+      "id": "fixture-doc-01",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0001",
+        "certificateNumber": "AS-COA-0001",
+        "issueDate": "2026-10-01",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-10-03"
+      },
+      "sourcePages": [
+        1,
+        2
+      ],
+      "rowCount": 8
+    },
+    {
+      "id": "fixture-doc-02",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0002",
+        "certificateNumber": "AS-COA-0002",
+        "issueDate": "2026-10-02",
+        "inspectionDate": "2026-09-12",
+        "deliveryDate": "2026-10-04"
+      },
+      "sourcePages": [
+        3
+      ],
+      "rowCount": 5
+    },
+    {
+      "id": "fixture-doc-03",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "fields": {
+        "productName": "Aster Catalyst C2",
+        "productCode": "AC2",
+        "lot": "AS-26-0003",
+        "certificateNumber": "AS-COA-0003",
+        "issueDate": "2026-10-03",
+        "inspectionDate": "2026-09-13",
+        "deliveryDate": "2026-10-05"
+      },
+      "sourcePages": [
+        4
+      ],
+      "rowCount": 3
+    },
+    {
+      "id": "fixture-doc-04",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0004",
+        "certificateNumber": "AO-COA-0004",
+        "issueDate": "2026-10-04",
+        "inspectionDate": "2026-09-14",
+        "deliveryDate": "2026-10-06"
+      },
+      "sourcePages": [
+        5,
+        6
+      ],
+      "rowCount": 8
+    },
+    {
+      "id": "fixture-doc-05",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "fields": {
+        "productName": "Northstar Polymer N1",
+        "productCode": "NP1",
+        "lot": "NO-26-0005",
+        "certificateNumber": "NO-COA-0005",
+        "issueDate": "2026-10-05",
+        "inspectionDate": "2026-09-15",
+        "deliveryDate": "2026-10-07"
+      },
+      "sourcePages": [
+        7
+      ],
+      "rowCount": 5
+    },
+    {
+      "id": "fixture-doc-06",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "fields": {
+        "productName": "青葉粉末B",
+        "productCode": "AP2",
+        "lot": "AO-26-0006",
+        "certificateNumber": "AO-COA-0006",
+        "issueDate": "2026-10-06",
+        "inspectionDate": "2026-09-16",
+        "deliveryDate": "2026-10-08"
+      },
+      "sourcePages": [
+        8
+      ],
+      "rowCount": 4
+    },
+    {
+      "id": "fixture-doc-07",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "fields": {
+        "productName": "Northstar Additive N2",
+        "productCode": "NA2",
+        "lot": "NO-26-0007",
+        "certificateNumber": "NO-COA-0007",
+        "issueDate": "2026-10-07",
+        "inspectionDate": "2026-09-17",
+        "deliveryDate": "2026-10-09"
+      },
+      "sourcePages": [
+        9
+      ],
+      "rowCount": 8
+    },
+    {
+      "id": "fixture-doc-08",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0008",
+        "certificateNumber": "AS-COA-0008",
+        "issueDate": "2026-10-08",
+        "inspectionDate": "2026-09-18",
+        "deliveryDate": "2026-10-10"
+      },
+      "sourcePages": [
+        10
+      ],
+      "rowCount": 6
+    },
+    {
+      "id": "fixture-doc-09",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0009",
+        "certificateNumber": "AO-COA-0009",
+        "issueDate": "2026-10-09",
+        "inspectionDate": "2026-09-19",
+        "deliveryDate": "2026-10-11"
+      },
+      "sourcePages": [
+        11,
+        12
+      ],
+      "rowCount": 7
+    },
+    {
+      "id": "fixture-doc-10",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "fields": {
+        "productName": "Northstar Polymer N1",
+        "productCode": "NP1",
+        "lot": "NO-26-0010",
+        "certificateNumber": "NO-COA-0010",
+        "issueDate": "2026-10-10",
+        "inspectionDate": "2026-09-20",
+        "deliveryDate": "2026-10-12"
+      },
+      "sourcePages": [
+        13
+      ],
+      "rowCount": 4
+    },
+    {
+      "id": "fixture-doc-11",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "fields": {
+        "productName": "Aster Catalyst C2",
+        "productCode": "AC2",
+        "lot": "AS-26-0011",
+        "certificateNumber": "AS-COA-0011",
+        "issueDate": "2026-10-11",
+        "inspectionDate": "2026-09-21",
+        "deliveryDate": "2026-10-13"
+      },
+      "sourcePages": [
+        14
+      ],
+      "rowCount": 7
+    },
+    {
+      "id": "fixture-doc-12",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "fields": {
+        "productName": "青葉粉末B",
+        "productCode": "AP2",
+        "lot": "AO-26-0012",
+        "certificateNumber": "AO-COA-0012",
+        "issueDate": "2026-10-12",
+        "inspectionDate": "2026-09-22",
+        "deliveryDate": "2026-10-14"
+      },
+      "sourcePages": [
+        15
+      ],
+      "rowCount": 5
+    },
+    {
+      "id": "fixture-doc-13",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "fields": {
+        "productName": "Northstar Additive N2",
+        "productCode": "NA2",
+        "lot": "NO-26-0013",
+        "certificateNumber": "NO-COA-0013",
+        "issueDate": "2026-10-13",
+        "inspectionDate": "2026-09-23",
+        "deliveryDate": "2026-10-15"
+      },
+      "sourcePages": [
+        16,
+        17
+      ],
+      "rowCount": 8
+    },
+    {
+      "id": "fixture-doc-14",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "",
+        "certificateNumber": "AS-COA-0014",
+        "issueDate": "2026-10-14",
+        "inspectionDate": "2026-09-24",
+        "deliveryDate": "2026-10-16"
+      },
+      "sourcePages": [
+        18
+      ],
+      "rowCount": 4
+    },
+    {
+      "id": "fixture-doc-15",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0015",
+        "certificateNumber": "AO-COA-0015",
+        "issueDate": "2026-10-15",
+        "inspectionDate": "2026-09-25",
+        "deliveryDate": ""
+      },
+      "sourcePages": [
+        19
+      ],
+      "rowCount": 6
+    },
+    {
+      "id": "fixture-doc-16",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "fields": {
+        "productName": "Northstar Polymer N1",
+        "productCode": "NP1",
+        "lot": "NO-26-0016",
+        "certificateNumber": "NO-COA-0016",
+        "issueDate": "2026-10-16",
+        "inspectionDate": "2026-09-26",
+        "deliveryDate": "2026-10-18"
+      },
+      "sourcePages": [
+        20
+      ],
+      "rowCount": 5
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "documentId": "fixture-doc-01",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0001",
+        "certificateNumber": "AS-COA-0001",
+        "issueDate": "2026-10-01",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-10-03"
+      },
+      "documentPage": 1,
+      "documentPageCount": 2,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "101.6",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-01-row-1",
+          "sourcePage": 1,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.066277,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.028028,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.100835,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-01-row-2",
+          "sourcePage": 1,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.107372,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-01-row-3",
+          "sourcePage": 1,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.10738,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-01-row-4",
+          "sourcePage": 1,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.078425,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.586775,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.586775,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "text",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.124263,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.09862,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 2,
+      "documentId": "fixture-doc-01",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0001",
+        "certificateNumber": "AS-COA-0001",
+        "issueDate": "2026-10-01",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-10-03"
+      },
+      "documentPage": 2,
+      "documentPageCount": 2,
+      "continuation": true,
+      "rows": [
+        {
+          "item": "Sodium",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-01-row-5",
+          "sourcePage": 2,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.056959,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Density",
+          "raw": "1,234.5",
+          "unit": "kg/m3",
+          "lsl": "1200",
+          "usl": "1250",
+          "method": "QM-06",
+          "id": "fixture-doc-01-row-6",
+          "sourcePage": 2,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.056016,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.056048,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.045746,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.037371,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.037371,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Appearance",
+          "raw": "Pass",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-01-row-7",
+          "sourcePage": 2,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.090598,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.037346,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.059756,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Impurity",
+          "raw": "Not Detected",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "1",
+          "method": "GC-02",
+          "id": "fixture-doc-01-row-8",
+          "sourcePage": 2,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.05974,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.586775,
+              0.098046,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.586775,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.586775,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.124263,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.09862,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 3,
+      "documentId": "fixture-doc-02",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0002",
+        "certificateNumber": "AS-COA-0002",
+        "issueDate": "2026-10-02",
+        "inspectionDate": "2026-09-12",
+        "deliveryDate": "2026-10-04"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "112.5",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-02-row-1",
+          "sourcePage": 3,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.066277,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.028028,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.100835,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-02-row-2",
+          "sourcePage": 3,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.107372,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-02-row-3",
+          "sourcePage": 3,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.10738,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-02-row-4",
+          "sourcePage": 3,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.078425,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.586775,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.586775,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Sodium",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-02-row-5",
+          "sourcePage": 3,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.62716,
+              0.056959,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.62716,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.62716,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.62716,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.62716,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.615282,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.124263,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.09862,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.239936
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 4,
+      "documentId": "fixture-doc-03",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Catalyst C2",
+        "productCode": "AC2",
+        "lot": "AS-26-0003",
+        "certificateNumber": "AS-COA-0003",
+        "issueDate": "2026-10-03",
+        "inspectionDate": "2026-09-13",
+        "deliveryDate": "2026-10-05"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "101.6",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-03-row-1",
+          "sourcePage": 4,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.066277,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.028028,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.100835,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-03-row-2",
+          "sourcePage": 4,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.107372,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-03-row-3",
+          "sourcePage": 4,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.10738,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.14377,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.09862,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.159166
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 5,
+      "documentId": "fixture-doc-04",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0004",
+        "certificateNumber": "AO-COA-0004",
+        "issueDate": "2026-10-04",
+        "inspectionDate": "2026-09-14",
+        "deliveryDate": "2026-10-06"
+      },
+      "documentPage": 1,
+      "documentPageCount": 2,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "99.2",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117",
+          "id": "fixture-doc-04-row-1",
+          "sourcePage": 5,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.077515,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-04-row-2",
+          "sourcePage": 5,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.050397,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "プロピオン酸",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-04-row-3",
+          "sourcePage": 5,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.100794,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.049478,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "カリウム",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-04-row-4",
+          "sourcePage": 5,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.067196,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.586775,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.586775,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 6,
+      "documentId": "fixture-doc-04",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0004",
+        "certificateNumber": "AO-COA-0004",
+        "issueDate": "2026-10-04",
+        "inspectionDate": "2026-09-14",
+        "deliveryDate": "2026-10-06"
+      },
+      "documentPage": 2,
+      "documentPageCount": 2,
+      "continuation": true,
+      "rows": [
+        {
+          "item": "ナトリウム",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-04-row-5",
+          "sourcePage": 6,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.083995,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "密度",
+          "raw": "1,234.5",
+          "unit": "kg/m3",
+          "lsl": "1200",
+          "usl": "1250",
+          "method": "QM-06",
+          "id": "fixture-doc-04-row-6",
+          "sourcePage": 6,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.056048,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.045746,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.037371,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.037371,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "外観",
+          "raw": "Pass",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-04-row-7",
+          "sourcePage": 6,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.059756,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.037346,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "不純物",
+          "raw": "Not Detected",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "1",
+          "method": "GC-02",
+          "id": "fixture-doc-04-row-8",
+          "sourcePage": 6,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.050397,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.586775,
+              0.049478,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.586775,
+              0.098046,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.586775,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "skew +2 degrees",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 7,
+      "documentId": "fixture-doc-05",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "templateId": "northstar-v1",
+      "title": "INSPECTION REPORT",
+      "language": "en",
+      "fields": {
+        "productName": "Northstar Polymer N1",
+        "productCode": "NP1",
+        "lot": "NO-26-0005",
+        "certificateNumber": "NO-COA-0005",
+        "issueDate": "2026-10-05",
+        "inspectionDate": "2026-09-15",
+        "deliveryDate": "2026-10-07"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "99.5",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-05-row-1",
+          "sourcePage": 7,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.429985,
+              0.066277,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.429985,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.429985,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.429985,
+              0.100835,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.429985,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.429985,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.418107,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-05-row-2",
+          "sourcePage": 7,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.47037,
+              0.107372,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.47037,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.47037,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.47037,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.47037,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.47037,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.458492,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-05-row-3",
+          "sourcePage": 7,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.510756,
+              0.10738,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.510756,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.510756,
+              0.042506,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.510756,
+              0.049478,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.510756,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.510756,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.498878,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-05-row-4",
+          "sourcePage": 7,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.551141,
+              0.078425,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.551141,
+              0.032679,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.551141,
+              0.024263,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.551141,
+              0.052283,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.551141,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.551141,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.539263,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Sodium",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-05-row-5",
+          "sourcePage": 7,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.591526,
+              0.056959,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.591526,
+              0.032679,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.591526,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.591526,
+              0.052283,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.591526,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.591526,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.579648,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.060476,
+          0.185297,
+          0.177651,
+          0.015679
+        ],
+        "productCode": [
+          0.537566,
+          0.185297,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.060476,
+          0.222119,
+          0.101688,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.537566,
+          0.222119,
+          0.121177,
+          0.015679
+        ],
+        "issueDate": [
+          0.060476,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.537566,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.060476,
+          0.295763,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.380097,
+          0.878585,
+          0.239936
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.339339
+          ],
+          "unit": [
+            0.339339,
+            0.445172
+          ],
+          "raw": [
+            0.445172,
+            0.581243
+          ],
+          "method": [
+            0.581243,
+            0.734114
+          ],
+          "lsl": [
+            0.734114,
+            0.831548
+          ],
+          "usl": [
+            0.831548,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 8,
+      "documentId": "fixture-doc-06",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉粉末B",
+        "productCode": "AP2",
+        "lot": "AO-26-0006",
+        "certificateNumber": "AO-COA-0006",
+        "issueDate": "2026-10-06",
+        "inspectionDate": "2026-09-16",
+        "deliveryDate": "2026-10-08"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "99.8",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117",
+          "id": "fixture-doc-06-row-1",
+          "sourcePage": 8,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.077515,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-06-row-2",
+          "sourcePage": 8,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.050397,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "プロピオン酸",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-06-row-3",
+          "sourcePage": 8,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.100794,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.049478,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "カリウム",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-06-row-4",
+          "sourcePage": 8,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.067196,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.586775,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.586775,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 9,
+      "documentId": "fixture-doc-07",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "templateId": "northstar-v1",
+      "title": "INSPECTION REPORT",
+      "language": "en",
+      "fields": {
+        "productName": "Northstar Additive N2",
+        "productCode": "NA2",
+        "lot": "NO-26-0007",
+        "certificateNumber": "NO-COA-0007",
+        "issueDate": "2026-10-07",
+        "inspectionDate": "2026-09-17",
+        "deliveryDate": "2026-10-09"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "101.6",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-07-row-1",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.429985,
+              0.066277,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.429985,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.429985,
+              0.042038,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.429985,
+              0.100835,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.429985,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.429985,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.418107,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-07-row-2",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.47037,
+              0.107372,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.47037,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.47037,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.47037,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.47037,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.47037,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.458492,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-07-row-3",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.510756,
+              0.10738,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.510756,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.510756,
+              0.042506,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.510756,
+              0.049478,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.510756,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.510756,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.498878,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Acid Number",
+          "raw": ">100",
+          "unit": "mg/g",
+          "lsl": "90",
+          "usl": "",
+          "method": "QM-09",
+          "id": "fixture-doc-07-row-4",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.551141,
+              0.097094,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.551141,
+              0.037346,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.551141,
+              0.037839,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.551141,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.551141,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.551141,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.539263,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Appearance",
+          "raw": "Fail",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-07-row-5",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.591526,
+              0.090598,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.591526,
+              0.0,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.591526,
+              0.027069,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.591526,
+              0.059756,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.591526,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.591526,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.579648,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Color",
+          "raw": "N/A",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-07-row-6",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.631912,
+              0.040144,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.631912,
+              0.0,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.631912,
+              0.028004,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.631912,
+              0.059756,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.631912,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.631912,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.620034,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Range Result",
+          "raw": "95–110",
+          "unit": "mPa.s",
+          "lsl": "",
+          "usl": "",
+          "method": "QM-10",
+          "id": "fixture-doc-07-row-7",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.672297,
+              0.101786,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.672297,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.672297,
+              0.055113,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.672297,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.672297,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.672297,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.660419,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Tolerance Result",
+          "raw": "100 ± 5",
+          "unit": "mPa.s",
+          "lsl": "",
+          "usl": "",
+          "method": "QM-11",
+          "id": "fixture-doc-07-row-8",
+          "sourcePage": 9,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.712682,
+              0.126985,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.712682,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.712682,
+              0.056516,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.712682,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.712682,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.712682,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.700804,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.060476,
+          0.185297,
+          0.175621,
+          0.015679
+        ],
+        "productCode": [
+          0.537566,
+          0.185297,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.060476,
+          0.222119,
+          0.101688,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.537566,
+          0.222119,
+          0.121177,
+          0.015679
+        ],
+        "issueDate": [
+          0.060476,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.537566,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.060476,
+          0.295763,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.380097,
+          0.878585,
+          0.361092
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.339339
+          ],
+          "unit": [
+            0.339339,
+            0.445172
+          ],
+          "raw": [
+            0.445172,
+            0.581243
+          ],
+          "method": [
+            0.581243,
+            0.734114
+          ],
+          "lsl": [
+            0.734114,
+            0.831548
+          ],
+          "usl": [
+            0.831548,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 10,
+      "documentId": "fixture-doc-08",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-26-0008",
+        "certificateNumber": "AS-COA-0008",
+        "issueDate": "2026-10-08",
+        "inspectionDate": "2026-09-18",
+        "deliveryDate": "2026-10-10"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "100.4",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-08-row-1",
+          "sourcePage": 10,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.066277,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.028028,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.100835,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-08-row-2",
+          "sourcePage": 10,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.107372,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-08-row-3",
+          "sourcePage": 10,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.10738,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-08-row-4",
+          "sourcePage": 10,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.078425,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.586775,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.586775,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Sodium",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-08-row-5",
+          "sourcePage": 10,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.62716,
+              0.056959,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.62716,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.62716,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.62716,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.62716,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.615282,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Density",
+          "raw": "1,234.5",
+          "unit": "kg/m3",
+          "lsl": "1200",
+          "usl": "1250",
+          "method": "QM-06",
+          "id": "fixture-doc-08-row-6",
+          "sourcePage": 10,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.667546,
+              0.056016,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.667546,
+              0.056048,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.667546,
+              0.045746,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.667546,
+              0.037371,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.667546,
+              0.037371,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.667546,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.655668,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.124263,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.09862,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.280322
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 11,
+      "documentId": "fixture-doc-09",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0009",
+        "certificateNumber": "AO-COA-0009",
+        "issueDate": "2026-10-09",
+        "inspectionDate": "2026-09-19",
+        "deliveryDate": "2026-10-11"
+      },
+      "documentPage": 1,
+      "documentPageCount": 2,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "100.7",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117",
+          "id": "fixture-doc-09-row-1",
+          "sourcePage": 11,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.077515,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-09-row-2",
+          "sourcePage": 11,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.050397,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "プロピオン酸",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-09-row-3",
+          "sourcePage": 11,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.100794,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.049478,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "カリウム",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-09-row-4",
+          "sourcePage": 11,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.067196,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.586775,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.586775,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "low contrast",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 12,
+      "documentId": "fixture-doc-09",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0009",
+        "certificateNumber": "AO-COA-0009",
+        "issueDate": "2026-10-09",
+        "inspectionDate": "2026-09-19",
+        "deliveryDate": "2026-10-11"
+      },
+      "documentPage": 2,
+      "documentPageCount": 2,
+      "continuation": true,
+      "rows": [
+        {
+          "item": "ナトリウム",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-09-row-5",
+          "sourcePage": 12,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.083995,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "密度",
+          "raw": "1,234.5",
+          "unit": "kg/m3",
+          "lsl": "1200",
+          "usl": "1250",
+          "method": "QM-06",
+          "id": "fixture-doc-09-row-6",
+          "sourcePage": 12,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.056048,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.045746,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.037371,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.037371,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "外観",
+          "raw": "Pass",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-09-row-7",
+          "sourcePage": 12,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.059756,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.037346,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.159166
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 13,
+      "documentId": "fixture-doc-10",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "templateId": "northstar-v1",
+      "title": "INSPECTION REPORT",
+      "language": "en",
+      "fields": {
+        "productName": "Northstar Polymer N1",
+        "productCode": "NP1",
+        "lot": "NO-26-0010",
+        "certificateNumber": "NO-COA-0010",
+        "issueDate": "2026-10-10",
+        "inspectionDate": "2026-09-20",
+        "deliveryDate": "2026-10-12"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "101.0",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-10-row-1",
+          "sourcePage": 13,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.429985,
+              0.066277,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.429985,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.429985,
+              0.042038,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.429985,
+              0.100835,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.429985,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.429985,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.418107,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-10-row-2",
+          "sourcePage": 13,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.47037,
+              0.107372,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.47037,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.47037,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.47037,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.47037,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.47037,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.458492,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-10-row-3",
+          "sourcePage": 13,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.510756,
+              0.10738,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.510756,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.510756,
+              0.042506,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.510756,
+              0.049478,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.510756,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.510756,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.498878,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-10-row-4",
+          "sourcePage": 13,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.551141,
+              0.078425,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.551141,
+              0.032679,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.551141,
+              0.024263,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.551141,
+              0.052283,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.551141,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.551141,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.539263,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "text",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.060476,
+          0.185297,
+          0.177651,
+          0.015679
+        ],
+        "productCode": [
+          0.537566,
+          0.185297,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.060476,
+          0.222119,
+          0.101688,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.537566,
+          0.222119,
+          0.121177,
+          0.015679
+        ],
+        "issueDate": [
+          0.060476,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.537566,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.060476,
+          0.295763,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.380097,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.339339
+          ],
+          "unit": [
+            0.339339,
+            0.445172
+          ],
+          "raw": [
+            0.445172,
+            0.581243
+          ],
+          "method": [
+            0.581243,
+            0.734114
+          ],
+          "lsl": [
+            0.734114,
+            0.831548
+          ],
+          "usl": [
+            0.831548,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 14,
+      "documentId": "fixture-doc-11",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Catalyst C2",
+        "productCode": "AC2",
+        "lot": "AS-26-0011",
+        "certificateNumber": "AS-COA-0011",
+        "issueDate": "2026-10-11",
+        "inspectionDate": "2026-09-21",
+        "deliveryDate": "2026-10-13"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "101.6",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-11-row-1",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.066277,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.028028,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.100835,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-11-row-2",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.107372,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-11-row-3",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.10738,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Acid Number",
+          "raw": ">100",
+          "unit": "mg/g",
+          "lsl": "90",
+          "usl": "",
+          "method": "QM-09",
+          "id": "fixture-doc-11-row-4",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.097094,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.586775,
+              0.037839,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.586775,
+              0.037346,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.586775,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.586775,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Appearance",
+          "raw": "Fail",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-11-row-5",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.62716,
+              0.090598,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.62716,
+              0.027069,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.62716,
+              0.059756,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.615282,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Color",
+          "raw": "N/A",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-11-row-6",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.667546,
+              0.040144,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.667546,
+              0.028004,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.667546,
+              0.0,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.667546,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.667546,
+              0.0,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.667546,
+              0.059756,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.655668,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Range Result",
+          "raw": "95–110",
+          "unit": "mPa.s",
+          "lsl": "",
+          "usl": "",
+          "method": "QM-10",
+          "id": "fixture-doc-11-row-7",
+          "sourcePage": 14,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.707931,
+              0.101786,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.707931,
+              0.055113,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.707931,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.707931,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.707931,
+              0.0,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.707931,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.696053,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.14377,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.09862,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.320707
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 15,
+      "documentId": "fixture-doc-12",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉粉末B",
+        "productCode": "AP2",
+        "lot": "AO-26-0012",
+        "certificateNumber": "AO-COA-0012",
+        "issueDate": "2026-10-12",
+        "inspectionDate": "2026-09-22",
+        "deliveryDate": "2026-10-14"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "99.8",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117",
+          "id": "fixture-doc-12-row-1",
+          "sourcePage": 15,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.077515,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-12-row-2",
+          "sourcePage": 15,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.050397,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "プロピオン酸",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-12-row-3",
+          "sourcePage": 15,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.100794,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.049478,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "カリウム",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-12-row-4",
+          "sourcePage": 15,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.067196,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.586775,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.586775,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "ナトリウム",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-12-row-5",
+          "sourcePage": 15,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.62716,
+              0.083995,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.62716,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.62716,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.62716,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.62716,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.615282,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.239936
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 16,
+      "documentId": "fixture-doc-13",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "templateId": "northstar-v1",
+      "title": "INSPECTION REPORT",
+      "language": "en",
+      "fields": {
+        "productName": "Northstar Additive N2",
+        "productCode": "NA2",
+        "lot": "NO-26-0013",
+        "certificateNumber": "NO-COA-0013",
+        "issueDate": "2026-10-13",
+        "inspectionDate": "2026-09-23",
+        "deliveryDate": "2026-10-15"
+      },
+      "documentPage": 1,
+      "documentPageCount": 2,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "101.6",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-13-row-1",
+          "sourcePage": 16,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.429985,
+              0.066277,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.429985,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.429985,
+              0.042038,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.429985,
+              0.100835,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.429985,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.429985,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.418107,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-13-row-2",
+          "sourcePage": 16,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.47037,
+              0.107372,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.47037,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.47037,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.47037,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.47037,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.47037,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.458492,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-13-row-3",
+          "sourcePage": 16,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.510756,
+              0.10738,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.510756,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.510756,
+              0.042506,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.510756,
+              0.049478,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.510756,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.510756,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.498878,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Acid Number",
+          "raw": ">100",
+          "unit": "mg/g",
+          "lsl": "90",
+          "usl": "",
+          "method": "QM-09",
+          "id": "fixture-doc-13-row-4",
+          "sourcePage": 16,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.551141,
+              0.097094,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.551141,
+              0.037346,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.551141,
+              0.037839,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.551141,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.551141,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.551141,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.539263,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "partially obscured result",
+      "expectedReviewReasons": [
+        "obscured_cell"
+      ],
+      "fieldBboxes": {
+        "productName": [
+          0.060476,
+          0.185297,
+          0.175621,
+          0.015679
+        ],
+        "productCode": [
+          0.537566,
+          0.185297,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.060476,
+          0.222119,
+          0.101688,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.537566,
+          0.222119,
+          0.121177,
+          0.015679
+        ],
+        "issueDate": [
+          0.060476,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.537566,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.060476,
+          0.295763,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.380097,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.339339
+          ],
+          "unit": [
+            0.339339,
+            0.445172
+          ],
+          "raw": [
+            0.445172,
+            0.581243
+          ],
+          "method": [
+            0.581243,
+            0.734114
+          ],
+          "lsl": [
+            0.734114,
+            0.831548
+          ],
+          "usl": [
+            0.831548,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 17,
+      "documentId": "fixture-doc-13",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "templateId": "northstar-v1",
+      "title": "INSPECTION REPORT",
+      "language": "en",
+      "fields": {
+        "productName": "Northstar Additive N2",
+        "productCode": "NA2",
+        "lot": "NO-26-0013",
+        "certificateNumber": "NO-COA-0013",
+        "issueDate": "2026-10-13",
+        "inspectionDate": "2026-09-23",
+        "deliveryDate": "2026-10-15"
+      },
+      "documentPage": 2,
+      "documentPageCount": 2,
+      "continuation": true,
+      "rows": [
+        {
+          "item": "Appearance",
+          "raw": "Fail",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-13-row-5",
+          "sourcePage": 17,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.429985,
+              0.090598,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.429985,
+              0.0,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.429985,
+              0.027069,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.429985,
+              0.059756,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.429985,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.429985,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.418107,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Color",
+          "raw": "N/A",
+          "unit": "",
+          "lsl": "",
+          "usl": "",
+          "method": "VISUAL",
+          "id": "fixture-doc-13-row-6",
+          "sourcePage": 17,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.47037,
+              0.040144,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.47037,
+              0.0,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.47037,
+              0.028004,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.47037,
+              0.059756,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.47037,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.47037,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.458492,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Range Result",
+          "raw": "95–110",
+          "unit": "mPa.s",
+          "lsl": "",
+          "usl": "",
+          "method": "QM-10",
+          "id": "fixture-doc-13-row-7",
+          "sourcePage": 17,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.510756,
+              0.101786,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.510756,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.510756,
+              0.055113,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.510756,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.510756,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.510756,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.498878,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Tolerance Result",
+          "raw": "100 ± 5",
+          "unit": "mPa.s",
+          "lsl": "",
+          "usl": "",
+          "method": "QM-11",
+          "id": "fixture-doc-13-row-8",
+          "sourcePage": 17,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.551141,
+              0.126985,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.551141,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.551141,
+              0.056516,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.551141,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.551141,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.551141,
+              0.0,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.539263,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.060476,
+          0.185297,
+          0.175621,
+          0.015679
+        ],
+        "productCode": [
+          0.537566,
+          0.185297,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.060476,
+          0.222119,
+          0.101688,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.537566,
+          0.222119,
+          0.121177,
+          0.015679
+        ],
+        "issueDate": [
+          0.060476,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.537566,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.060476,
+          0.295763,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.380097,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.339339
+          ],
+          "unit": [
+            0.339339,
+            0.445172
+          ],
+          "raw": [
+            0.445172,
+            0.581243
+          ],
+          "method": [
+            0.581243,
+            0.734114
+          ],
+          "lsl": [
+            0.734114,
+            0.831548
+          ],
+          "usl": [
+            0.831548,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 18,
+      "documentId": "fixture-doc-14",
+      "supplierId": "aster",
+      "supplierName": "Aster Materials",
+      "templateId": "aster-v1",
+      "title": "CERTIFICATE OF ANALYSIS",
+      "language": "en",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "",
+        "certificateNumber": "AS-COA-0014",
+        "issueDate": "2026-10-14",
+        "inspectionDate": "2026-09-24",
+        "deliveryDate": "2026-10-16"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "102.2",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-14-row-1",
+          "sourcePage": 18,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.066277,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.465619,
+              0.028028,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.465619,
+              0.100835,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-14-row-2",
+          "sourcePage": 18,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.107372,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.506004,
+              0.05134,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-14-row-3",
+          "sourcePage": 18,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.10738,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.54639,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.54639,
+              0.049478,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-14-row-4",
+          "sourcePage": 18,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.078425,
+              0.014254
+            ],
+            "raw": [
+              0.342698,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.497249,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.599722,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.683717,
+              0.586775,
+              0.009343,
+              0.014254
+            ],
+            "method": [
+              0.767712,
+              0.586775,
+              0.052283,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [
+        "missing_lot"
+      ],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.124263,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.0,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.118109,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.199551
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.334299
+          ],
+          "raw": [
+            0.334299,
+            0.488849
+          ],
+          "unit": [
+            0.488849,
+            0.591323
+          ],
+          "lsl": [
+            0.591323,
+            0.675317
+          ],
+          "usl": [
+            0.675317,
+            0.759312
+          ],
+          "method": [
+            0.759312,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 19,
+      "documentId": "fixture-doc-15",
+      "supplierId": "aoba",
+      "supplierName": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "title": "検査成績書",
+      "language": "ja",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-26-0015",
+        "certificateNumber": "AO-COA-0015",
+        "issueDate": "2026-10-15",
+        "inspectionDate": "2026-09-25",
+        "deliveryDate": ""
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "102.5",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117",
+          "id": "fixture-doc-15-row-1",
+          "sourcePage": 19,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.465619,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.465619,
+              0.077515,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.465619,
+              0.042038,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.465619,
+              0.047608,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.465619,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.465619,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.453741,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-15-row-2",
+          "sourcePage": 19,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.506004,
+              0.050397,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.506004,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.506004,
+              0.032696,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.506004,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.506004,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.506004,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.494126,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "プロピオン酸",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-15-row-3",
+          "sourcePage": 19,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.54639,
+              0.100794,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.54639,
+              0.049478,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.54639,
+              0.042506,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.54639,
+              0.014937,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.54639,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.54639,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.534512,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "カリウム",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-15-row-4",
+          "sourcePage": 19,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.586775,
+              0.067196,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.586775,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.586775,
+              0.024263,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.586775,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.586775,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.586775,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.574897,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "ナトリウム",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-15-row-5",
+          "sourcePage": 19,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.62716,
+              0.083995,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.62716,
+              0.052283,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.62716,
+              0.033598,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.62716,
+              0.032679,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.62716,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.62716,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.615282,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "密度",
+          "raw": "1,234.5",
+          "unit": "kg/m3",
+          "lsl": "1200",
+          "usl": "1250",
+          "method": "QM-06",
+          "id": "fixture-doc-15-row-6",
+          "sourcePage": 19,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.667546,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.334299,
+              0.667546,
+              0.05134,
+              0.014254
+            ],
+            "raw": [
+              0.495569,
+              0.667546,
+              0.056048,
+              0.014254
+            ],
+            "unit": [
+              0.643399,
+              0.667546,
+              0.045746,
+              0.014254
+            ],
+            "lsl": [
+              0.749233,
+              0.667546,
+              0.037371,
+              0.014254
+            ],
+            "usl": [
+              0.848347,
+              0.667546,
+              0.037371,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.655668,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "skew -1.5 degrees + mild blur",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.272143,
+          0.185297,
+          0.086241,
+          0.015679
+        ],
+        "productCode": [
+          0.272143,
+          0.212617,
+          0.034928,
+          0.015679
+        ],
+        "lot": [
+          0.272143,
+          0.239936,
+          0.100668,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.272143,
+          0.267256,
+          0.120158,
+          0.015679
+        ],
+        "issueDate": [
+          0.272143,
+          0.294575,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.272143,
+          0.321895,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.272143,
+          0.349214,
+          0.0,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.415731,
+          0.878585,
+          0.280322
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.325899
+          ],
+          "method": [
+            0.325899,
+            0.487169
+          ],
+          "raw": [
+            0.487169,
+            0.635
+          ],
+          "unit": [
+            0.635,
+            0.740833
+          ],
+          "lsl": [
+            0.740833,
+            0.839947
+          ],
+          "usl": [
+            0.839947,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    },
+    {
+      "pageNumber": 20,
+      "documentId": "fixture-doc-16",
+      "supplierId": "northstar",
+      "supplierName": "Northstar Polymers",
+      "templateId": "northstar-v1",
+      "title": "INSPECTION REPORT",
+      "language": "en",
+      "fields": {
+        "productName": "Northstar Polymer N1",
+        "productCode": "NP1",
+        "lot": "NO-26-0016",
+        "certificateNumber": "NO-COA-0016",
+        "issueDate": "2026-10-16",
+        "inspectionDate": "2026-09-26",
+        "deliveryDate": "2026-10-18"
+      },
+      "documentPage": 1,
+      "documentPageCount": 1,
+      "continuation": false,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "102.8",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196",
+          "id": "fixture-doc-16-row-1",
+          "sourcePage": 20,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.429985,
+              0.066277,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.429985,
+              0.047608,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.429985,
+              0.042038,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.429985,
+              0.100835,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.429985,
+              0.018686,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.429985,
+              0.028028,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.418107,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02",
+          "id": "fixture-doc-16-row-2",
+          "sourcePage": 20,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.47037,
+              0.107372,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.47037,
+              0.0,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.47037,
+              0.032696,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.47037,
+              0.05134,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.47037,
+              0.009343,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.47037,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.458492,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01",
+          "id": "fixture-doc-16-row-3",
+          "sourcePage": 20,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.510756,
+              0.10738,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.510756,
+              0.014937,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.510756,
+              0.042506,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.510756,
+              0.049478,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.510756,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.510756,
+              0.032696,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.498878,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-16-row-4",
+          "sourcePage": 20,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.551141,
+              0.078425,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.551141,
+              0.032679,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.551141,
+              0.024263,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.551141,
+              0.052283,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.551141,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.551141,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.539263,
+            0.878585,
+            0.040385
+          ]
+        },
+        {
+          "item": "Sodium",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01",
+          "id": "fixture-doc-16-row-5",
+          "sourcePage": 20,
+          "bboxes": {
+            "item": [
+              0.068876,
+              0.591526,
+              0.056959,
+              0.014254
+            ],
+            "unit": [
+              0.347738,
+              0.591526,
+              0.032679,
+              0.014254
+            ],
+            "raw": [
+              0.453571,
+              0.591526,
+              0.033598,
+              0.014254
+            ],
+            "method": [
+              0.589643,
+              0.591526,
+              0.052283,
+              0.014254
+            ],
+            "lsl": [
+              0.742513,
+              0.591526,
+              0.0,
+              0.014254
+            ],
+            "usl": [
+              0.839947,
+              0.591526,
+              0.009343,
+              0.014254
+            ]
+          },
+          "bbox": [
+            0.060476,
+            0.579648,
+            0.878585,
+            0.040385
+          ]
+        }
+      ],
+      "expectedMethod": "ocr",
+      "degradation": "none",
+      "expectedReviewReasons": [],
+      "fieldBboxes": {
+        "productName": [
+          0.060476,
+          0.185297,
+          0.177651,
+          0.015679
+        ],
+        "productCode": [
+          0.537566,
+          0.185297,
+          0.035947,
+          0.015679
+        ],
+        "lot": [
+          0.060476,
+          0.222119,
+          0.101688,
+          0.015679
+        ],
+        "certificateNumber": [
+          0.537566,
+          0.222119,
+          0.121177,
+          0.015679
+        ],
+        "issueDate": [
+          0.060476,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "inspectionDate": [
+          0.537566,
+          0.258941,
+          0.094524,
+          0.015679
+        ],
+        "deliveryDate": [
+          0.060476,
+          0.295763,
+          0.094524,
+          0.015679
+        ]
+      },
+      "table": {
+        "bbox": [
+          0.060476,
+          0.380097,
+          0.878585,
+          0.239936
+        ],
+        "columns": {
+          "item": [
+            0.060476,
+            0.339339
+          ],
+          "unit": [
+            0.339339,
+            0.445172
+          ],
+          "raw": [
+            0.445172,
+            0.581243
+          ],
+          "method": [
+            0.581243,
+            0.734114
+          ],
+          "lsl": [
+            0.734114,
+            0.831548
+          ],
+          "usl": [
+            0.831548,
+            0.939061
+          ]
+        }
+      },
+      "widthPoints": 595.2755905511812,
+      "heightPoints": 841.8897637795277
+    }
+  ],
+  "individualFiles": {
+    "text-certificate-aster.pdf": {
+      "groundTruthPages": [
+        3
+      ],
+      "method": "text"
+    },
+    "scanned-certificate-aoba.pdf": {
+      "groundTruthPages": [
+        8
+      ],
+      "method": "ocr"
+    },
+    "certificate-aster.png": {
+      "groundTruthPages": [
+        3
+      ],
+      "method": "ocr"
+    },
+    "certificate-aoba.jpg": {
+      "groundTruthPages": [
+        8
+      ],
+      "method": "ocr"
+    }
+  },
+  "evaluationNotes": [
+    "All names and values are synthetic; no real supplier records.",
+    "Mixed corpus has18scannedpages and2textpages. Scanned corpus has20scannedpages.",
+    "Ground-truth boxes precede rotation and describe approximate source location, not fitted OCR boxes.",
+    "Obscured-cell ground truth is retained; it must not be silently excluded from extraction accuracy.",
+    "Missing fields are empty strings, never zero. Missing lot requires human review.",
+    "Accuracy corpus is used to develop templates, not an independent unseen or real-world validation set."
+  ]
+}

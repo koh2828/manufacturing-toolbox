@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "schemaVersion": 1,
+      "id": "aster-v1",
+      "supplierId": "aster",
+      "supplier": "Aster Materials",
+      "name": "Aster Materials v1",
+      "version": 1,
+      "title": "Certificate of Analysis",
+      "keywords": [
+        "Aster Materials"
+      ],
+      "fields": {
+        "product": {
+          "labels": [
+            "Product",
+            "Product Name",
+            "製品名",
+            "品名"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "productCode": {
+          "labels": [
+            "Product Code",
+            "製品コード",
+            "品番"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "lot": {
+          "labels": [
+            "Lot",
+            "Lot Number",
+            "Lot No",
+            "ロット番号",
+            "ロット"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "certificate": {
+          "labels": [
+            "Certificate",
+            "Certificate No",
+            "成績書番号"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "issueDate": {
+          "labels": [
+            "Issue Date",
+            "発行日"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "inspectionDate": {
+          "labels": [
+            "Inspection Date",
+            "検査日"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "deliveryDate": {
+          "labels": [
+            "Delivery Date",
+            "納品日"
+          ],
+          "pattern": "",
+          "region": null
+        }
+      },
+      "table": {
+        "headerKeywords": [
+          "Inspection Item",
+          "Result",
+          "検査項目",
+          "測定値"
+        ],
+        "columns": {
+          "item": [
+            "Inspection Item",
+            "Test Item",
+            "Item",
+            "検査項目",
+            "試験項目"
+          ],
+          "result": [
+            "Result",
+            "Value",
+            "測定値",
+            "結果",
+            "検査結果"
+          ],
+          "unit": [
+            "Unit",
+            "単位"
+          ],
+          "lsl": [
+            "LSL",
+            "Lower Limit",
+            "下限",
+            "規格下限"
+          ],
+          "usl": [
+            "USL",
+            "Upper Limit",
+            "上限",
+            "規格上限"
+          ],
+          "method": [
+            "Test Method",
+            "Method",
+            "試験方法",
+            "検査方法"
+          ]
+        },
+        "endKeywords": [
+          "END OF RESULTS",
+          "検査結果終了",
+          "Authorized Signature",
+          "承認者"
+        ],
+        "region": null
+      },
+      "aliases": {
+        "items": {},
+        "products": {}
+      },
+      "continuationKeywords": [
+        "Continued",
+        "Continuation",
+        "続き",
+        "継続"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "aoba-v1",
+      "supplierId": "aoba",
+      "supplier": "青葉試薬株式会社",
+      "name": "青葉試薬株式会社 v1",
+      "version": 1,
+      "title": "検査成績書",
+      "keywords": [
+        "青葉試薬",
+        "Aoba Reagents"
+      ],
+      "fields": {
+        "product": {
+          "labels": [
+            "Product",
+            "Product Name",
+            "製品名",
+            "品名"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "productCode": {
+          "labels": [
+            "Product Code",
+            "製品コード",
+            "品番"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "lot": {
+          "labels": [
+            "Lot",
+            "Lot Number",
+            "Lot No",
+            "ロット番号",
+            "ロット"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "certificate": {
+          "labels": [
+            "Certificate",
+            "Certificate No",
+            "成績書番号"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "issueDate": {
+          "labels": [
+            "Issue Date",
+            "発行日"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "inspectionDate": {
+          "labels": [
+            "Inspection Date",
+            "検査日"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "deliveryDate": {
+          "labels": [
+            "Delivery Date",
+            "納品日"
+          ],
+          "pattern": "",
+          "region": null
+        }
+      },
+      "table": {
+        "headerKeywords": [
+          "Inspection Item",
+          "Result",
+          "検査項目",
+          "測定値"
+        ],
+        "columns": {
+          "item": [
+            "Inspection Item",
+            "Test Item",
+            "Item",
+            "検査項目",
+            "試験項目"
+          ],
+          "result": [
+            "Result",
+            "Value",
+            "測定値",
+            "結果",
+            "検査結果"
+          ],
+          "unit": [
+            "Unit",
+            "単位"
+          ],
+          "lsl": [
+            "LSL",
+            "Lower Limit",
+            "下限",
+            "規格下限"
+          ],
+          "usl": [
+            "USL",
+            "Upper Limit",
+            "上限",
+            "規格上限"
+          ],
+          "method": [
+            "Test Method",
+            "Method",
+            "試験方法",
+            "検査方法"
+          ]
+        },
+        "endKeywords": [
+          "END OF RESULTS",
+          "検査結果終了",
+          "Authorized Signature",
+          "承認者"
+        ],
+        "region": null
+      },
+      "aliases": {
+        "items": {},
+        "products": {}
+      },
+      "continuationKeywords": [
+        "Continued",
+        "Continuation",
+        "続き",
+        "継続"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "northstar-v1",
+      "supplierId": "northstar",
+      "supplier": "Northstar Polymers",
+      "name": "Northstar Polymers v1",
+      "version": 1,
+      "title": "Inspection Report",
+      "keywords": [
+        "Northstar Polymers"
+      ],
+      "fields": {
+        "product": {
+          "labels": [
+            "Product",
+            "Product Name",
+            "製品名",
+            "品名"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "productCode": {
+          "labels": [
+            "Product Code",
+            "製品コード",
+            "品番"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "lot": {
+          "labels": [
+            "Lot",
+            "Lot Number",
+            "Lot No",
+            "ロット番号",
+            "ロット"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "certificate": {
+          "labels": [
+            "Certificate",
+            "Certificate No",
+            "成績書番号"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "issueDate": {
+          "labels": [
+            "Issue Date",
+            "発行日"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "inspectionDate": {
+          "labels": [
+            "Inspection Date",
+            "検査日"
+          ],
+          "pattern": "",
+          "region": null
+        },
+        "deliveryDate": {
+          "labels": [
+            "Delivery Date",
+            "納品日"
+          ],
+          "pattern": "",
+          "region": null
+        }
+      },
+      "table": {
+        "headerKeywords": [
+          "Inspection Item",
+          "Result",
+          "検査項目",
+          "測定値"
+        ],
+        "columns": {
+          "item": [
+            "Inspection Item",
+            "Test Item",
+            "Item",
+            "検査項目",
+            "試験項目"
+          ],
+          "result": [
+            "Result",
+            "Value",
+            "測定値",
+            "結果",
+            "検査結果"
+          ],
+          "unit": [
+            "Unit",
+            "単位"
+          ],
+          "lsl": [
+            "LSL",
+            "Lower Limit",
+            "下限",
+            "規格下限"
+          ],
+          "usl": [
+            "USL",
+            "Upper Limit",
+            "上限",
+            "規格上限"
+          ],
+          "method": [
+            "Test Method",
+            "Method",
+            "試験方法",
+            "検査方法"
+          ]
+        },
+        "endKeywords": [
+          "END OF RESULTS",
+          "検査結果終了",
+          "Authorized Signature",
+          "承認者"
+        ],
+        "region": null
+      },
+      "aliases": {
+        "items": {},
+        "products": {}
+      },
+      "continuationKeywords": [
+        "Continued",
+        "Continuation",
+        "続き",
+        "継続"
+      ]
+    }
+  ]
+}
