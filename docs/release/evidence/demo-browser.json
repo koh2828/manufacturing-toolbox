@@ -1,0 +1,110 @@
+{
+  "url": "http://127.0.0.1:8772/dist/",
+  "browser": "155.0.8059.40",
+  "checks": [
+    "D01 xlsx all five rows analyzed",
+    "downloaded report reread: D01-xlsx",
+    "D01 xlsx downloaded XLSX preserves full precision, source count and text Lot",
+    "D01 csv all five rows analyzed",
+    "downloaded report reread: D01-csv",
+    "D01 csv downloaded XLSX preserves full precision, source count and text Lot",
+    "D01 switching Japanese retains data and all computed values",
+    "downloaded report reread: D01-ja",
+    "D01 mixed Product/Unit/Method prevents capability calculation",
+    "D01 selecting one product still blocks its mixed methods",
+    "D01 block identifies offending condition column",
+    "workflow completed with real parser and statistics",
+    "downloaded report reread: D02-period-comparison",
+    "D02 report retains all ten source audit rows",
+    "workflow completed with real parser and statistics",
+    "recurring real mixed-method file suppresses mean and capability",
+    "downloaded report reread: D02-mixed-method-block",
+    "recurring blocked group report retains original method evidence",
+    "D03 downloaded XLSX preserves zero/text/blank/censored/date semantics",
+    "D03 downloaded CSV preserves Lot text and censored strings",
+    "D04 valid long tail retained",
+    "downloaded report reread: D04-cycle",
+    "D04 exported all ten timing records",
+    "D04 midnight20 minutes with insufficient-N percentile hidden",
+    "D04 invalid/ambiguous dates blocked without next-day repair",
+    "workflow completed with real parser and statistics",
+    "D05 parallel elapsed30 versus step sum40",
+    "D05 zero excess has undefined percentages and disabled Pareto navigation",
+    "downloaded report reread: D05-parallel",
+    "D05 downloaded batch report preserves parallel durations and text Batch ID",
+    "D05 zero total exports blank percentages with explanation",
+    "workflow completed with real parser and statistics",
+    "workflow completed with real parser and statistics",
+    "D05 IQR changes statistics while retaining60-minute physical record",
+    "downloaded report reread: D05-iqr",
+    "D05 export retains all ten raw batch records",
+    "D06 Pareto total and cumulative exact",
+    "downloaded report reread: D06-pareto",
+    "D06 downloaded Pareto workbook has exact cumulative percentages",
+    "D06 totalzero export blocked",
+    "D06 totalzero explanation visible",
+    "no browser runtime errors",
+    "every printed analytical report contains chart SVGs"
+  ],
+  "errors": [],
+  "downloads": [
+    "D01-xlsx.xlsx",
+    "D01-csv.xlsx",
+    "D01-ja.xlsx",
+    "D02-period-comparison.xlsx",
+    "D02-mixed-method-block.xlsx",
+    "D03-preserved.xlsx",
+    "D03-preserved.csv",
+    "D04-cycle.xlsx",
+    "D05-parallel.xlsx",
+    "D05-iqr.xlsx",
+    "D06-pareto.xlsx"
+  ],
+  "pdfs": [
+    {
+      "name": "D01-xlsx.pdf",
+      "svgCount": 3
+    },
+    {
+      "name": "D01-ja.pdf",
+      "svgCount": 3
+    },
+    {
+      "name": "D02-period-comparison.pdf",
+      "svgCount": 2
+    },
+    {
+      "name": "D04-cycle.pdf",
+      "svgCount": 1
+    },
+    {
+      "name": "D05-parallel.pdf",
+      "svgCount": 2
+    },
+    {
+      "name": "D06-pareto.pdf",
+      "svgCount": 1
+    }
+  ],
+  "timings": [
+    {
+      "fixture": "D01B_known_1_to_5.xlsx",
+      "rows": 5,
+      "inputToResultMs": 101.49808399999984,
+      "resultToExportAndReadbackMs": 126.98295800000005,
+      "totalMs": 228.4810419999999,
+      "includesPdf": false,
+      "description": "Actual file input, parser, automatic UI analysis, specification edits, report modal, XLSX download/save/readback; excludes separate PDF generation."
+    },
+    {
+      "fixture": "D01B_known_1_to_5.csv",
+      "rows": 5,
+      "inputToResultMs": 104.72033399999964,
+      "resultToExportAndReadbackMs": 161.7268750000003,
+      "totalMs": 266.44720899999993,
+      "includesPdf": false,
+      "description": "Actual file input, parser, automatic UI analysis, specification edits, report modal, XLSX download/save/readback; excludes separate PDF generation."
+    }
+  ],
+  "syntheticDataOnly": true
+}

@@ -1,0 +1,101 @@
+{
+  "candidate": "v0.8.1-beta.1",
+  "date": "2026-10-15",
+  "branch": "release/free-beta-owner-test",
+  "baseCommit": "ea808cf830cb70d84ec2fc72884c75b15ccf9ac4",
+  "node": "v24.19.0",
+  "python": "3.12.14",
+  "platform": "Darwin 25.6.0 arm64",
+  "browser": "155.0.8059.40",
+  "target": "http://127.0.0.1:8773/manufacturing-toolbox/Launch.html",
+  "unit": {
+    "baseline": 276,
+    "final": 305,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browserChecks": [
+    {
+      "script": "tests/release-ui-browser.cjs",
+      "checks": 29,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/multilingual-browser.cjs",
+      "checks": 56,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/browser-acceptance.cjs",
+      "checks": 35,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/chart-view-browser.cjs",
+      "checks": 45,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/lot-axis-browser.cjs",
+      "checks": 49,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/workflow-browser.cjs",
+      "checks": 128,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/workflow-safety-browser.cjs",
+      "checks": 21,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/document-ui-browser.cjs",
+      "checks": 35,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/document-ui-safety-browser.cjs",
+      "checks": 27,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/document-store-browser.cjs",
+      "checks": 44,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/release-demo-browser.cjs",
+      "checks": 43,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/release-security-browser.cjs",
+      "checks": 23,
+      "result": "PASS"
+    },
+    {
+      "script": "tests/release-startup-browser.cjs",
+      "checks": 12,
+      "result": "PASS"
+    }
+  ],
+  "totalBrowserChecks": 547,
+  "realPdfOcrCases": 4,
+  "webkit": "NOT RUN: executable not installed",
+  "ownerManualTests": "NOT TESTED (30 rows)",
+  "feedback": {
+    "ui": "PASS; external destination mocked",
+    "url": "UNCONFIGURED",
+    "realSubmission": "NOT RUN",
+    "receipt": "OWNER PENDING"
+  },
+  "production": "UNCHANGED",
+  "launchSha256": "80bae0c5a2dabe42b810417be5022fe2b2b0e364d0308bd267603a4fbce3a3c7",
+  "initialTestCorrections": [
+    "Old CSV warning assertion updated to verify safe preview and downloaded prefix; ambiguous header explicitly selected",
+    "Hidden settings panel opened before selecting product",
+    "file:// OCR help clarified for local candidate"
+  ]
+}

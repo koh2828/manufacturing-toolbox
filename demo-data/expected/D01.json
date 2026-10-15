@@ -1,0 +1,49 @@
+{
+  "known": {
+    "input": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n": 5,
+    "mean": 3,
+    "median": 3,
+    "sampleVariance": 2.5,
+    "sampleSd": 1.5811388300841898,
+    "populationVariance": 2,
+    "populationSd": 1.4142135623730951,
+    "lsl": 0,
+    "usl": 6,
+    "mrbar": 1,
+    "withinSigma": 0.8865248226950355,
+    "cp": 1.128,
+    "cpk": 1.128,
+    "pp": 0.6324555320336759,
+    "ppk": 0.6324555320336759,
+    "individualsUcl": 5.659574468085107,
+    "individualsLcl": 0.3404255319148932,
+    "mrUcl": 3.2672872340425534,
+    "mrLcl": 0,
+    "oosCount": 0,
+    "oosRatePercent": 0,
+    "warning": "N=5 is a numerical fixture, not a qualified capability study; any SPC signal remains visible."
+  },
+  "experience": {
+    "sheets": [
+      "Product_A",
+      "Product_B"
+    ],
+    "rowsPerSheet": 40,
+    "items": [
+      "Viscosity",
+      "Volatile Matter"
+    ],
+    "firstLot": "000123",
+    "select": "Product_A / Viscosity / LSL95 USL110 / mPa.s"
+  },
+  "mixed": {
+    "expected": "Different products, units and methods must not be silently pooled. A warning/block or separately selected homogeneous data is required."
+  }
+}

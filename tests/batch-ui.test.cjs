@@ -34,3 +34,10 @@ test('バッチUI: all-data labels do not describe IQR candidates as removed rec
 test('バッチUI: Japanese/English rendering leaves batch numbers and raw rows unchanged',()=>{
  const h=harness(),before=JSON.stringify(h.w);I18n.setLanguage('ja');const ja=h.context.renderBatchResults(h.w);I18n.setLanguage('en');const en=h.context.renderBatchResults(h.w);assert.notEqual(ja,en);assert.equal(JSON.stringify(h.w),before);assert.doesNotMatch(ja,/NaN|Infinity/);
 });
+test('バッチUI: zero-total Pareto keeps quantities but suppresses undefined percentages and chart',()=>{
+ I18n.setLanguage('en');const h=harness();h.w.result.pareto.result={total:0,excluded:0,items:[{label:'Heat',value:0,percent:0,cumulative:0}]};h.w.result.pareto.rows=[['Heat',0]];
+ const before=JSON.stringify(h.w),html=h.context.renderBatchResults(h.w),report=h.context.buildBatchReport();
+ assert.match(html,/percentages are undefined/);assert.doesNotMatch(html,/data-pareto-total="0"/);assert.match(html,/id="batch-pareto" disabled/);
+ const table=report.sheets[9][1];assert.equal(table[1][1],0);assert.equal(table[1][2],null);assert.equal(table[1][3],null);assert.match(report.html,/percentages are undefined/);assert.doesNotMatch(report.html,/data-pareto-total="0"/);
+ assert.equal(JSON.stringify(h.w),before);
+});

@@ -1,5 +1,7 @@
 # Local-first and dependency review — 2026-10-13
 
+Historical review of the pre-OCR release. The current candidate's CSP, dependencies, CSV safety behavior and input bounds are documented in [the v0.8.1 candidate review](release/SECURITY_EVIDENCE.md); the statements below describe the earlier release only.
+
 ## Data boundary
 
 The app is a static browser application. Imported manufacturing rows, workbook contents, analysis results and RCI text are held in browser memory. The reviewed source has no upload API, analytics, error tracking, external AI API or application-initiated network client. Content Security Policy blocks connections (`connect-src 'none'`) and form submissions. The language and validated, explicitly saved mappings/presets use dedicated localStorage keys. A preset may contain a user-selected product filter, specification limits and column names; these are settings, not a copy of the imported rows. Browser extensions, device software and the hosting provider are outside this code review.

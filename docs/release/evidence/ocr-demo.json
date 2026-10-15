@@ -1,0 +1,432 @@
+{
+  "browser": "155.0.8059.40",
+  "base": "http://127.0.0.1:8773/manufacturing-toolbox/dist/",
+  "results": [
+    {
+      "file": "A-experience/D08/D08A_aster_text.pdf",
+      "expectedMethod": "text",
+      "methods": [
+        "text"
+      ],
+      "pageCount": 1,
+      "pageStatus": [
+        "completed"
+      ],
+      "documentCount": 1,
+      "expectedRows": 3,
+      "actual": {
+        "supplier": "Aster Materials",
+        "product": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-BETA-001",
+        "certificate": "AS-BETA-COA-001",
+        "issueDate": "2026-09-11",
+        "inspectionDate": "2026-09-10",
+        "deliveryDate": "2026-09-12",
+        "rows": [
+          {
+            "item": "Viscosity",
+            "raw": "100.2",
+            "unit": "mPa.s",
+            "lsl": "95",
+            "usl": "110",
+            "method": "ASTM D2196"
+          },
+          {
+            "item": "Volatile Matter",
+            "raw": "0.01",
+            "unit": "%",
+            "lsl": "0",
+            "usl": "0.10",
+            "method": "QM-02"
+          },
+          {
+            "item": "Propionic Acid",
+            "raw": "<0.01",
+            "unit": "%",
+            "lsl": "",
+            "usl": "0.05",
+            "method": "GC-01"
+          }
+        ],
+        "verification": "unconfirmed"
+      },
+      "mismatches": [],
+      "before": {
+        "analysisGroups": 0,
+        "exportedConfirmedRows": 0
+      },
+      "afterExplicitCorrection": {
+        "correctedStillBlocked": true,
+        "confirmedRows": 3,
+        "analysisRows": 2,
+        "analysisValues": [
+          100.2,
+          0.01
+        ],
+        "confirmationInvalidatedAfterEdit": true
+      },
+      "durationMs": 105.5
+    },
+    {
+      "file": "B-known-answer/D08/D08B_aster_text.pdf",
+      "expectedMethod": "text",
+      "methods": [
+        "text"
+      ],
+      "pageCount": 1,
+      "pageStatus": [
+        "completed"
+      ],
+      "documentCount": 1,
+      "expectedRows": 5,
+      "actual": {
+        "supplier": "Aster Materials",
+        "product": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-BETA-002",
+        "certificate": "AS-BETA-COA-002",
+        "issueDate": "2026-09-12",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-09-13",
+        "rows": [
+          {
+            "item": "Viscosity",
+            "raw": "102.4",
+            "unit": "mPa.s",
+            "lsl": "95",
+            "usl": "110",
+            "method": "ASTM D2196"
+          },
+          {
+            "item": "Volatile Matter",
+            "raw": "0.01",
+            "unit": "%",
+            "lsl": "0",
+            "usl": "0.10",
+            "method": "QM-02"
+          },
+          {
+            "item": "Propionic Acid",
+            "raw": "<0.01",
+            "unit": "%",
+            "lsl": "",
+            "usl": "0.05",
+            "method": "GC-01"
+          },
+          {
+            "item": "Potassium",
+            "raw": "ND",
+            "unit": "ppm",
+            "lsl": "",
+            "usl": "5",
+            "method": "ICP-01"
+          },
+          {
+            "item": "Sodium",
+            "raw": "N.D.",
+            "unit": "ppm",
+            "lsl": "",
+            "usl": "5",
+            "method": "ICP-01"
+          }
+        ],
+        "verification": "unconfirmed"
+      },
+      "mismatches": [],
+      "before": {
+        "analysisGroups": 0,
+        "exportedConfirmedRows": 0
+      },
+      "afterExplicitCorrection": {
+        "correctedStillBlocked": true,
+        "confirmedRows": 5,
+        "analysisRows": 2,
+        "analysisValues": [
+          102.4,
+          0.01
+        ],
+        "confirmationInvalidatedAfterEdit": true
+      },
+      "durationMs": 81.40000009536743
+    },
+    {
+      "file": "A-experience/D08/D08A_aoba_scan.pdf",
+      "expectedMethod": "ocr",
+      "methods": [
+        "ocr"
+      ],
+      "pageCount": 1,
+      "pageStatus": [
+        "completed"
+      ],
+      "documentCount": 1,
+      "expectedRows": 2,
+      "actual": {
+        "supplier": "青葉試薬株式会社",
+        "product": "青葉 溶液 A",
+        "productCode": "AS1",
+        "lot": "AO-BETA-001",
+        "certificate": "ビィ 圭",
+        "issueDate": "2026-09-11",
+        "inspectionDate": "2026-09-10",
+        "deliveryDate": "2026-09-12",
+        "rows": [
+          {
+            "item": "HE",
+            "raw": "99.8",
+            "unit": "mPa.s",
+            "lsl": "95",
+            "usl": "110",
+            "method": "JIS K7117"
+          },
+          {
+            "item": "揮発 分",
+            "raw": "0.01",
+            "unit": "%",
+            "lsl": "0",
+            "usl": "0.10",
+            "method": "QM-02"
+          }
+        ],
+        "verification": "unconfirmed"
+      },
+      "mismatches": [
+        {
+          "field": "product",
+          "expected": "青葉溶液A",
+          "actual": "青葉 溶液 A"
+        },
+        {
+          "field": "certificate",
+          "expected": "AO-BETA-COA-001",
+          "actual": "ビィ 圭"
+        },
+        {
+          "field": "row1.item",
+          "expected": "粘度",
+          "actual": "HE"
+        },
+        {
+          "field": "row2.item",
+          "expected": "揮発分",
+          "actual": "揮発 分"
+        }
+      ],
+      "before": {
+        "analysisGroups": 0,
+        "exportedConfirmedRows": 0
+      },
+      "afterExplicitCorrection": {
+        "correctedStillBlocked": true,
+        "confirmedRows": 2,
+        "analysisRows": 2,
+        "analysisValues": [
+          99.8,
+          0.01
+        ],
+        "confirmationInvalidatedAfterEdit": true
+      },
+      "durationMs": 1250.5999999046326
+    },
+    {
+      "file": "B-known-answer/D08/D08B_aoba_scan.pdf",
+      "expectedMethod": "ocr",
+      "methods": [
+        "ocr"
+      ],
+      "pageCount": 1,
+      "pageStatus": [
+        "completed"
+      ],
+      "documentCount": 1,
+      "expectedRows": 4,
+      "actual": {
+        "supplier": "青葉試薬株式会社",
+        "product": "青葉 溶液 A",
+        "productCode": "AS1",
+        "lot": "AO-BETA-002",
+        "certificate": "ビィ 圭",
+        "issueDate": "2026-09-12",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-09-13",
+        "rows": [
+          {
+            "item": "HE",
+            "raw": "1032",
+            "unit": "mPa.s",
+            "lsl": "95",
+            "usl": "110",
+            "method": "JIS K7117"
+          },
+          {
+            "item": "揮発 分",
+            "raw": "0.01",
+            "unit": "%",
+            "lsl": "0",
+            "usl": "0.10",
+            "method": "QM-02"
+          },
+          {
+            "item": "プロ ピオ ン 酸",
+            "raw": "<0.01",
+            "unit": "%",
+            "lsl": "",
+            "usl": "0.05",
+            "method": "GC-01"
+          },
+          {
+            "item": "カリ ウム",
+            "raw": "ND",
+            "unit": "ppm",
+            "lsl": "",
+            "usl": "5",
+            "method": "ICP-01"
+          }
+        ],
+        "verification": "unconfirmed"
+      },
+      "mismatches": [
+        {
+          "field": "product",
+          "expected": "青葉溶液A",
+          "actual": "青葉 溶液 A"
+        },
+        {
+          "field": "certificate",
+          "expected": "AO-BETA-COA-002",
+          "actual": "ビィ 圭"
+        },
+        {
+          "field": "row1.item",
+          "expected": "粘度",
+          "actual": "HE"
+        },
+        {
+          "field": "row1.raw",
+          "expected": "103.2",
+          "actual": "1032"
+        },
+        {
+          "field": "row2.item",
+          "expected": "揮発分",
+          "actual": "揮発 分"
+        },
+        {
+          "field": "row3.item",
+          "expected": "プロピオン酸",
+          "actual": "プロ ピオ ン 酸"
+        },
+        {
+          "field": "row4.item",
+          "expected": "カリウム",
+          "actual": "カリ ウム"
+        }
+      ],
+      "before": {
+        "analysisGroups": 0,
+        "exportedConfirmedRows": 0
+      },
+      "afterExplicitCorrection": {
+        "correctedStillBlocked": true,
+        "confirmedRows": 4,
+        "analysisRows": 2,
+        "analysisValues": [
+          103.2,
+          0.01
+        ],
+        "confirmationInvalidatedAfterEdit": true
+      },
+      "durationMs": 1105.6999998092651
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/release-demo-check",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/document-engine.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/document-core.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/pdf.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/tesseract/tesseract.min.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/tesseract/worker.min.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/tesseract/core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/tesseract/lang/eng.traineddata.gz",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/tesseract/lang/jpn.traineddata.gz",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8773/manufacturing-toolbox/dist/vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bytes": 0
+    }
+  ],
+  "limitations": "Real synthetic files only. Gate checks use real extraction and explicit source-based correction; this is not owner approval or real-world OCR accuracy."
+}

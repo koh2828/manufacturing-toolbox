@@ -4,3 +4,11 @@ test-results/
 .env
 .env.*
 .openai/
+
+# Owner-entered results and local artifacts may contain private data.
+local-test-results/
+release-artifacts/
+
+node_modules
+__pycache__/
+*.pyc

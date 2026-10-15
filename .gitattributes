@@ -1,0 +1,4 @@
+# Preserve actual fixture bytes and Excel-friendly CSV CRLF line endings.
+*.csv -text whitespace=cr-at-eol
+*.xlsx binary
+*.pdf binary

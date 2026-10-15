@@ -1,0 +1,25 @@
+✔ バッチUI: compact seven-column all-data summary includes pooled batch percentiles (86.903958ms)
+✔ バッチUI: count remains integer while time metrics, Pareto and deltas use display hours (15.919667ms)
+✔ バッチUI: unknown batch bounds show only observed valid intervals without epoch/NaN (4.358125ms)
+✔ バッチUI: timelines distinguish global unrecorded gaps and clip long labels safely (5.197417ms)
+✔ バッチUI: duplicated normalization+analysis issues appear once and retain raw time provenance (3.987208ms)
+✔ バッチUI: Excel includes full batch distributions/all-data/IQR and source/audit tables (25.975709ms)
+✔ バッチUI: all-data labels do not describe IQR candidates as removed records (6.029458ms)
+✔ バッチUI: Japanese/English rendering leaves batch numbers and raw rows unchanged (40.828083ms)
+✔ バッチUI: zero-total Pareto keeps quantities but suppresses undefined percentages and chart (23.269292ms)
+✔ release demo D01: actual CSV and XLSX match independent hand values and preserve Lot (15.604458ms)
+✔ release demo D02: real two-file import compares each period against independent values (19.662375ms)
+✔ release demo D03: actual CleanCore export preserves original types, ambiguous dates and censored text (14.518125ms)
+✔ release demo D03: cached formulas export values only, without recalculation or formulas (6.794209ms)
+✔ release demo D04: real files distinguish valid tails, midnight and invalid dates (3.223291ms)
+✔ release demo D05: independent parallel union and IQR values match actual files (16.277125ms)
+✔ release demo D06: actual aggregated and event-level inputs match independent Pareto (3.581333ms)
+✔ release demo D07 and manual checklist: native RCI is valid, owner results remain Not Tested (9.6215ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 404.324291

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "seed": 20261015,
+  "synthetic": true,
+  "source": "Fixed inputs requested by the owner; arithmetic in this standalone generator, no imports from application calculation modules.",
+  "definitions": {
+    "mean": "sum(x)/n",
+    "sampleVariance": "sum((x-mean)^2)/(n-1)",
+    "populationVariance": "sum((x-mean)^2)/n",
+    "quantile": "R7: h=(n-1)p; linear interpolation between sorted[floor(h)] and sorted[ceil(h)]",
+    "iqr": "Q3-Q1; candidate outside Q1-1.5IQR or Q3+1.5IQR; no automatic deletion",
+    "withinXmR": "mean adjacent moving range / d2; d2=1.128, d3=.8525",
+    "capability": "Cp=(USL-LSL)/(6*withinSigma); Cpk=min((USL-mean),(mean-LSL))/(3*withinSigma); Pp/Ppk use sampleSd",
+    "oos": "outside strict specification limits / all valid numeric measurements; limits themselves are in specification",
+    "time": "Wall-clock ISO date-times with one consistent basis. Minute=(end-start)/60000. No timezone inference.",
+    "parallel": "Sum of durations differs from union of intervals and firstStart-to-lastEnd elapsed."
+  },
+  "tolerances": {
+    "numericAbsolute": 1e-10,
+    "reason": "Fixed small inputs and double-precision arithmetic; UI formatting is compared separately at its shown precision.",
+    "identifiers": "exact",
+    "counts": "exact",
+    "timestamps": "exact millisecond",
+    "ocr": "No numerical tolerance for OCR transcription: compare source text exactly and correct before confirming."
+  },
+  "sources": [
+    {
+      "title": "Owner-provided hand-checkable examples",
+      "reference": "Request sections8 and7; preserved in expected files."
+    },
+    {
+      "title": "R quantile documentation, type7 definition",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/quantile.html"
+    },
+    {
+      "title": "NIST Individuals Control Charts, MRbar/d2",
+      "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc322.htm"
+    }
+  ]
+}

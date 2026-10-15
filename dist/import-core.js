@@ -10,6 +10,8 @@
   function signature(tool,headers){return JSON.stringify([tool,headers.map(normalized)]);}
   function sheetRows(X,sheet){
     const range=X.utils.decode_range(sheet['!ref']||'A1');if(range.e.r>50000||range.e.c>299)throw Error((I18n.t("import-core.b6ddc84d1c")));
+    const missing=Object.entries(sheet).filter(([address,cell])=>address[0]!=='!'&&cell?.f&&(cell.v===undefined||cell.v===null));
+    if(missing.length){const error=Error(I18n.t('import.formulaMissing',[missing.length,missing[0][0]]));error.code='FORMULA_MISSING';error.count=missing.length;error.cell=missing[0][0];throw error;}
     const rows=X.utils.sheet_to_json(sheet,{header:1,defval:'',raw:true,blankrows:true,range:{s:{r:0,c:0},e:range.e}});
     // SheetJS may materialize Date objects from formatted numeric cells even with
     // raw:true. Restore the original serial to avoid any local timezone conversion.
@@ -27,6 +29,24 @@
     const type=id?'category':n&&dates/n>=.8?'date':n&&numbers/n>=.8?'number':'category';
     return {index:i,type,filled:n,numeric:numbers,dates,confidence:n===0?'low':type==='number'?numbers===n?'high':'low':type==='date'?dates===n?'high':'low':'high'};
   });}
+  // Safety hints are deliberately narrow: they identify explicit condition
+  // columns, never infer a measurement's unit or method from its values.
+  const conditionPatterns={
+    product:/^(?:製品(?:名|コード|識別コード)?|品番|品目|product(?:[ _-]*(?:name|code|id))?|material|sku)$/i,
+    item:/^(?:検査項目|測定項目|試験項目|inspection[ _-]*item|test[ _-]*item|parameter|analyte|item)$/i,
+    unit:/^(?:単位|測定単位|units?|measurement[ _-]*units?)$/i,
+    method:/^(?:試験(?:方法|法)|測定(?:方法|法)|検査方法|分析(?:方法|法)|method(?:[ _-]*(?:id|code))?|(?:test|measurement|analytical|analysis)[ _-]*method)$/i
+  };
+  function conditionColumns(headers,kinds=Object.keys(conditionPatterns)){
+    return headers.flatMap((header,column)=>{const kind=kinds.find(k=>conditionPatterns[k]?.test(normalized(header)));return kind?[{kind,column,header:String(header)}]:[];});
+  }
+  function conditionConflicts(headers,rows,{kinds=Object.keys(conditionPatterns),ignoreColumns=[]}={}){
+    const populated=rows.filter(row=>Array.isArray(row)&&row.some(v=>v!==null&&v!==undefined&&String(v).trim()!==''));
+    return conditionColumns(headers,kinds).filter(c=>!ignoreColumns.includes(c.column)).flatMap(c=>{
+      const values=new Set(populated.map(row=>String(row[c.column]??'').trim()));
+      return values.size>1?[{...c,distinctCount:values.size,hasMissing:values.has('')}]:[];
+    });
+  }
   function mapping(tool,m,width){
     if(W.fields[tool]){try{return W.mapping(tool,m,width);}catch{throw Error(I18n.t('workflow.invalidSettings'));}}
     if(!m||typeof m!=='object')throw Error((I18n.t("import-core.e720147c09")));const out={};
@@ -69,5 +89,5 @@
   function lotColumn(headers,used=[]){return Y.suggestColumns(headers.map((h,i)=>used.includes(i)?'':h)).lot;}
   const lotCollator=new Intl.Collator('en',{numeric:true,sensitivity:'base'});
   const compareLots=(a,b)=>lotCollator.compare(normalized(a),normalized(b));
-  const api={lotColumn,compareLots,KEY,normalized,fields,signature,sheetRows,date,infer,mapping,settings,validate,read,write,match};root.ImportCore=api;if(typeof module!=='undefined')module.exports=api;
+  const api={lotColumn,compareLots,KEY,normalized,fields,signature,sheetRows,date,infer,conditionColumns,conditionConflicts,mapping,settings,validate,read,write,match};root.ImportCore=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

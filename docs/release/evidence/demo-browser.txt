@@ -1,0 +1,44 @@
+PASS D01 xlsx all five rows analyzed
+PASS downloaded report reread: D01-xlsx
+PASS D01 xlsx downloaded XLSX preserves full precision, source count and text Lot
+PASS D01 csv all five rows analyzed
+PASS downloaded report reread: D01-csv
+PASS D01 csv downloaded XLSX preserves full precision, source count and text Lot
+PASS D01 switching Japanese retains data and all computed values
+PASS downloaded report reread: D01-ja
+PASS D01 mixed Product/Unit/Method prevents capability calculation
+PASS D01 selecting one product still blocks its mixed methods
+PASS D01 block identifies offending condition column
+PASS workflow completed with real parser and statistics
+PASS downloaded report reread: D02-period-comparison
+PASS D02 report retains all ten source audit rows
+PASS workflow completed with real parser and statistics
+PASS recurring real mixed-method file suppresses mean and capability
+PASS downloaded report reread: D02-mixed-method-block
+PASS recurring blocked group report retains original method evidence
+PASS D03 downloaded XLSX preserves zero/text/blank/censored/date semantics
+PASS D03 downloaded CSV preserves Lot text and censored strings
+PASS D04 valid long tail retained
+PASS downloaded report reread: D04-cycle
+PASS D04 exported all ten timing records
+PASS D04 midnight20 minutes with insufficient-N percentile hidden
+PASS D04 invalid/ambiguous dates blocked without next-day repair
+PASS workflow completed with real parser and statistics
+PASS D05 parallel elapsed30 versus step sum40
+PASS D05 zero excess has undefined percentages and disabled Pareto navigation
+PASS downloaded report reread: D05-parallel
+PASS D05 downloaded batch report preserves parallel durations and text Batch ID
+PASS D05 zero total exports blank percentages with explanation
+PASS workflow completed with real parser and statistics
+PASS workflow completed with real parser and statistics
+PASS D05 IQR changes statistics while retaining60-minute physical record
+PASS downloaded report reread: D05-iqr
+PASS D05 export retains all ten raw batch records
+PASS D06 Pareto total and cumulative exact
+PASS downloaded report reread: D06-pareto
+PASS D06 downloaded Pareto workbook has exact cumulative percentages
+PASS D06 totalzero export blocked
+PASS D06 totalzero explanation visible
+PASS no browser runtime errors
+PASS every printed analytical report contains chart SVGs
+COMPLETE 43 release demo browser checks; outputs: work/beta-statistics-browser
