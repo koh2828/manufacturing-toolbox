@@ -1,0 +1,211 @@
+{
+  "dateJST": "2026-10-17",
+  "candidate": "v0.8.1-beta.1",
+  "applicationCommit": "a05f4b3c06dcacf88f0f706dcf3146766dd19936",
+  "launchSha256": "80bae0c5a2dabe42b810417be5022fe2b2b0e364d0308bd267603a4fbce3a3c7",
+  "browser": "155.0.8059.80",
+  "sourceAndTestsUnchanged": true,
+  "unit": {
+    "passed": 305,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browserChecks": 547,
+  "suites": [
+    {
+      "script": "browser-acceptance",
+      "checks": 35,
+      "exitCode": 0
+    },
+    {
+      "script": "multilingual-browser",
+      "checks": 56,
+      "exitCode": 0
+    },
+    {
+      "script": "workflow-safety-browser",
+      "checks": 21,
+      "exitCode": 0
+    },
+    {
+      "script": "chart-view-browser",
+      "checks": 45,
+      "exitCode": 0
+    },
+    {
+      "script": "lot-axis-browser",
+      "checks": 49,
+      "exitCode": 0
+    },
+    {
+      "script": "release-ui-browser",
+      "checks": 29,
+      "exitCode": 0
+    },
+    {
+      "script": "release-startup-browser",
+      "checks": 12,
+      "exitCode": 0
+    },
+    {
+      "script": "release-demo-browser",
+      "checks": 43,
+      "exitCode": 0
+    },
+    {
+      "script": "workflow-browser",
+      "checks": 128,
+      "exitCode": 0
+    },
+    {
+      "script": "document-ui-browser",
+      "checks": 35,
+      "exitCode": 0
+    },
+    {
+      "script": "document-ui-safety-browser",
+      "checks": 27,
+      "exitCode": 0
+    },
+    {
+      "script": "document-store-browser",
+      "checks": 44,
+      "exitCode": 0
+    },
+    {
+      "script": "release-security-browser",
+      "checks": 23,
+      "exitCode": 0
+    }
+  ],
+  "realPdfOcrCases": 4,
+  "ocrObservations": [
+    {
+      "file": "A-experience/D08/D08A_aster_text.pdf",
+      "methods": [
+        "text"
+      ],
+      "rawMismatches": 0,
+      "confirmedRowsAfterExplicitCorrection": 3,
+      "unconfirmedBlocked": true
+    },
+    {
+      "file": "B-known-answer/D08/D08B_aster_text.pdf",
+      "methods": [
+        "text"
+      ],
+      "rawMismatches": 0,
+      "confirmedRowsAfterExplicitCorrection": 5,
+      "unconfirmedBlocked": true
+    },
+    {
+      "file": "A-experience/D08/D08A_aoba_scan.pdf",
+      "methods": [
+        "ocr"
+      ],
+      "rawMismatches": 4,
+      "confirmedRowsAfterExplicitCorrection": 2,
+      "unconfirmedBlocked": true
+    },
+    {
+      "file": "B-known-answer/D08/D08B_aoba_scan.pdf",
+      "methods": [
+        "ocr"
+      ],
+      "rawMismatches": 7,
+      "confirmedRowsAfterExplicitCorrection": 4,
+      "unconfirmedBlocked": true
+    }
+  ],
+  "security": {
+    "requests": 10,
+    "bodyBytes": 0,
+    "websockets": 0,
+    "serviceWorkers": 0,
+    "consoleMessages": 0,
+    "errors": 0,
+    "allSameOriginStaticGET": true
+  },
+  "performance": [
+    {
+      "tool": "recurring",
+      "rows": 10000,
+      "inputBytes": 867735,
+      "importMs": 241,
+      "analyzeRenderMs": 135,
+      "reportExportMs": 1078,
+      "exportBytes": 7361859
+    },
+    {
+      "tool": "recurring",
+      "rows": 50000,
+      "inputBytes": 3767198,
+      "importMs": 310,
+      "analyzeRenderMs": 354,
+      "reportExportMs": 6499,
+      "exportBytes": 36826690
+    },
+    {
+      "tool": "batch",
+      "rows": 10000,
+      "inputBytes": 864027,
+      "importMs": 278,
+      "analyzeRenderMs": 163,
+      "reportExportMs": 634,
+      "exportBytes": 2974982
+    },
+    {
+      "tool": "batch",
+      "rows": 50000,
+      "inputBytes": 4938991,
+      "importMs": 558,
+      "analyzeRenderMs": 437,
+      "reportExportMs": 2392,
+      "exportBytes": 14665014
+    }
+  ],
+  "demoTimings": [
+    {
+      "fixture": "D01B_known_1_to_5.xlsx",
+      "rows": 5,
+      "inputToResultMs": 138.13650000000007,
+      "resultToExportAndReadbackMs": 234.2304160000001,
+      "totalMs": 372.3669160000002,
+      "includesPdf": false,
+      "description": "Actual file input, parser, automatic UI analysis, specification edits, report modal, XLSX download/save/readback; excludes separate PDF generation."
+    },
+    {
+      "fixture": "D01B_known_1_to_5.csv",
+      "rows": 5,
+      "inputToResultMs": 52.21529199999986,
+      "resultToExportAndReadbackMs": 150.25812499999984,
+      "totalMs": 202.4734169999997,
+      "includesPdf": false,
+      "description": "Actual file input, parser, automatic UI analysis, specification edits, report modal, XLSX download/save/readback; excludes separate PDF generation."
+    }
+  ],
+  "performanceRunsSequential": true,
+  "unrun": [
+    "WebKit: executable unavailable",
+    "Owner manual tests",
+    "Corporate PC and real business documents",
+    "Feedback real submission and receipt"
+  ],
+  "evidenceDirectories": [
+    "work/beta-release/evidence/resume-2026-10-17/",
+    "work/beta-release/evidence/resume-document-2026-10-17/"
+  ],
+  "draftPr": "https://github.com/koh2828/manufacturing-toolbox/pull/1",
+  "productionCommit": "ea808cf830cb70d84ec2fc72884c75b15ccf9ac4",
+  "productionPagesRun": 38556122817,
+  "uploadedArtifact": {
+    "source": "https://raw.githubusercontent.com/koh2828/manufacturing-toolbox/release/free-beta-owner-test/Launch.html",
+    "sha256MatchesTestedApplication": true,
+    "gitBlob": "d0cceee6d4764be46d6d992ca5f6367487d6067a",
+    "checks": 35,
+    "network": [],
+    "errors": [],
+    "evidenceDirectory": "work/beta-release/evidence/uploaded-artifact-2026-10-17/",
+    "scope": "Downloaded Launch.html in localhost test server; supporting dist assets from identical local application commit"
+  }
+}

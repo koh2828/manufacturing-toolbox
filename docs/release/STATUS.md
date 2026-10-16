@@ -61,6 +61,15 @@ Importerは `core.js / import-core.js / file-reader.js`、保存設定は `produ
 - 確認できた連携経路では作業ブランチPush/PR作成はPagesを更新しません。任意の第三者による公開リポジトリのポーリングまで保証するものではありません。
 - ブランチPushとDraft PRだけを許可。mainへのPush・マージ・公開Release・タグ・Actionsの手動起動は行わない。
 
+### Gitの引き渡し状態（2026-10-17）
+
+アプリ・デモ・検証を含むローカルCommit: `a05f4b3c06dcacf88f0f706dcf3146766dd19936`。
+本人が承認した公式GitHub CLIの既存権限でHTTPS認証を完了し、作業ブランチをPushしました。鍵・SSHの信頼設定は変更していません。認証情報はリポジトリに含めていません。
+**Draft PR: [#1 — Free beta owner-test candidate](https://github.com/koh2828/manufacturing-toolbox/pull/1)。Push完了・Draftのまま・本番変更なし。**
+再確認したPages公開元はmain/root、既定ブランチmain、自動マージ無効、Webhook 0件。mainは基点の `ea808cf830cb70d84ec2fc72884c75b15ccf9ac4`、最終本番runは `38556122817` のままです。
+2026-10-17に単体305件・ブラウザ547チェック・実PDF/OCR4ケースを再実行し、すべて合格しました。アプリ・テストのソースは変更していません。画像OCRの既知の誤読は残り、原本確認・訂正を必須とする制御を検証した結果です。
+この引き渡し文書・証拠の更新は、上記アプリCommitを基にした通常の追加Commitです。手動確認時には `git rev-parse HEAD` またはPRの最新Commitを記録してください。
+
 [GitHub Pages公式制限](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)は、商用SaaS等の無料ホスティング利用に制約を設けています。「無料βだから適合」とは判断していません。本人が運営目的と現行条件を確認してください。移行が必要なら `Launch.html / index.html / dist/` とライセンスを同じ相対配置で静的ホストへ移し、base path/CSP/OCRを再検証する手順を使用できます。契約・DNS変更・実移行は未実施です。
 
 ## 本人に残ること・再開時の手順
