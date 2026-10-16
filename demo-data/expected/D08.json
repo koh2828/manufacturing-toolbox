@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "seed": 20261015,
+  "synthetic": true,
+  "documents": [
+    {
+      "path": "A-experience/D08/D08A_aster_text.pdf",
+      "purpose": "template setup",
+      "pageCount": 1,
+      "textLayer": true,
+      "expectedMethod": "text",
+      "supplier": "Aster Materials",
+      "templateId": "aster-v1",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-BETA-001",
+        "certificateNumber": "AS-BETA-COA-001",
+        "issueDate": "2026-09-11",
+        "inspectionDate": "2026-09-10",
+        "deliveryDate": "2026-09-12"
+      },
+      "measurementRowCount": 3,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "100.2",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196"
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02"
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01"
+        }
+      ],
+      "initialVerification": "unconfirmed"
+    },
+    {
+      "path": "B-known-answer/D08/D08B_aster_text.pdf",
+      "purpose": "held-out validation",
+      "pageCount": 1,
+      "textLayer": true,
+      "expectedMethod": "text",
+      "supplier": "Aster Materials",
+      "templateId": "aster-v1",
+      "fields": {
+        "productName": "Aster Resin R1",
+        "productCode": "AR1",
+        "lot": "AS-BETA-002",
+        "certificateNumber": "AS-BETA-COA-002",
+        "issueDate": "2026-09-12",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-09-13"
+      },
+      "measurementRowCount": 5,
+      "rows": [
+        {
+          "item": "Viscosity",
+          "raw": "102.4",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "ASTM D2196"
+        },
+        {
+          "item": "Volatile Matter",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02"
+        },
+        {
+          "item": "Propionic Acid",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01"
+        },
+        {
+          "item": "Potassium",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01"
+        },
+        {
+          "item": "Sodium",
+          "raw": "N.D.",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01"
+        }
+      ],
+      "initialVerification": "unconfirmed"
+    },
+    {
+      "path": "A-experience/D08/D08A_aoba_scan.pdf",
+      "purpose": "template setup",
+      "pageCount": 1,
+      "textLayer": false,
+      "expectedMethod": "ocr",
+      "supplier": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-BETA-001",
+        "certificateNumber": "AO-BETA-COA-001",
+        "issueDate": "2026-09-11",
+        "inspectionDate": "2026-09-10",
+        "deliveryDate": "2026-09-12"
+      },
+      "measurementRowCount": 2,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "99.8",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117"
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02"
+        }
+      ],
+      "initialVerification": "unconfirmed"
+    },
+    {
+      "path": "B-known-answer/D08/D08B_aoba_scan.pdf",
+      "purpose": "held-out validation",
+      "pageCount": 1,
+      "textLayer": false,
+      "expectedMethod": "ocr",
+      "supplier": "青葉試薬株式会社",
+      "templateId": "aoba-v1",
+      "fields": {
+        "productName": "青葉溶液A",
+        "productCode": "AS1",
+        "lot": "AO-BETA-002",
+        "certificateNumber": "AO-BETA-COA-002",
+        "issueDate": "2026-09-12",
+        "inspectionDate": "2026-09-11",
+        "deliveryDate": "2026-09-13"
+      },
+      "measurementRowCount": 4,
+      "rows": [
+        {
+          "item": "粘度",
+          "raw": "103.2",
+          "unit": "mPa.s",
+          "lsl": "95",
+          "usl": "110",
+          "method": "JIS K7117"
+        },
+        {
+          "item": "揮発分",
+          "raw": "0.01",
+          "unit": "%",
+          "lsl": "0",
+          "usl": "0.10",
+          "method": "QM-02"
+        },
+        {
+          "item": "プロピオン酸",
+          "raw": "<0.01",
+          "unit": "%",
+          "lsl": "",
+          "usl": "0.05",
+          "method": "GC-01"
+        },
+        {
+          "item": "カリウム",
+          "raw": "ND",
+          "unit": "ppm",
+          "lsl": "",
+          "usl": "5",
+          "method": "ICP-01"
+        }
+      ],
+      "initialVerification": "unconfirmed"
+    }
+  ],
+  "evaluation": "Setup files may be used to inspect/reuse supplier templates. Do not tune templates using held-out files before their first evaluation. These synthetic layouts are based on existing development fixtures and are not an independent real-world accuracy benchmark.",
+  "safety": "All extraction starts unconfirmed. Compare every field with the original before confirming. <0.01 and ND must not become numeric 0 or 0.01. No inferred fields."
+}

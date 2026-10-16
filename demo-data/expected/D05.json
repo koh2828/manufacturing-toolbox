@@ -1,0 +1,72 @@
+{
+  "parallel": {
+    "rows": 2,
+    "stepTotalMinutes": 40,
+    "activeUnionMinutes": 30,
+    "elapsedMinutes": 30,
+    "gapMinutes": 0,
+    "overlapMinutes": 10,
+    "batch": "000123",
+    "nBatches": 1
+  },
+  "percentiles": {
+    "inputMinutes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      60
+    ],
+    "all": {
+      "n": 10,
+      "p25": 12.25,
+      "p50": 14.5,
+      "p75": 16.75,
+      "p90": 22.199999999999985,
+      "p95": 41.09999999999995
+    },
+    "iqr": {
+      "q1": 12.25,
+      "q3": 16.75,
+      "iqr": 4.5,
+      "lowerFence": 5.5,
+      "upperFence": 23.5,
+      "candidateMinutes": [
+        60
+      ],
+      "filteredN": 9,
+      "p25": 12,
+      "p50": 14,
+      "p75": 16,
+      "p90": 17.2,
+      "p95": 17.6
+    },
+    "physicalElapsedTotalMinutes": 186,
+    "expected": "IQR changes statistical comparison only; raw records, elapsed, timeline and losses retain60 minutes."
+  },
+  "incomplete": {
+    "rows": 3,
+    "batches": 2,
+    "duplicateRows": 2,
+    "missingEndRows": 1,
+    "completeBatches": 0
+  },
+  "experience": {
+    "rows": 40,
+    "batches": 8,
+    "firstBatch": {
+      "stepTotalMinutes": 280,
+      "activeUnionMinutes": 240,
+      "elapsedMinutes": 250,
+      "gapMinutes": 10,
+      "overlapMinutes": 40
+    },
+    "waitingMinutesPerBatch": 20,
+    "expected": "Recorded waiting is identified from Loss Type. Ten-minute gaps have no inferred cause."
+  }
+}

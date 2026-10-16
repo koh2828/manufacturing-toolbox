@@ -1,0 +1,4 @@
+﻿"Batch ID","Product","Equipment","Process Step","Start Time","End Time","Delay Category","Delay Reason","Target Time","Loss Type"
+"000123","DEMO-INCOMPLETE","DEMO-A","Step A","2026-09-01 09:00","2026-09-01 09:20","","","20",""
+"000123","DEMO-INCOMPLETE","DEMO-A","Step A","2026-09-01 09:00","2026-09-01 09:20","","","20",""
+"000124","DEMO-INCOMPLETE","DEMO-A","Step A","2026-09-02 09:00","","","","20",""

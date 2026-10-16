@@ -1,0 +1,242 @@
+[
+  {
+    "id": "T01",
+    "tool": "Process Capability",
+    "scenario": "検査日報からレポートまで",
+    "file": "A-experience/D01/D01A_inspection.xlsx",
+    "expected": "Product_A40件。粘度・ロット順を選択。Excel/PDFを開ける",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T02",
+    "tool": "Process Capability",
+    "scenario": "既知値とXmR",
+    "file": "B-known-answer/D01/D01B_known_1_to_5.xlsx",
+    "expected": "N5 Mean3 SD1.581139 Cp/Cpk1.128 Pp/Ppk0.632456",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T03",
+    "tool": "Process Capability",
+    "scenario": "日本語/Englishと表示範囲",
+    "file": "A-experience/D01/D01A_inspection.xlsx",
+    "expected": "言語・拡大・期間ズームで元の集計値/ロット順を変えない",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T04",
+    "tool": "Process Capability",
+    "scenario": "製品・単位・方法の混在",
+    "file": "B-known-answer/D01/D01B_mixed_conditions.csv",
+    "expected": "異条件を無警告で合算しない",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T05",
+    "tool": "Recurring Quality",
+    "scenario": "二か月の品質レビュー",
+    "file": "A-experience/D02/D02A_2026-09.csv + D02A_2026-10.csv",
+    "expected": "期間ごと4層・各N30。条件別のままレポート",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T06",
+    "tool": "Recurring Quality",
+    "scenario": "小さい既知の期間比較",
+    "file": "B-known-answer/D02/D02B_2026-09.xlsx + D02B_2026-10.xlsx",
+    "expected": "平均3→7 標本SD1.581139→3.162278 参考値",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T07",
+    "tool": "Recurring Quality",
+    "scenario": "Preset・作業の退避/復元",
+    "file": "A-experience/D02/",
+    "expected": "設定再利用と.mtb再開。上書き前に退避",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T08",
+    "tool": "Clean & Export",
+    "scenario": "現場帳票の見出し確認",
+    "file": "A-experience/D03/D03A_messy_log.xlsx",
+    "expected": "Inspection見出し6行。値を補完せずExcel/CSV出力",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T09",
+    "tool": "Clean & Export",
+    "scenario": "結合セル・曖昧な日付",
+    "file": "A-experience/D03/D03A_messy_log.xlsx",
+    "expected": "Merged_cells_reviewの空欄を補完しない。日付変換は停止",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T10",
+    "tool": "Clean & Export",
+    "scenario": "文字列・先頭ゼロ・欠損保全",
+    "file": "B-known-answer/D03/D03B_preserve_values.xlsx",
+    "expected": "6行。000123、<0.01、ND、Pass、空欄とゼロを保持",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T11",
+    "tool": "Clean & Export",
+    "scenario": "数式の保存済み結果",
+    "file": "B-known-answer/D03/D03B_cached_formula.xlsx",
+    "expected": "正味重量100,104。再計算なし/値出力",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T12",
+    "tool": "Cycle Time",
+    "scenario": "通常と6日サイクル",
+    "file": "A-experience/D04/D04A_production_log.xlsx",
+    "expected": "40加工時間。144hを通常の有効値として含める",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T13",
+    "tool": "Cycle Time",
+    "scenario": "既知P25/P50・指標切替",
+    "file": "B-known-answer/D04/D04B_minutes.csv",
+    "expected": "Start→End N10 P25 12.25 P50 14.5分;Start→nextStart N9 P25/P50 1440分",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T14",
+    "tool": "Cycle Time",
+    "scenario": "日跨ぎ・少数データ",
+    "file": "B-known-answer/D04/D04B_midnight.csv",
+    "expected": "個別加工時間20分。N1のP25/P50非表示",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T15",
+    "tool": "Cycle Time",
+    "scenario": "不正日時を分離",
+    "file": "B-known-answer/D04/D04B_invalid_dates.csv",
+    "expected": "3行とも加工時間対象外。翌日補正なし",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T16",
+    "tool": "Batch Process",
+    "scenario": "並列・待機・日跨ぎ",
+    "file": "A-experience/D05/D05A_batch_events.xlsx",
+    "expected": "8バッチ、40工程記録。明示待機と未記録区間を区別",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T17",
+    "tool": "Batch Process",
+    "scenario": "小さい並列既知値",
+    "file": "B-known-answer/D05/D05B_parallel.csv",
+    "expected": "工程合計40分/記録時間30分/経過30分",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T18",
+    "tool": "Batch Process",
+    "scenario": "R7/IQR比較",
+    "file": "B-known-answer/D05/D05B_percentiles_iqr.csv",
+    "expected": "P50/75/90/95 14.5/16.75/22.2/41.1→14/16/17.2/17.6;原記録保持",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T19",
+    "tool": "Batch Process",
+    "scenario": "パレート引継ぎと出力",
+    "file": "A-experience/D05/D05A_batch_events.xlsx",
+    "expected": "時間ロスの分類と単位を保ち、パレートからレポート",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T20",
+    "tool": "Batch Process",
+    "scenario": "重複・終了欠落",
+    "file": "B-known-answer/D05/D05B_incomplete.csv",
+    "expected": "2バッチとも不完全。全体経過時間を確定しない",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T21",
+    "tool": "Pareto Analysis",
+    "scenario": "100件の明細を集計",
+    "file": "A-experience/D06/D06A_defect_events.csv",
+    "expected": "件数40/30/20/10 累積40/70/90/100%",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T22",
+    "tool": "Pareto Analysis",
+    "scenario": "集計済み既知値",
+    "file": "B-known-answer/D06/D06B_counts.xlsx",
+    "expected": "T21と同じ結果。出力4分類/総数100",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T23",
+    "tool": "Pareto Analysis",
+    "scenario": "全件ゼロ",
+    "file": "B-known-answer/D06/D06B_all_zero.csv",
+    "expected": "総数0。比率を有効な百分率と表示しない",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T24",
+    "tool": "RCI",
+    "scenario": "調査保存・復元・レポート",
+    "file": "A-experience/D07/D07A_investigation.rci",
+    "expected": "確認済みWhy1・未確認1・未着手対策2。保存復元で保持",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T25",
+    "tool": "RCI",
+    "scenario": "時系列CSV追加",
+    "file": "B-known-answer/D07/D07B_timeline.csv",
+    "expected": "既存2+追加2=4件。引用符/カンマ保持",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T26",
+    "tool": "Document Intelligence",
+    "scenario": "テンプレート設定用原本",
+    "file": "A-experience/D08/",
+    "expected": "Aster3行(text)/Aoba2行(scan)。未確認のまま取り込む",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T27",
+    "tool": "Document Intelligence",
+    "scenario": "未使用の検証用原本",
+    "file": "B-known-answer/D08/",
+    "expected": "Aster5行(text)/Aoba4行(scan)。同じテンプレートを使う",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T28",
+    "tool": "Document Intelligence",
+    "scenario": "確認前後・退避復元",
+    "file": "B-known-answer/D08/",
+    "expected": "未確認の値は解析対象外。原本照合後に明示確認。バックアップを開ける",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T29",
+    "tool": "Common",
+    "scenario": "Feedback往復・任意入力",
+    "file": "A-experience/D01/D01A_inspection.xlsx",
+    "expected": "データ/ファイル名の自動転送なし。未設定時は送信を装わない",
+    "status": "Not Tested"
+  },
+  {
+    "id": "T30",
+    "tool": "Common",
+    "scenario": "サンプル・再読込・安全な退避",
+    "file": "A-experience/D02/",
+    "expected": "保存済み設定と退避ファイルを保持。戻る/再読込前に注意を読む",
+    "status": "Not Tested"
+  }
+]

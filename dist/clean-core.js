@@ -5,6 +5,11 @@
   // A single policy seam for future entitlements. No account or billing dependency.
   const capabilities={cleanExport:true};
   const canUse=(feature,policy=capabilities)=>policy[feature]===true;
+  // CSV carries no cell type. Quoting alone does not prevent spreadsheet formula
+  // evaluation. Keep actual numbers (including negatives) and numeric text intact;
+  // make other formula-like strings explicit text. XLSX does not need this prefix.
+  function csvNeedsPrefix(value){return typeof value==='string'&&/^[\s\u0000-\u001f]*[=+@-]/.test(value)&&!/^\s*[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?\s*$/.test(value);}
+  const csvValue=value=>csvNeedsPrefix(value)?"'"+value:value;
   function filename(name,format){return (String(name||'data').replace(/\.[^.]+$/,'')||'data')+'_cleaned.'+format;}
   function iso(value,date1904){const d=I.date(value,date1904);if(!d)return null;const text=new Date(d.ms).toISOString().replace(/\.000Z$/,'Z');return d.kind==='instant'?text:text.replace(/Z$/,'');}
   function prepare(data,edits=[],{format='xlsx',sourceSheet=null,X=null}={}){
@@ -35,13 +40,16 @@
       if(type!=='preserve'){delete formats[r+','+c];if(next!==value)changes.converted++;}
       rows[r][c]=next;
     }
-    const formulaLike=[headers,...rows].reduce((n,row)=>n+row.filter(v=>typeof v==='string'&&/^[\s\u0000-\u001f]*[=+@-]/.test(v)).length,0);
+    const formulaLike=[headers,...rows].reduce((n,row)=>n+row.filter(csvNeedsPrefix).length,0);
+    // The comparison preview shows precisely the bytes the CSV will represent.
+    // Only these copied output arrays change; the imported data stays untouched.
+    if(format==='csv'){for(let c=0;c<headers.length;c++)headers[c]=csvValue(headers[c]);for(const row of rows)for(let c=0;c<row.length;c++)row[c]=csvValue(row[c]);}
     return {headers,rows,issues,formats,changes,formulaLike,date1904:!!data.date1904,sourceStart:start};
   }
-  function csv(prepared){const field=v=>'"'+String(v??'').replace(/"/g,'""')+'"';return '\uFEFF'+[prepared.headers,...prepared.rows].map(row=>row.map(field).join(',')).join('\r\n')+'\r\n';}
+  function csv(prepared){const field=v=>'"'+String(csvValue(v)??'').replace(/"/g,'""')+'"';return '\uFEFF'+[prepared.headers,...prepared.rows].map(row=>row.map(field).join(',')).join('\r\n')+'\r\n';}
   function workbook(X,prepared){const wb=X.utils.book_new(),sheet=X.utils.aoa_to_sheet([prepared.headers,...prepared.rows]);wb.Workbook={WBProps:{date1904:prepared.date1904}};
     for(const [key,z] of Object.entries(prepared.formats)){const [r,c]=key.split(',').map(Number),cell=sheet[X.utils.encode_cell({r:r+1,c})];if(cell)cell.z=z;}
     sheet['!cols']=prepared.headers.map(()=>({wch:24}));X.utils.book_append_sheet(wb,sheet,'Cleaned');return wb;
   }
-  const api={canUse,capabilities,filename,prepare,csv,workbook};root.CleanCore=api;if(typeof module!=='undefined')module.exports=api;
+  const api={canUse,capabilities,filename,prepare,csv,workbook,csvNeedsPrefix,csvValue};root.CleanCore=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

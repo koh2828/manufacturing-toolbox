@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-15",
+  "checks": 23,
+  "passed": [
+    "real capability import calculates 25 records",
+    "mapping saved locally",
+    "language switching preserves quality results",
+    "cycle records import without network submission",
+    "Pareto category remains local",
+    "downloaded CSV reread preserves identifiers/censored result and protects formula text",
+    "imported HTML remains escaped text",
+    "downloaded XLSX reread keeps original formula-like text literal",
+    "failed sheet selection is atomic and restores the previous displayed sheet",
+    "failed sheet selection displays the affected formula coordinate",
+    "recurring real import and calculation",
+    "workflow import displays safe formula repair guidance and retains earlier source",
+    "batch real import and calculation",
+    "RCI local project includes entered text without submission",
+    "unconfirmed PDF values do not enter analysis",
+    "invalid backup leaves existing saved records untouched; valid restore and unrelated storage survive",
+    "actual local Tesseract processes sentinel image pixels",
+    "clean browser context has no service worker interception",
+    "sentinel absent from observed URLs, request headers/bodies, WebSocket frames, API attempts and console",
+    "all HTTP requests are same-origin static GETs with empty bodies",
+    "no WebSocket connections",
+    "no uncaught browser exceptions",
+    "both PDF and OCR workers were observed"
+  ],
+  "browser": "155.0.8059.40",
+  "serviceWorkers": 0,
+  "limits": "BrowserContext request events include worker requests. No service worker existed in this fresh context. Not a browser-extension, hosting-log or OS audit. API instrumentation is page scoped; worker HTTP events are observed separately.",
+  "target": "local HTTP dist/index.html",
+  "httpRequests": [
+    {
+      "path": "vendor/document/pdf/pdf.min.mjs",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "script"
+    },
+    {
+      "path": "vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "script"
+    },
+    {
+      "path": "vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "fetch"
+    },
+    {
+      "path": "vendor/document/pdf/pdf.worker.min.mjs",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "script"
+    },
+    {
+      "path": "vendor/document/pdf/standard_fonts/LiberationSans-Regular.ttf",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "fetch"
+    },
+    {
+      "path": "vendor/document/tesseract/tesseract.min.js",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "script"
+    },
+    {
+      "path": "vendor/document/tesseract/worker.min.js",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "script"
+    },
+    {
+      "path": "vendor/document/tesseract/core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "other"
+    },
+    {
+      "path": "vendor/document/tesseract/lang/eng.traineddata.gz",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "fetch"
+    },
+    {
+      "path": "vendor/document/tesseract/lang/jpn.traineddata.gz",
+      "method": "GET",
+      "bodyBytes": 0,
+      "resourceType": "fetch"
+    }
+  ],
+  "externalHosts": 0,
+  "sentinelLeaks": 0,
+  "webSocketConnections": 0,
+  "consoleMessages": 0,
+  "uncaughtErrors": 0,
+  "workerPaths": [
+    "vendor/document/pdf/pdf.worker.min.mjs",
+    "vendor/document/pdf/pdf.worker.min.mjs",
+    "vendor/document/tesseract/worker.min.js"
+  ],
+  "focusedUnitTests": {
+    "passed": 32,
+    "failed": 0
+  }
+}

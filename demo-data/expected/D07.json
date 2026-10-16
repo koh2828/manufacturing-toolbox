@@ -1,0 +1,8 @@
+{
+  "expected": "Whys:1 confirmed and1 unknown; cause tree2 unknown; no automatically confirmed root cause;2 open actions;2 initial timeline events.",
+  "timeline": {
+    "addedRows": 2,
+    "totalRows": 4,
+    "lastEvent": "確認待ち, 承認前"
+  }
+}

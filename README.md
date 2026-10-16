@@ -1,8 +1,13 @@
 # Manufacturing Toolbox
 
+**このブランチは v0.8.1-beta.1 の本人確認用候補です。本番未反映・公開承認待ちです。**
+候補版の検証は、このフォルダの `Launch.html` と [手動検証ガイド](docs/release/MANUAL_TEST_GUIDE_JA.md)を使用してください。
+[公開範囲・残条件](docs/release/STATUS.md) / [検証結果](docs/release/VALIDATION.md) / [デモ](demo-data/README.md) / [お問い合わせ設定](docs/release/FEEDBACK_SETUP.md)。
+下のGitHub Pagesリンクは既存公開版で、今回の候補版ではありません。
+
 管理図の横軸はロット番号順・等間隔表示です。同じ日付の測定点も重ならず、日付による期間絞り込みも利用できます。
 
-## [▶ Launch.html — アプリを起動 / Open the app](https://koh2828.github.io/manufacturing-toolbox/Launch.html)
+## [▶ 既存公開版を起動 / Open the existing published version](https://koh2828.github.io/manufacturing-toolbox/Launch.html)
 
 **上のリンクをクリックするだけで利用できます。インストール・ログイン・アクセス申請・コマンド操作は不要です。**
 

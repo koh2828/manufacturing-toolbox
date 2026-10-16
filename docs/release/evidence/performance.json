@@ -1,0 +1,43 @@
+{
+  "candidate": "v0.8.1-beta.1",
+  "browser": "155.0.8059.40",
+  "singleRun": true,
+  "results": [
+    {
+      "tool": "recurring",
+      "rows": 10000,
+      "inputBytes": 867735,
+      "importMs": 255,
+      "analyzeRenderMs": 136,
+      "reportExportMs": 1125,
+      "exportBytes": 7361859
+    },
+    {
+      "tool": "recurring",
+      "rows": 50000,
+      "inputBytes": 3767198,
+      "importMs": 341,
+      "analyzeRenderMs": 364,
+      "reportExportMs": 6404,
+      "exportBytes": 36826690
+    },
+    {
+      "tool": "batch",
+      "rows": 10000,
+      "inputBytes": 864027,
+      "importMs": 275,
+      "analyzeRenderMs": 229,
+      "reportExportMs": 661,
+      "exportBytes": 2974982
+    },
+    {
+      "tool": "batch",
+      "rows": 50000,
+      "inputBytes": 4938991,
+      "importMs": 428,
+      "analyzeRenderMs": 488,
+      "reportExportMs": 2462,
+      "exportBytes": 14665014
+    }
+  ]
+}

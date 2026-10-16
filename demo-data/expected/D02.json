@@ -1,0 +1,47 @@
+{
+  "known": {
+    "previous": {
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n": 5,
+      "mean": 3,
+      "sampleSd": 1.5811388300841898
+    },
+    "current": {
+      "values": [
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "n": 5,
+      "mean": 7,
+      "sampleSd": 3.1622776601683795
+    },
+    "meanDelta": 4,
+    "sdDelta": 1.5811388300841898,
+    "currentPeriod": [
+      "2026-10-01",
+      "2026-10-31"
+    ],
+    "previousPeriod": [
+      "2026-09-01",
+      "2026-09-30"
+    ],
+    "warning": "N=5 in each period: reference values. SPC limits are recalculated per period; not a causal comparison."
+  },
+  "experience": {
+    "rowsPerFile": 120,
+    "products": 2,
+    "items": 2,
+    "groupsPerPeriod": 4,
+    "nPerGroup": 30,
+    "expected": "DEMO-A mean and spread change by design; DEMO-B is generated from the same distribution, not identical values."
+  }
+}

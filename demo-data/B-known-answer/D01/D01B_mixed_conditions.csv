@@ -1,0 +1,4 @@
+﻿"Date","Product","Lot","Value","Unit","Test Method"
+"2026-09-01","DEMO-A","000123","100","mPa.s","Method A"
+"2026-09-02","DEMO-A","000124","101","mPa.s","Method B"
+"2026-09-03","DEMO-B","000125","0.1","Pa.s","Method A"

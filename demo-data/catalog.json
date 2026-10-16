@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 1,
+  "seed": 20261015,
+  "synthetic": true,
+  "release": "v0.8.1-beta.1",
+  "files": [
+    {
+      "demoId": "D01",
+      "variant": "A",
+      "path": "A-experience/D01/D01A_inspection.xlsx",
+      "purpose": "Separate product sheets, two inspection items, same-date lots; all records fictional.",
+      "rowCount": 80,
+      "sheetCount": 2,
+      "relatedTool": "capability",
+      "testIds": [
+        "T01",
+        "T03"
+      ],
+      "expectedRef": "expected/D01.json#/experience"
+    },
+    {
+      "demoId": "D01",
+      "variant": "B",
+      "path": "B-known-answer/D01/D01B_known_1_to_5.csv",
+      "purpose": "Hand-checkable values 1..5. LSL=0, USL=6, Individuals/MR. N=5 is not adequate process qualification.",
+      "rowCount": 5,
+      "sheetCount": 1,
+      "relatedTool": "capability",
+      "testIds": [
+        "T02"
+      ],
+      "expectedRef": "expected/D01.json#/known"
+    },
+    {
+      "demoId": "D01",
+      "variant": "B",
+      "path": "B-known-answer/D01/D01B_known_1_to_5.xlsx",
+      "purpose": "Hand-checkable values 1..5. LSL=0, USL=6, Individuals/MR. N=5 is not adequate process qualification.",
+      "rowCount": 5,
+      "sheetCount": 1,
+      "relatedTool": "capability",
+      "testIds": [
+        "T02"
+      ],
+      "expectedRef": "expected/D01.json#/known"
+    },
+    {
+      "demoId": "D01",
+      "variant": "B",
+      "path": "B-known-answer/D01/D01B_mixed_conditions.csv",
+      "purpose": "Condition-boundary check; do not pool different products, methods or units.",
+      "rowCount": 3,
+      "sheetCount": 1,
+      "relatedTool": "capability",
+      "testIds": [
+        "T04"
+      ],
+      "expectedRef": "expected/D01.json#/mixed"
+    },
+    {
+      "demoId": "D02",
+      "variant": "A",
+      "path": "A-experience/D02/D02A_2026-09.csv",
+      "purpose": "Monthly inspection records: two products and two items; same layout in both periods.",
+      "rowCount": 120,
+      "sheetCount": 1,
+      "relatedTool": "recurring",
+      "testIds": [
+        "T05",
+        "T07"
+      ],
+      "expectedRef": "expected/D02.json#/experience"
+    },
+    {
+      "demoId": "D02",
+      "variant": "A",
+      "path": "A-experience/D02/D02A_2026-10.csv",
+      "purpose": "Monthly inspection records: two products and two items; same layout in both periods.",
+      "rowCount": 120,
+      "sheetCount": 1,
+      "relatedTool": "recurring",
+      "testIds": [
+        "T05",
+        "T07"
+      ],
+      "expectedRef": "expected/D02.json#/experience"
+    },
+    {
+      "demoId": "D02",
+      "variant": "B",
+      "path": "B-known-answer/D02/D02B_2026-09.xlsx",
+      "purpose": "Two periods with independently known means and sample standard deviations.",
+      "rowCount": 5,
+      "sheetCount": 1,
+      "relatedTool": "recurring",
+      "testIds": [
+        "T06"
+      ],
+      "expectedRef": "expected/D02.json#/known"
+    },
+    {
+      "demoId": "D02",
+      "variant": "B",
+      "path": "B-known-answer/D02/D02B_2026-10.xlsx",
+      "purpose": "Two periods with independently known means and sample standard deviations.",
+      "rowCount": 5,
+      "sheetCount": 1,
+      "relatedTool": "recurring",
+      "testIds": [
+        "T06"
+      ],
+      "expectedRef": "expected/D02.json#/known"
+    },
+    {
+      "demoId": "D03",
+      "variant": "A",
+      "path": "A-experience/D03/D03A_messy_log.xlsx",
+      "purpose": "Title and blank rows, a two-level heading, merged cells, ambiguous date, missing and censored values.",
+      "rowCount": 11,
+      "sheetCount": 2,
+      "relatedTool": "clean",
+      "testIds": [
+        "T08",
+        "T09"
+      ],
+      "expectedRef": "expected/D03.json#/experience"
+    },
+    {
+      "demoId": "D03",
+      "variant": "B",
+      "path": "B-known-answer/D03/D03B_preserve_values.xlsx",
+      "purpose": "Typed zeros, blank, identifiers and qualified results must survive export without inferred values.",
+      "rowCount": 6,
+      "sheetCount": 1,
+      "relatedTool": "clean",
+      "testIds": [
+        "T10"
+      ],
+      "expectedRef": "expected/D03.json#/preservation"
+    },
+    {
+      "demoId": "D03",
+      "variant": "B",
+      "path": "B-known-answer/D03/D03B_cached_formula.xlsx",
+      "purpose": "Read stored formula results; the app does not recalculate formulas.",
+      "rowCount": 2,
+      "sheetCount": 1,
+      "relatedTool": "clean",
+      "testIds": [
+        "T11"
+      ],
+      "expectedRef": "expected/D03.json#/formula"
+    },
+    {
+      "demoId": "D04",
+      "variant": "A",
+      "path": "A-experience/D04/D04A_production_log.xlsx",
+      "purpose": "Forty chronological lots, two products, campaigns and genuine long cycles (12–144 hours).",
+      "rowCount": 40,
+      "sheetCount": 1,
+      "relatedTool": "cycle",
+      "testIds": [
+        "T12"
+      ],
+      "expectedRef": "expected/D04.json#/experience"
+    },
+    {
+      "demoId": "D04",
+      "variant": "B",
+      "path": "B-known-answer/D04/D04B_minutes.csv",
+      "purpose": "Start→End minutes 10..18,60; all valid durations stay included. Cycle UI supports P25/P50.",
+      "rowCount": 10,
+      "sheetCount": 1,
+      "relatedTool": "cycle",
+      "testIds": [
+        "T13"
+      ],
+      "expectedRef": "expected/D04.json#/known"
+    },
+    {
+      "demoId": "D04",
+      "variant": "B",
+      "path": "B-known-answer/D04/D04B_midnight.csv",
+      "purpose": "One valid midnight interval of20 minutes; product percentiles suppressed for N<5.",
+      "rowCount": 1,
+      "sheetCount": 1,
+      "relatedTool": "cycle",
+      "testIds": [
+        "T14"
+      ],
+      "expectedRef": "expected/D04.json#/midnight"
+    },
+    {
+      "demoId": "D04",
+      "variant": "B",
+      "path": "B-known-answer/D04/D04B_invalid_dates.csv",
+      "purpose": "Separate invalid cases; never automatically add a day or infer day/month order.",
+      "rowCount": 3,
+      "sheetCount": 1,
+      "relatedTool": "cycle",
+      "testIds": [
+        "T15"
+      ],
+      "expectedRef": "expected/D04.json#/invalid"
+    },
+    {
+      "demoId": "D05",
+      "variant": "A",
+      "path": "A-experience/D05/D05A_batch_events.xlsx",
+      "purpose": "Eight batches with midnight, parallel inspection, explicit waiting and an unclassified10-minute gap.",
+      "rowCount": 40,
+      "sheetCount": 1,
+      "relatedTool": "batch",
+      "testIds": [
+        "T16",
+        "T19"
+      ],
+      "expectedRef": "expected/D05.json#/experience"
+    },
+    {
+      "demoId": "D05",
+      "variant": "B",
+      "path": "B-known-answer/D05/D05B_parallel.csv",
+      "purpose": "Two parallel20-minute steps; sum40, union30 and elapsed30 minutes.",
+      "rowCount": 2,
+      "sheetCount": 1,
+      "relatedTool": "batch",
+      "testIds": [
+        "T17"
+      ],
+      "expectedRef": "expected/D05.json#/parallel"
+    },
+    {
+      "demoId": "D05",
+      "variant": "B",
+      "path": "B-known-answer/D05/D05B_percentiles_iqr.csv",
+      "purpose": "Same durations asD04B. Existing Batch IQR comparison must preserve source events and physical totals.",
+      "rowCount": 10,
+      "sheetCount": 1,
+      "relatedTool": "batch",
+      "testIds": [
+        "T18"
+      ],
+      "expectedRef": "expected/D05.json#/percentiles"
+    },
+    {
+      "demoId": "D05",
+      "variant": "B",
+      "path": "B-known-answer/D05/D05B_incomplete.csv",
+      "purpose": "Exact duplicate events and missing End Time; full-batch elapsed must not look complete.",
+      "rowCount": 3,
+      "sheetCount": 1,
+      "relatedTool": "batch",
+      "testIds": [
+        "T20"
+      ],
+      "expectedRef": "expected/D05.json#/incomplete"
+    },
+    {
+      "demoId": "D06",
+      "variant": "A",
+      "path": "A-experience/D06/D06A_defect_events.csv",
+      "purpose": "One row per incident, Count=1; use Count as quantity, not Event ID.",
+      "rowCount": 100,
+      "sheetCount": 1,
+      "relatedTool": "pareto",
+      "testIds": [
+        "T21"
+      ],
+      "expectedRef": "expected/D06.json"
+    },
+    {
+      "demoId": "D06",
+      "variant": "B",
+      "path": "B-known-answer/D06/D06B_counts.xlsx",
+      "purpose": "Four categories total100. Cumulative40,70,90,100%.",
+      "rowCount": 4,
+      "sheetCount": 1,
+      "relatedTool": "pareto",
+      "testIds": [
+        "T22"
+      ],
+      "expectedRef": "expected/D06.json"
+    },
+    {
+      "demoId": "D06",
+      "variant": "B",
+      "path": "B-known-answer/D06/D06B_all_zero.csv",
+      "purpose": "Separate all-zero boundary: no meaningful cumulative percentage.",
+      "rowCount": 4,
+      "sheetCount": 1,
+      "relatedTool": "pareto",
+      "testIds": [
+        "T23"
+      ],
+      "expectedRef": "expected/D06.json#/zero"
+    },
+    {
+      "demoId": "D07",
+      "variant": "A",
+      "path": "A-experience/D07/D07A_investigation.rci",
+      "purpose": "Facts, hypotheses, unknowns and proposed actions are kept separate.",
+      "rowCount": 0,
+      "sheetCount": 0,
+      "relatedTool": "rci",
+      "testIds": [
+        "T24"
+      ],
+      "expectedRef": "expected/D07.json"
+    },
+    {
+      "demoId": "D07",
+      "variant": "B",
+      "path": "B-known-answer/D07/D07B_timeline.csv",
+      "purpose": "Import two timeline entries after the nativeRCI project; preserve the comma in the event text.",
+      "rowCount": 2,
+      "sheetCount": 1,
+      "relatedTool": "rci",
+      "testIds": [
+        "T25"
+      ],
+      "expectedRef": "expected/D07.json#/timeline"
+    },
+    {
+      "demoId": "D08",
+      "variant": "A",
+      "path": "A-experience/D08/D08A_aster_text.pdf",
+      "purpose": "Template setup and learning file. All companies and values are fictional.",
+      "pageCount": 1,
+      "measurementRows": 3,
+      "textLayer": true,
+      "relatedTool": "documents",
+      "testIds": [
+        "T26"
+      ],
+      "expectedRef": "expected/D08.json"
+    },
+    {
+      "demoId": "D08",
+      "variant": "B",
+      "path": "B-known-answer/D08/D08B_aster_text.pdf",
+      "purpose": "Held-out document; do not change template from this file before first evaluation.",
+      "pageCount": 1,
+      "measurementRows": 5,
+      "textLayer": true,
+      "relatedTool": "documents",
+      "testIds": [
+        "T27",
+        "T28"
+      ],
+      "expectedRef": "expected/D08.json"
+    },
+    {
+      "demoId": "D08",
+      "variant": "A",
+      "path": "A-experience/D08/D08A_aoba_scan.pdf",
+      "purpose": "Template setup and learning file. All companies and values are fictional.",
+      "pageCount": 1,
+      "measurementRows": 2,
+      "textLayer": false,
+      "relatedTool": "documents",
+      "testIds": [
+        "T26"
+      ],
+      "expectedRef": "expected/D08.json"
+    },
+    {
+      "demoId": "D08",
+      "variant": "B",
+      "path": "B-known-answer/D08/D08B_aoba_scan.pdf",
+      "purpose": "Held-out document; do not change template from this file before first evaluation.",
+      "pageCount": 1,
+      "measurementRows": 4,
+      "textLayer": false,
+      "relatedTool": "documents",
+      "testIds": [
+        "T27",
+        "T28"
+      ],
+      "expectedRef": "expected/D08.json"
+    }
+  ]
+}

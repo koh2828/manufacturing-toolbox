@@ -1,0 +1,87 @@
+{
+  "reports": [
+    {
+      "file": "D01-xlsx.pdf",
+      "pages": 4,
+      "textChecks": 3,
+      "rasters": [
+        "D01-xlsx-1.png",
+        "D01-xlsx-2.png",
+        "D01-xlsx-3.png",
+        "D01-xlsx-4.png"
+      ]
+    },
+    {
+      "file": "D01-ja.pdf",
+      "pages": 4,
+      "textChecks": 3,
+      "rasters": [
+        "D01-ja-1.png",
+        "D01-ja-2.png",
+        "D01-ja-3.png",
+        "D01-ja-4.png"
+      ]
+    },
+    {
+      "file": "D02-period-comparison.pdf",
+      "pages": 5,
+      "textChecks": 3,
+      "rasters": [
+        "D02-period-comparison-1.png",
+        "D02-period-comparison-2.png",
+        "D02-period-comparison-3.png",
+        "D02-period-comparison-4.png",
+        "D02-period-comparison-5.png"
+      ]
+    },
+    {
+      "file": "D04-cycle.pdf",
+      "pages": 2,
+      "textChecks": 2,
+      "rasters": [
+        "D04-cycle-1.png",
+        "D04-cycle-2.png"
+      ]
+    },
+    {
+      "file": "D05-parallel.pdf",
+      "pages": 5,
+      "textChecks": 3,
+      "rasters": [
+        "D05-parallel-1.png",
+        "D05-parallel-2.png",
+        "D05-parallel-3.png",
+        "D05-parallel-4.png",
+        "D05-parallel-5.png"
+      ]
+    },
+    {
+      "file": "D06-pareto.pdf",
+      "pages": 2,
+      "textChecks": 4,
+      "rasters": [
+        "D06-pareto-1.png",
+        "D06-pareto-2.png"
+      ]
+    }
+  ],
+  "pageCount": 22,
+  "contactSheets": [
+    "contact-1.jpg",
+    "contact-2.jpg",
+    "contact-3.jpg",
+    "contact-4.jpg",
+    "contact-5.jpg",
+    "contact-6.jpg"
+  ],
+  "visualReview": {
+    "reviewer": "Codex automated assistant (not the user)",
+    "reviewedPages": 22,
+    "result": "Readable values, tables, Japanese glyphs and charts; no source-value/table-cell loss in these demos. Batch total-zero percentages are dashes with an undefined-percent explanation.",
+    "remainingP2": [
+      "Close USL/UCL right-side labels overlap in recurring chart.",
+      "Wide cycle audit table wraps identifiers and timestamps.",
+      "Pareto has a footer-only final page."
+    ]
+  }
+}

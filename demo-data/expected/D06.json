@@ -1,0 +1,25 @@
+{
+  "categories": [
+    "Scratch",
+    "Bubble",
+    "Color",
+    "Other"
+  ],
+  "counts": [
+    40,
+    30,
+    20,
+    10
+  ],
+  "total": 100,
+  "cumulativePercent": [
+    40,
+    70,
+    90,
+    100
+  ],
+  "zero": {
+    "total": 0,
+    "expected": "No meaningful percent or cumulative percent. A warning/empty percentage is required, never100% orNaN."
+  }
+}

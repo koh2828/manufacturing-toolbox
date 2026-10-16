@@ -16,7 +16,8 @@
     const oos=records.filter(r=>(lsl!==null&&r.value<lsl)||(usl!==null&&r.value>usl));
     const signals=within>0?records.filter(r=>r.value>ucl||r.value<lcl):[];
     if(!Number.isFinite(mean)||!Number.isFinite(sd)||within!==null&&!Number.isFinite(within))throw Error((I18n.t("core.bfa8a63566")));const sorted=[...v].sort((a,b)=>a-b);
-    return {n,mean,sd,within,mr,lcl,ucl,cp:a.cp,cpk:a.cpk,pp:b.cp,ppk:b.cpk,min:sorted[0],max:sorted[n-1],median:n%2?sorted[(n-1)/2]:(sorted[n/2-1]+sorted[n/2])/2,oos,signals,records,excluded:raw.length-n,lsl,usl};
+    const lower=sorted[Math.floor((n-1)/2)],upper=sorted[Math.floor(n/2)],sum=lower+upper,median=Number.isFinite(sum)?sum/2:lower/2+upper/2;
+    return {n,mean,sd,within,mr,lcl,ucl,cp:a.cp,cpk:a.cpk,pp:b.cp,ppk:b.cpk,min:sorted[0],max:sorted[n-1],median,oos,signals,records,excluded:raw.length-n,lsl,usl};
   }
   function pareto(rows){
     const sums=new Map();let excluded=0;rows.forEach(r=>{const label=String(r[0]??'').trim(),value=numeric(r[1]);if(!label||value===null||value<0){excluded++;return;}sums.set(label,(sums.get(label)||0)+value);});

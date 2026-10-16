@@ -1,0 +1,64 @@
+{
+  "format": "manufacturing-toolbox-rci",
+  "version": 2,
+  "project": {
+    "isDemo": true,
+    "title": "【架空】温度センサー交換後の粘度上昇",
+    "when": "2026-09-14T10:30",
+    "where": "DEMO-R1",
+    "impact": "架空の2ロットを確認待ちとした。実際の事故・製品ではない。",
+    "immediate": "対象ロットを保留し、温度記録と交換記録を確認する。",
+    "sourceEvidence": "事実：交換後の検査記録で粘度上昇を観測。因果関係は未確認。",
+    "rootCause": "未確定。校正記録と比較試験を確認する。",
+    "whys": [
+      {
+        "cause": "検査値が上昇した",
+        "evidence": "架空の検査記録で確認済み",
+        "status": "confirmed"
+      },
+      {
+        "cause": "センサー補正値の未設定の可能性",
+        "evidence": "校正記録は未入手",
+        "status": "unknown"
+      }
+    ],
+    "causeTree": [
+      {
+        "parent": -1,
+        "cause": "設備条件の影響",
+        "evidence": "交換作業の記録あり",
+        "status": "unknown"
+      },
+      {
+        "parent": 0,
+        "cause": "補正値の設定漏れの仮説",
+        "evidence": "未検証",
+        "status": "unknown"
+      }
+    ],
+    "timeline": [
+      {
+        "time": "2026-09-14T08:00",
+        "event": "架空のセンサー交換を完了"
+      },
+      {
+        "time": "2026-09-14T10:30",
+        "event": "粘度上昇を観測"
+      }
+    ],
+    "actions": [
+      {
+        "action": "校正記録を入手し補正値を照合",
+        "owner": "架空 保全担当",
+        "due": "2026-09-20",
+        "status": "open"
+      },
+      {
+        "action": "同一条件の比較試験を計画",
+        "owner": "架空 品質担当",
+        "due": "2026-09-25",
+        "status": "open"
+      }
+    ]
+  }
+}

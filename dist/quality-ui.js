@@ -18,6 +18,10 @@ function qualityInput(){const d=state.data,q=state.quality;
     if(new Set(rows.map(x=>x.timeKind)).size>1)throw Error((I18n.t("quality-ui.04ffdad7a6")));
     rows.sort((a,b)=>a.time-b.time||a.index-b.index);
   }
+  const measured=rows.filter(x=>C.numeric(x.row[state.col])!==null).map(x=>x.row);
+  if(q.product>=0&&new Set(measured.map(row=>String(row[q.product]??'').trim())).size>1)throw Error(I18n.t('release.mixedConditions',[d.headers[q.product]]));
+  const conflicts=ImportCore.conditionConflicts(d.headers,measured,{ignoreColumns:[state.col,q.date,q.lot]});
+  if(conflicts.length)throw Error(I18n.t('release.mixedConditions',[conflicts.map(x=>x.header).join(', ')]));
   return rows;
 }
 function spcChart(records,center,lcl,ucl,label,{lsl=null,usl=null,alarms=[],axis=null,width=700,height=250,utc=false}={}){

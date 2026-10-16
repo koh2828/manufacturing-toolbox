@@ -43,6 +43,8 @@
       if(new Set(used).size!==used.length||m.format==='wide'&&measurements.some(x=>used.includes(x.column))){
         issues.push(issue('duplicateMapping',[],context));return;
       }
+      const unmappedColumns=I.conditionColumns(table.headers).filter(c=>!used.includes(c.column)&&!measurements.some(x=>x.column===c.column));
+      const methodColumns=unmappedColumns.filter(c=>c.kind==='method');
       table.rows.forEach((row,rowIndex)=>{
         if(!Array.isArray(row)){issues.push(issue('invalidRow',[],{...context,row:rowIndex+1}));return;}
         const sourceRow=table.sourceRows?.[rowIndex];
@@ -57,6 +59,8 @@
           const r={id:JSON.stringify([sourceId,sourceIndex,rowIndex,measurementIndex]),...context,sourceIndex,rowIndex,row:rowNumber,column:measurement.column,
             rawValue,value,rawDate,date:parsedDate?.ms??null,timeKind:parsedDate?.kind??null,hasDate:column('date')>=0,
             product:text(cell('product')),lot:text(cell('lot')),equipment:text(cell('equipment')),
+            testMethod:methodColumns.some(c=>text(row[c.column]))?JSON.stringify([...new Set(methodColumns.map(c=>text(row[c.column])))].sort()):'',
+            unmappedConditions:Object.fromEntries(['product','item','unit'].map(kind=>{const columns=unmappedColumns.filter(c=>c.kind===kind);return [kind,columns.some(c=>text(row[c.column]))?JSON.stringify([...new Set(columns.map(c=>text(row[c.column])))].sort()):''];})),
             item:m.format==='long'?text(cell('item')):text(measurement.name)||text(table.headers[measurement.column]),
             unit:text(m.format==='long'?cell('unit'):measurement.unit),rawLsl:rawLsl??'',rawUsl:rawUsl??'',lsl,usl,specInvalid,issues:[]};
           const add=code=>{const e=issue(code,[],{sourceId,file,sheet,row:rowNumber,column:measurement.column,recordId:r.id});r.issues.push(e);issues.push(e);};
@@ -88,6 +92,12 @@
   function inPeriod(r,p){return !p.active||Number.isFinite(r.date)&&r.date>=p.start&&r.date<=p.end;}
   function groupKey(r){return JSON.stringify([r.product,r.item,r.equipment,r.unit,r.lsl,r.usl,r.timeKind,r.specInvalid?[text(r.rawLsl),text(r.rawUsl)]:null]);}
   const nullable=v=>typeof v==='number'&&Number.isFinite(v)?v:null;
+  function conditionMismatch(records){
+    const valid=records.filter(r=>r.value!==null);
+    if(new Set(valid.map(r=>r.testMethod||'')).size>1)return 'mixedTestMethods';
+    if(['product','item','unit'].some(kind=>new Set(valid.map(r=>r.unmappedConditions?.[kind]||'')).size>1))return 'mixedUnmappedConditions';
+    return null;
+  }
   function descriptors(raw){
     const values=raw.map(C.numeric).filter(v=>v!==null),n=values.length;
     if(n<2)return {n,mean:n?values[0]:null,median:n?values[0]:null,sd:null,min:n?values[0]:null,max:n?values[0]:null,cp:null,cpk:null,pp:null,ppk:null,within:null,oosCount:null,oosRate:null};
@@ -100,6 +110,13 @@
     if(completeLots)selectedRecords.sort((a,b)=>I.compareLots(a.lot,b.lot)||a.sourceIndex-b.sourceIndex||a.rowIndex-b.rowIndex||a.column-b.column);
     else add(records.some(r=>r.lot)?'partialLotOrder':'inputOrder');
     const raw=selectedRecords.map(r=>r.value),key=groupKey(first),g={key,product:first.product,item:first.item,equipment:first.equipment,unit:first.unit,lsl:first.lsl,usl:first.usl,timeKind:first.timeKind,specInvalid:!!first.specInvalid,order,selectedRecords,result:null,stats:null,reasons,attention:false,status:'unavailable',reference:false,excluded:[],comparison:null};
+    // Method mapping is not part of this beta. Refuse to pool different or
+    // unknown methods within an otherwise identical analysis condition.
+    const conflict=conditionMismatch(records);
+    if(conflict){
+      g.blocked=true;g.stats=descriptors([]);add(conflict);
+      g.excluded=selectedRecords.map(record=>({record,code:conflict}));return g;
+    }
     try{g.stats=descriptors(raw);}catch{g.stats={n:raw.filter(v=>v!==null).length,mean:null,median:null,sd:null,min:null,max:null,cp:null,cpk:null,pp:null,ppk:null,within:null,oosCount:null,oosRate:null};add('numericOverflow');}
     const validSpec=!g.specInvalid,hasSpec=validSpec&&(g.lsl!==null||g.usl!==null),allowSpc=s.chart!=='xbar'||s.rationalSubgroups;
     if(g.specInvalid)add('invalidSpecification');else if(!hasSpec)add('missingSpecification');else if(g.lsl===null||g.usl===null)add('oneSidedSpecification');
@@ -154,7 +171,7 @@
     const previousMap=new Map(result.previousGroups.map(g=>[g.key,g]));
     if(previous.active){
       if(current.start<=previous.end&&previous.start<=current.end)result.issues.push(issue('overlappingPeriods'));
-      for(const g of result.groups){const old=previousMap.get(g.key);if(old){
+      for(const g of result.groups){const old=previousMap.get(g.key),conflict=old?conditionMismatch([...g.selectedRecords,...old.selectedRecords]):null;if(conflict){const code=conflict==='mixedTestMethods'?'incomparableTestMethods':'incomparableConditions';g.reasons.push(issue(code));result.issues.push(issue(code,[],{groupKey:g.key}));continue;}if(old){
         const c=compare(g,old);g.comparison=c;result.comparisons.push(c);
         if(s.deltaThreshold!==null&&c.deltas.mean.absolute!==null&&Math.abs(c.deltas.mean.absolute)>s.deltaThreshold){g.attention=true;g.status='attention';g.reasons.push(issue('meanChange',[c.deltas.mean.absolute,s.deltaThreshold]));}
       }else{g.reasons.push(issue('noComparablePrevious'));result.issues.push(issue('noComparablePrevious',[],{groupKey:g.key}));}}

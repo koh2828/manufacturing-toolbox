@@ -1,0 +1,46 @@
+{
+  "known": {
+    "inputMinutes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      60
+    ],
+    "n": 10,
+    "p25": 12.25,
+    "p50": 14.5,
+    "p75": 16.75,
+    "p90": 22.199999999999985,
+    "p95": 41.09999999999995,
+    "cycleStartToNextStartMinutes": 1440,
+    "cycleN": 9,
+    "status": "reference",
+    "default": "include all valid data;60 is not an input error"
+  },
+  "midnight": {
+    "start": "2026-09-01 23:50",
+    "end": "2026-09-02 00:10",
+    "processingMinutes": 20,
+    "n": 1,
+    "p25": null,
+    "p50": null
+  },
+  "invalid": {
+    "rows": 3,
+    "validProcessingRows": 0,
+    "expected": "End before Start, nonexistent date and ambiguous date format are invalid; no overnight correction."
+  },
+  "experience": {
+    "rows": 40,
+    "products": 2,
+    "maxProcessingHours": 144,
+    "minProcessingHours": 12,
+    "expected": "For Start→End all40 rows valid. One final record has no following batch, so at most39 Start→nextStart intervals."
+  }
+}

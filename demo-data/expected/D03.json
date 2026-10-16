@@ -1,0 +1,51 @@
+{
+  "experience": {
+    "headerRow": 6,
+    "sheets": [
+      "Inspection",
+      "Merged_cells_review"
+    ],
+    "dataRowsIncludingBlank": 7,
+    "measuredRows": 6,
+    "blankExcelRow": 9,
+    "ambiguousDate": "01/02/2026",
+    "expected": "Inspect Original/Cleaned, explicitly choose row6. Do not infer a date convention or fill merged Lot cells. Empty rows may be preserved in exported table; no measurements may be invented."
+  },
+  "preservation": {
+    "rows": 6,
+    "lots": [
+      "000123",
+      "000124",
+      "000125",
+      "000126",
+      "000127",
+      "000128"
+    ],
+    "values": [
+      0,
+      "0",
+      null,
+      "<0.01",
+      "ND",
+      "Pass"
+    ],
+    "types": [
+      "number",
+      "string",
+      "blank",
+      "string",
+      "string",
+      "string"
+    ],
+    "ambiguousDate": "01/02/2026",
+    "expected": "Preserve values and types in XLSX with unchanged types. CSV has no cell type metadata; import identifier columns as text in Excel."
+  },
+  "formula": {
+    "rows": 2,
+    "storedResults": [
+      100,
+      104
+    ],
+    "expected": "App exports stored results as values. Changing upstream cells without recalculating/saving in Excel cannot update cached results in the app."
+  }
+}
