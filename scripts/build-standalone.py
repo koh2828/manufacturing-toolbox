@@ -7,12 +7,19 @@ import re
 root = Path(__file__).resolve().parents[1]
 dist = root / 'dist'
 html = (dist / 'index.html').read_text(encoding='utf-8')
-html = html.replace('<link rel="stylesheet" href="style.css">', '<style>' + (dist / 'style.css').read_text(encoding='utf-8') + '</style>')
+for stylesheet in re.findall(r'<link rel="stylesheet" href="([^"]+)">', html):
+    html = html.replace(f'<link rel="stylesheet" href="{stylesheet}">', '<style>' + (dist / stylesheet).read_text(encoding='utf-8') + '</style>')
 parts, hashes = [], []
-for script in re.findall(r'<script defer src="([^"]+)"></script>', html):
-    html = html.replace(f'<script defer src="{script}"></script>', '')
+for defer, script in re.findall(r'<script (defer )?src="([^"]+)"></script>', html):
+    tag = f'<script {defer}src="{script}"></script>'
     content = '\n' + re.sub(r'</script', r'<\\/script', (dist / script).read_text(encoding='utf-8'), flags=re.I) + '\n'
-    parts.append('<script>' + content + '</script>')
+    bundled = '<script>' + content + '</script>'
+    # Keep early theme initialization in the head to avoid a light flash on reload.
+    if defer:
+        html = html.replace(tag, '')
+        parts.append(bundled)
+    else:
+        html = html.replace(tag, bundled)
     hashes.append("'sha256-" + base64.b64encode(hashlib.sha256(content.encode()).digest()).decode() + "'")
 html = html.replace("script-src 'self'", "script-src 'self' " + ' '.join(hashes))
 html = html.replace('</body>', '\n'.join(parts) + '</body>')
