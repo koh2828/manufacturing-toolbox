@@ -12,3 +12,6 @@ release-artifacts/
 node_modules
 __pycache__/
 *.pyc
+
+# Generated visual review evidence (only synthetic data; packaged separately).
+artifacts/ui-review/

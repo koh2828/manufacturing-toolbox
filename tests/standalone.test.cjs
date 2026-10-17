@@ -2,7 +2,7 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),fs=requir
 const root=path.join(__dirname,'..'),html=fs.readFileSync(path.join(root,'Launch.html'),'utf8');
 test('Launch bundles exactly the source scripts with valid CSP hashes',()=>{
   const source=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
-  const files=[...source.matchAll(/<script defer src="([^"]+)"><\/script>/g)].map(m=>m[1]);
+  const files=[...source.matchAll(/<script (?:defer )?src="([^"]+)"><\/script>/g)].map(m=>m[1]);
   const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
   assert.equal(scripts.length,files.length);
   files.forEach((file,i)=>{
@@ -16,6 +16,8 @@ test('Launch bundles exactly the source scripts with valid CSP hashes',()=>{
   assert.ok(html.includes("connect-src 'self';"));
   assert.ok(html.includes("'wasm-unsafe-eval'"));
   assert.ok(!html.includes("'unsafe-eval'"));
+  assert.equal(files[0],'theme.js');
+  assert.ok(html.indexOf('<script>') < html.indexOf('<style>'),'theme restores before the first stylesheet');
 });
 test('Launch carries the bundled license and root entry points to it',()=>{
   const license=fs.readFileSync(path.join(root,'dist/vendor/LICENSE.sheetjs.txt'),'utf8').replace(/--/g,'—');

@@ -1,0 +1,64 @@
+/* SVG presentation only: theme changes never rerun analysis or replace chart nodes. */
+.chart{background:var(--chart-bg,#fff);color:var(--chart-text,#414141)}
+.chart text{fill:var(--chart-text,#414141);font-variant-numeric:tabular-nums}
+.chart .grid{stroke:var(--chart-grid,#e0e0e0);stroke-width:1}
+.chart .chart-axis{stroke:var(--chart-axis,#767676);stroke-width:1}
+.chart .chart-series{stroke:var(--chart-series,#252525);fill:none}
+.chart .chart-point,.chart .chart-bar{fill:var(--chart-series,#252525)}
+.chart .chart-bar--secondary{fill:var(--chart-secondary,#737373)}
+.chart .chart-point--alert{fill:var(--chart-alert,#a33128);stroke:var(--chart-bg,#fff);stroke-width:1.5}
+.chart .chart-mean{stroke:var(--chart-mean,#5d5d5d);stroke-width:2;stroke-dasharray:none}
+.chart .chart-limit{stroke:var(--chart-limit,#666);stroke-width:1.5;stroke-dasharray:7 4}
+.chart .chart-reference-halo{stroke:var(--chart-bg,#fff);stroke-width:5}
+.chart .chart-spec{stroke:var(--chart-spec,#3e3e3e);stroke-width:2;stroke-dasharray:1 4;stroke-linecap:round}
+.chart text.chart-mean{fill:var(--chart-mean,#5d5d5d);stroke:none}
+.chart text.chart-limit{fill:var(--chart-limit,#666);stroke:none}
+.chart text.chart-spec{fill:var(--chart-spec,#3e3e3e);stroke:none}
+.chart .chart-threshold{stroke:var(--chart-limit,#666);stroke-width:1.5;stroke-dasharray:5 4}
+.chart text.chart-threshold{fill:var(--chart-text,#414141);paint-order:stroke;stroke:var(--chart-bg,#fff);stroke-width:3px;stroke-linejoin:round}
+.chart .chart-cumulative-halo{stroke:var(--chart-bg,#fff);fill:none}
+.chart .chart-cumulative{stroke:var(--chart-text,#414141);fill:none}
+.chart .chart-cumulative-point{stroke:var(--chart-text,#414141);stroke-width:2;fill:var(--chart-bg,#fff)}
+.chart .chart-track{fill:var(--chart-bg,#fff);stroke:var(--chart-grid,#e0e0e0)}
+.chart .chart-gap{fill:var(--chart-band,#e8e8e8)}
+.chart .chart-step{fill:var(--chart-series,#252525);stroke:var(--chart-bg,#fff);stroke-width:1}
+.chart .chart-step--1,.chart .chart-step--3,.chart .chart-step--5{fill:var(--chart-secondary,#737373)}
+.chart .chart-step--2,.chart .chart-step--3{stroke-dasharray:5 2}
+.chart .chart-step--4,.chart .chart-step--5{stroke-dasharray:1 2}
+.chart text.chart-step-label{fill:var(--chart-on-series,#fff);font-weight:600}
+.chart g[tabindex]:focus-visible{outline:2px solid var(--focus,#626262);outline-offset:3px}
+.legend i{background:var(--chart-series,#252525)}
+.legend i.secondary{background:var(--chart-secondary,#737373)}
+.legend i.spec{height:0;background:none;border-top:2px dotted var(--chart-spec,#3e3e3e)}
+.legend i.cumulative{height:2px;background:var(--chart-text,#414141);position:relative}
+.legend i.cumulative::after{content:"";position:absolute;left:6px;top:-2px;width:6px;height:6px;border:1.5px solid var(--chart-text,#414141);background:var(--chart-bg,#fff);border-radius:50%}
+.legend i.limit{height:0;background:none;border-top:2px dashed var(--chart-limit,#666)}
+
+/* A report is a white paper preview, independent of the surrounding app theme. */
+.report-document{
+ color-scheme:light;
+ --chart-bg:#fff;--chart-text:#414141;--chart-axis:#767676;--chart-grid:#e0e0e0;
+ --chart-series:#252525;--chart-secondary:#737373;--chart-mean:#5d5d5d;
+ --chart-limit:#666;--chart-spec:#3e3e3e;--chart-alert:#a33128;--chart-band:#e8e8e8;--chart-on-series:#fff;
+ --line:#d5d5d5;--muted:#575757;
+ background:#fff;color:#202020
+}
+.report-document :is(h1,h2,h3,p,td,li,strong){color:#202020}
+.report-document :is(th,.report-meta,small,footer){color:#575757}
+.report-document th{background:#f3f3f3}
+.report-document td{background:#fff}
+.report-document :is(td,th){border-color:#d5d5d5}
+.report-document .report-meta{border-color:#555}
+.report-document .cause-tree ul{border-color:#767676}
+.report-document .cause-tree li{background:#fff;border-color:#d5d5d5}
+.report-document .warning-text,.report-document .bad{color:#a33128}
+.report-document .chart{background:#fff}
+@media print{
+ html,body{
+  color-scheme:light;
+  --chart-bg:#fff;--chart-text:#414141;--chart-axis:#767676;--chart-grid:#e0e0e0;
+  --chart-series:#252525;--chart-secondary:#737373;--chart-mean:#5d5d5d;
+  --chart-limit:#666;--chart-spec:#3e3e3e;--chart-alert:#a33128;--chart-band:#e8e8e8;--chart-on-series:#fff
+ }
+ .chart{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
